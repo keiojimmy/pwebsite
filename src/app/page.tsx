@@ -6,12 +6,11 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
       {/* Name */}
-      <h1 className="font-sans text-[28px] sm:text-[42px] leading-tight tracking-tight text-ink mb-2 sm:mb-3">
-        <span className="font-semibold">Jimmy</span>{" "}
-        <span className="font-light">Cho</span>
+      <h1 className="font-sans font-light text-[28px] sm:text-[32px] leading-tight tracking-tight text-ink mb-1">
+        jimmy cho
       </h1>
 
       {/* Accent subtitle */}
