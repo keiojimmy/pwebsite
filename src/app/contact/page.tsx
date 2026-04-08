@@ -6,12 +6,12 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
       {/* Page header */}
       <div className="mb-10 sm:mb-16 pb-6 sm:pb-8 border-b border-border">
         <h1 className="font-serif font-light text-[28px] sm:text-[32px] tracking-tight text-ink">contact</h1>
-        <p className="mt-2 font-sans text-sm text-accent">open to investing, advisory, and interesting conversations.</p>
+        <p className="mt-1 font-sans text-sm text-accent">open to investing, advisory, and interesting conversations.</p>
       </div>
 
       {/* No sidebar on contact — full width content */}

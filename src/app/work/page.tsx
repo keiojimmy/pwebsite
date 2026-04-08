@@ -10,12 +10,12 @@ export default function WorkPage() {
   const sections = Array.from(new Set(projects.map((p) => p.section)));
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
       {/* Page header */}
       <div className="mb-10 sm:mb-16 pb-6 sm:pb-8 border-b border-border">
         <h1 className="font-sans font-light text-[28px] sm:text-[32px] tracking-tight text-ink">projects</h1>
-        <p className="mt-2 font-sans text-sm text-accent">projects across strategy, investing, and operations.</p>
+        <p className="mt-1 font-sans text-sm text-accent">projects across strategy, investing, and operations.</p>
       </div>
 
       {/* Sections */}
