@@ -10,7 +10,8 @@ export default function WorkPage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">Work</h1>
+        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">work</h1>
+        <p className="mt-2 font-sans text-sm text-accent">Projects across strategy, investing, and operations.</p>
       </div>
 
       {/* Two-column layout */}
