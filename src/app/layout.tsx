@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import ClientShell from "@/components/ClientShell";
 
 export const metadata: Metadata = {
   title: "Jimmy Cho",
@@ -14,11 +13,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Flash-prevention: apply dark class before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme'),m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&m))document.documentElement.classList.add('dark');})();`,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-bg text-ink font-sans antialiased">
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ClientShell>{children}</ClientShell>
       </body>
     </html>
   );
