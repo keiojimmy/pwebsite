@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+  :root {
+    --bg: #f4f1eb;
+    --bg-warm: #edeae3;
+    --ink: #1c1c1c;
+    --ink-light: #6b6860;
+    --ink-faint: #a8a49b;
+    --ink-ghost: #ccc8c0;
+    --ink-whisper: #ddd9d2;
+    --shu: #b83a2a;
+    --shu-faint: rgba(184,58,42,0.08);
+    --shu-ghost: rgba(184,58,42,0.15);
+    --heading: 'Cormorant Garamond', Georgia, serif;
+    --body: 'EB Garamond', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--shu-faint);
+    color: var(--ink);
+  }
+
+  /* ——— Nav ——— */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 34px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: linear-gradient(var(--bg) 60%, transparent);
+    pointer-events: none;
+  }
+
+  nav > * { pointer-events: auto; }
+
+  .wordmark {
+    font-family: var(--heading);
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+
+  .nav-items {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-items a {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--ink-faint);
+    transition: color 0.5s;
+  }
+
+  .nav-items a:hover { color: var(--shu); }
+
+  /* ——— Hero ——— */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 0.55fr;
+    padding: 0 52px;
+    align-items: end;
+    padding-bottom: 72px;
+  }
+
+  .hero-left {
+    padding-bottom: 8px;
+    max-width: 580px;
+  }
+
+  .hero-name {
+    font-family: var(--heading);
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    color: var(--ink);
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .hero-intro {
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--ink-light);
+    max-width: 420px;
+  }
+
+  .hero-right {
+    justify-self: end;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 140px;
+  }
+
+  .photo-container {
+    width: 340px;
+    height: 460px;
+    position: relative;
+  }
+
+  .photo-inner {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-warm);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(165deg, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.04) 100%);
+  }
+
+  .photo-label {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    color: var(--ink-ghost);
+    font-style: italic;
+  }
+
+  /* Red accent line on the photo */
+  .photo-accent {
+    position: absolute;
+    top: 24px;
+    left: -20px;
+    width: 2px;
+    height: 64px;
+    background: var(--shu);
+    opacity: 0.7;
+  }
+
+  /* ——— Seal mark ——— */
+  .seal {
+    position: fixed;
+    bottom: 52px;
+    left: 52px;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--shu);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.35;
+    transition: opacity 0.5s;
+  }
+
+  .seal:hover { opacity: 0.7; }
+
+  .seal-inner {
+    font-family: var(--heading);
+    font-size: 14px;
+    color: var(--shu);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  /* ——— Horizontal rule ——— */
+  .hr {
+    margin: 0 52px;
+    height: 1px;
+    background: var(--ink-whisper);
+  }
+
+  /* ——— Belief section ——— */
+  .belief {
+    padding: 120px 52px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 100px;
+    max-width: 1200px;
+  }
+
+  .belief-statement {
+    font-family: var(--heading);
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    max-width: 440px;
+    font-style: italic;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .belief-statement::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 2px;
+    height: 48px;
+    background: var(--shu);
+    opacity: 0.45;
+  }
+
+  .belief-body {
+    padding-top: 10px;
+  }
+
+  .belief-body p {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: var(--ink-light);
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+
+  /* ——— Path ——— */
+  .path-section {
+    padding: 100px 52px 120px;
+    max-width: 1200px;
+  }
+
+  .path-label {
+    font-family: var(--body);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-ghost);
+    margin-bottom: 64px;
+    font-style: italic;
+  }
+
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink-whisper);
+  }
+
+  .path-item {
+    padding: 40px 32px 40px 0;
+    border-bottom: 1px solid var(--ink-whisper);
+    position: relative;
+    transition: background 0.4s;
+  }
+
+  .path-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 40px;
+    bottom: 40px;
+    width: 1px;
+    background: var(--ink-whisper);
+  }
+
+  .path-item:hover {
+    background: var(--shu-faint);
+  }
+
+  .path-index {
+    font-family: var(--heading);
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--ink-whisper);
+    margin-bottom: 22px;
+    transition: color 0.4s;
+  }
+
+  .path-item:hover .path-index {
+    color: var(--shu-ghost);
+  }
+
+  .path-role {
+    font-family: var(--body);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 5px;
+  }
+
+  .path-org {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  /* ——— Aside section ——— */
+  .aside-section {
+    padding: 100px 52px 140px;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+  }
+
+  .aside-label {
+    font-family: var(--body);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-ghost);
+    padding-top: 4px;
+    font-style: italic;
+  }
+
+  .aside-content {
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+
+  .aside-item {
+    font-family: var(--body);
+    font-size: 15.5px;
+    font-weight: 400;
+    color: var(--ink-light);
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .aside-item::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 1.5px;
+    background: var(--shu);
+    opacity: 0.3;
+    margin-bottom: 14px;
+  }
+
+  /* ——— Footer ——— */
+  footer {
+    padding: 44px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid var(--ink-whisper);
+  }
+
+  .footer-contact a {
+    font-family: var(--body);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink-light);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s;
+  }
+
+  .footer-contact a:hover {
+    color: var(--shu);
+    border-bottom-color: var(--shu);
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: baseline;
+    gap: 36px;
+  }
+
+  .footer-location {
+    font-family: var(--body);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--ink-ghost);
+    font-style: italic;
+  }
+
+  .footer-mark {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--shu);
+    opacity: 0.3;
+  }
+
+  /* ——— Texture ——— */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wordmark">Jimmy Cho</div>
+  <ul class="nav-items">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Writing</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Seal mark — bottom left like a hanko -->
+<div class="seal">
+  <div class="seal-inner">JC</div>
+</div>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1 class="hero-name">Jimmy<br>Cho</h1>
+    <p class="hero-intro">
+      Investor and operator building at the intersection of technology and emerging markets across Southeast Asia.
+    </p>
+  </div>
+  <div class="hero-right">
+    <div class="photo-container">
+      <div class="photo-accent"></div>
+      <div class="photo-inner">
+        <div class="photo-label">portrait</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="belief">
+  <div class="belief-statement">
+    I care most about the early, hard stages — where long-term outcomes are shaped with the least information.
+  </div>
+  <div class="belief-body">
+    <p>
+      My career has been deliberately varied, not out of restlessness, but from a belief that the question of what makes businesses work is best understood from multiple vantage points.
+    </p>
+    <p>
+      I've underwritten risk, advised on strategy, operated through rapid scale, and now invest at the earliest stages. Each chapter sharpened a different instinct. Together, they form a point of view.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="path-section">
+  <div class="path-label">Path</div>
+  <div class="path-grid">
+    <div class="path-item">
+      <div class="path-index">I</div>
+      <div class="path-role">Investment Banking</div>
+      <div class="path-org">Goldman Sachs</div>
+    </div>
+    <div class="path-item">
+      <div class="path-index">II</div>
+      <div class="path-role">Management Consulting</div>
+      <div class="path-org">McKinsey & Company</div>
+    </div>
+    <div class="path-item">
+      <div class="path-index">III</div>
+      <div class="path-role">Operational Leadership</div>
+      <div class="path-org">High-growth startup</div>
+    </div>
+    <div class="path-item">
+      <div class="path-index">IV</div>
+      <div class="path-role">Venture Investing</div>
+      <div class="path-org">Current</div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="aside-section">
+  <div class="aside-label">Elsewhere</div>
+  <div class="aside-content">
+    <div class="aside-item">History &<br>philosophy of science</div>
+    <div class="aside-item">Occasional<br>writing</div>
+    <div class="aside-item">Distance<br>running</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-contact">
+    <a href="mailto:hello@jimmycho.com">hello@jimmycho.com</a>
+  </div>
+  <div class="footer-right">
+    <span class="footer-location">Singapore</span>
+    <div class="footer-mark"></div>
+  </div>
+</footer>
+
+</body>
+</html>
