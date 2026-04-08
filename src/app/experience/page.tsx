@@ -14,6 +14,7 @@ export default function ExperiencePage() {
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           cv
         </h1>
+        <div className="w-8 h-px bg-accent opacity-55 my-4" />
         <p className="font-sans text-[15px] text-faint italic">
           roles, education, and the work behind the work.
         </p>
@@ -40,6 +41,7 @@ export default function ExperiencePage() {
           {/* Roles */}
           <section id="roles" className="mb-20 sm:mb-24">
             <div className="flex items-center gap-5 mb-12">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
               <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                 Roles
               </p>
@@ -72,6 +74,7 @@ export default function ExperiencePage() {
           {/* Education */}
           <section id="education">
             <div className="flex items-center gap-5 mb-12">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
               <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                 Education
               </p>

@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: Props) {
 
       {/* Content */}
       <div className="px-1">
-        <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-faint italic mb-3">
+        <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent/70 mb-3">
           {project.category}
         </p>
         <h3 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-[1.3] mb-3">

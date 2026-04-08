@@ -13,6 +13,7 @@ export default function ContactPage() {
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           contact
         </h1>
+        <div className="w-8 h-px bg-accent opacity-55 my-4" />
         <p className="font-sans text-[15px] text-faint italic">
           open to investing, advisory, and interesting conversations.
         </p>
@@ -22,11 +23,14 @@ export default function ContactPage() {
       {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[900px]">
 
-        <p className="font-sans text-[16px] leading-[1.9] text-muted">
-          Open to conversations about investing, strategy, and interesting
-          company-building — especially in Southeast Asia and emerging markets.
-          If you&apos;re building something ambitious, I&apos;d like to hear from you.
-        </p>
+        <div className="relative pl-7">
+          <div className="absolute left-0 top-2 w-0.5 h-10 bg-accent opacity-40" />
+          <p className="font-sans text-[16px] leading-[1.9] text-muted">
+            Open to conversations about investing, strategy, and interesting
+            company-building — especially in Southeast Asia and emerging markets.
+            If you&apos;re building something ambitious, I&apos;d like to hear from you.
+          </p>
+        </div>
 
         <div className="space-y-12">
           <div>

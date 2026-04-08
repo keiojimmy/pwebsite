@@ -17,6 +17,7 @@ export default function WorkPage() {
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           projects
         </h1>
+        <div className="w-8 h-px bg-accent opacity-55 my-4" />
         <p className="font-sans text-[15px] text-faint italic">
           selected work across strategy, investing, and operations.
         </p>
@@ -31,6 +32,7 @@ export default function WorkPage() {
             <div key={section}>
               {/* Section label */}
               <div className="flex items-center gap-5 mb-10 sm:mb-12">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
                 <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                   {section}
                 </p>

@@ -78,7 +78,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
                 key={href}
                 href={href}
                 className={`font-sans text-[14px] tracking-[0.02em] transition-colors duration-500 ${
-                  isActive ? "text-ink" : "text-faint hover:text-accent"
+                  isActive ? "text-accent" : "text-faint hover:text-accent"
                 }`}
               >
                 {label}
@@ -128,7 +128,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
               key={href}
               href={href}
               className={`flex-1 text-center py-3 font-sans text-[12px] tracking-[0.02em] transition-colors ${
-                isActive ? "text-ink" : "text-faint hover:text-accent"
+                isActive ? "text-accent" : "text-faint hover:text-accent"
               }`}
             >
               {label}

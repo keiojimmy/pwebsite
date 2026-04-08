@@ -8,18 +8,19 @@ export default function HomePage() {
   return (
     <div>
       {/* ——— Hero ——— */}
-      <section className="min-h-screen grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 items-end pb-16 sm:pb-20 md:pb-20">
-        <div className="pb-2 max-w-xl pt-40 md:pt-0">
-          <h1 className="font-serif text-[58px] sm:text-[68px] md:text-[72px] font-light leading-[1.02] tracking-[-0.03em] text-ink mb-10 sm:mb-12">
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end">
+        <div className="pb-2 max-w-xl">
+          <h1 className="font-serif text-[58px] sm:text-[68px] md:text-[72px] font-light leading-[1.02] tracking-[-0.03em] text-ink mb-5 sm:mb-6">
             Jimmy<br />Cho
           </h1>
+          <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
           <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-md">
             Investor and operator building at the intersection of technology and
             emerging markets across Southeast Asia.
           </p>
         </div>
 
-        <div className="hidden md:flex justify-end items-end pt-36 self-stretch">
+        <div className="hidden md:flex justify-end items-end pt-16 self-stretch">
           <div className="relative w-72 lg:w-80">
             {/* Red accent line — left of photo */}
             <div className="absolute top-6 -left-4 w-0.5 h-16 bg-accent opacity-70" />
