@@ -56,7 +56,7 @@ export default function Nav({
                 href={href}
                 className={`font-sans text-sm transition-colors ${
                   isActive
-                    ? "text-ink underline underline-offset-4 decoration-ink"
+                    ? "text-accent underline underline-offset-4 decoration-accent"
                     : "text-muted hover:text-ink"
                 }`}
               >

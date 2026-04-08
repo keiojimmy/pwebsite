@@ -9,7 +9,7 @@ export default function ContactPage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-5xl text-ink">Contact</h1>
+        <h1 className="font-serif font-normal text-5xl text-ink">Contact</h1>
       </div>
 
       <div className="flex gap-16">
@@ -31,7 +31,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="mailto:hello@jimmycho.com"
-                className="font-serif font-light text-2xl text-ink hover:text-muted transition-colors"
+                className="font-serif font-normal text-2xl text-ink hover:text-muted transition-colors"
               >
                 hello@jimmycho.com
               </a>
@@ -43,7 +43,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="https://linkedin.com/in/jimmycho"
-                className="font-serif font-light text-2xl text-ink hover:text-muted transition-colors"
+                className="font-serif font-normal text-2xl text-ink hover:text-muted transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -55,7 +55,7 @@ export default function ContactPage() {
               <p className="font-sans text-xs uppercase tracking-widest text-muted mb-2">
                 Based in
               </p>
-              <p className="font-serif font-light text-2xl text-ink">
+              <p className="font-serif font-normal text-2xl text-ink">
                 Singapore
               </p>
             </div>

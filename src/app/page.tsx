@@ -8,13 +8,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 pt-24 pb-28">
-        <p className="font-sans text-xs uppercase tracking-widest text-muted mb-6">
+        <p className="font-sans text-xs uppercase tracking-widest text-accent mb-6">
           Investor&nbsp;·&nbsp;Operator&nbsp;·&nbsp;Strategist
         </p>
-        <h1 className="font-serif font-light text-[72px] leading-none text-ink mb-8">
+        <h1 className="font-serif font-normal text-[72px] leading-[1.05] text-ink mb-8">
           Jimmy Cho
         </h1>
-        <p className="font-sans text-base leading-relaxed text-muted max-w-xl">
+        <p className="font-sans text-base leading-[1.85] text-muted max-w-xl">
           I build and back technology companies in Southeast Asia. Over the past
           decade I&apos;ve worked across venture, strategy consulting, and
           operating roles — with a focus on finding and scaling businesses at
@@ -91,7 +91,7 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="font-serif font-light text-4xl text-ink mb-4">
+        <h2 className="font-serif font-normal text-4xl text-ink mb-4">
           Get in touch
         </h2>
         <p className="font-sans text-sm text-muted mb-8 max-w-sm">

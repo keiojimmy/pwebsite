@@ -10,7 +10,7 @@ export default function WorkPage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-5xl text-ink">Work</h1>
+        <h1 className="font-serif font-normal text-5xl text-ink">Work</h1>
       </div>
 
       {/* Two-column layout */}
@@ -37,17 +37,17 @@ export default function WorkPage() {
             <article key={project.id} className="py-8 group">
               <div className="flex items-start gap-6">
                 {/* Year badge */}
-                <span className="font-sans text-xs px-2.5 py-1 bg-surface text-muted rounded-sm shrink-0 mt-1">
+                <span className="font-sans text-xs px-2.5 py-1 bg-accent text-bg rounded-sm shrink-0 mt-1">
                   {project.year}
                 </span>
 
                 {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-baseline justify-between gap-4 mb-2">
-                    <h2 className="font-serif font-light text-2xl text-ink leading-snug">
+                    <h2 className="font-serif font-normal text-2xl text-ink leading-snug">
                       {project.title}
                     </h2>
-                    <span className="font-sans text-xs uppercase tracking-widest text-muted shrink-0">
+                    <span className="font-sans text-xs uppercase tracking-widest text-accent shrink-0">
                       {project.category}
                     </span>
                   </div>

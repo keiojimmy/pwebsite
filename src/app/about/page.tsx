@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-5xl text-ink">About</h1>
+        <h1 className="font-serif font-normal text-5xl text-ink">About</h1>
       </div>
 
       <div className="flex gap-16">
