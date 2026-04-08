@@ -11,7 +11,7 @@ export default function ExperiencePage() {
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
         <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">cv</h1>
-        <p className="mt-2 font-sans text-sm text-accent">Roles, education, and the work behind the work.</p>
+        <p className="mt-2 font-sans text-sm text-accent">roles, education, and the work behind the work.</p>
       </div>
 
       <div className="flex gap-16">

@@ -10,7 +10,7 @@ export default function ContactPage() {
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
         <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">contact</h1>
-        <p className="mt-2 font-sans text-sm text-accent">Open to investing, advisory, and interesting conversations.</p>
+        <p className="mt-2 font-sans text-sm text-accent">open to investing, advisory, and interesting conversations.</p>
       </div>
 
       <div className="flex gap-16">

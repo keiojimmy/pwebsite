@@ -11,7 +11,7 @@ export default function WorkPage() {
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
         <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">projects</h1>
-        <p className="mt-2 font-sans text-sm text-accent">Projects across strategy, investing, and operations.</p>
+        <p className="mt-2 font-sans text-sm text-accent">projects across strategy, investing, and operations.</p>
       </div>
 
       {/* Two-column layout */}
