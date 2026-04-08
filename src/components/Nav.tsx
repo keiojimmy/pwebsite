@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "/about", label: "about" },
+  { href: "/", label: "about" },
   { href: "/work", label: "work" },
   { href: "/experience", label: "experience" },
   { href: "/contact", label: "contact" },
@@ -76,7 +76,9 @@ export default function Nav({
           {/* Nav links */}
           {links.map(({ href, label }) => {
             const isActive =
-              pathname === href || pathname.startsWith(href + "/");
+              href === "/"
+                ? pathname === "/"
+                : pathname === href || pathname.startsWith(href + "/");
             return (
               <Link
                 key={href}

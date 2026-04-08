@@ -1,120 +1,63 @@
-import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
-import { featuredProjects } from "@/data/projects";
-import { experiences } from "@/data/experience";
+import type { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Jimmy Cho",
+};
+
+export default function HomePage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-28">
-        <p className="font-sans text-xs uppercase tracking-widest text-accent mb-6">
-          Investor&nbsp;·&nbsp;Operator&nbsp;·&nbsp;Strategist
-        </p>
-        <h1 className="font-serif font-light text-[42px] leading-[1.1] tracking-tight text-ink mb-8">
+    <div className="max-w-5xl mx-auto px-6 py-16">
+      {/* Page header */}
+      <div className="mb-16 pb-8 border-b border-border">
+        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">
           Jimmy Cho
         </h1>
-        <p className="font-sans text-base leading-[1.85] text-muted max-w-xl">
-          I build and back technology companies in Southeast Asia. Over the past
-          decade I&apos;ve worked across venture, strategy consulting, and
-          operating roles — with a focus on finding and scaling businesses at
-          the intersection of technology and emerging markets.
-        </p>
-      </section>
+      </div>
 
-      {/* Divider */}
-      <div className="border-t border-border" />
+      <div className="flex gap-16">
+        {/* Left sidebar */}
+        <aside className="w-40 shrink-0" />
 
-      {/* Selected Work */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-baseline justify-between mb-12">
-          <h2 className="font-sans text-xs uppercase tracking-widest text-muted">
-            Selected Work
-          </h2>
-          <Link
-            href="/work"
-            className="font-sans text-xs text-muted hover:text-ink transition-colors"
-          >
-            All Work →
-          </Link>
+        {/* Main content */}
+        <div className="flex-1 max-w-2xl">
+          <div className="space-y-6 font-sans text-base leading-relaxed text-ink">
+            <p>
+              I&apos;m Jimmy Cho — an investor and operator focused on
+              technology and emerging markets. I spend most of my time in
+              Southeast Asia, where I&apos;ve built and backed businesses across
+              fintech, B2B software, and consumer technology.
+            </p>
+            <p>
+              My path has been deliberately varied: investment banking at
+              Goldman Sachs, management consulting at McKinsey, operational
+              leadership at a high-growth startup, and now venture investing. I
+              don&apos;t think these are separate careers — they&apos;re
+              different vantage points on the same question of what makes
+              businesses work.
+            </p>
+            <p>
+              I care most about the early, hard stages of company building — the
+              period where the decisions that determine long-term outcomes are
+              made with the least information. That&apos;s where I think I can
+              add the most value, both as an investor and as an operator.
+            </p>
+            <p>
+              Outside of work, I&apos;m a reader (mostly history and philosophy
+              of science), an occasional writer, and a slow but enthusiastic
+              distance runner.
+            </p>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-border">
+            <p className="font-sans text-xs uppercase tracking-widest text-muted mb-6">
+              Currently
+            </p>
+            <p className="font-sans text-sm text-ink">
+              Partner at [Firm Name], Singapore
+            </p>
+          </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="border-t border-border" />
-
-      {/* Experience Snapshot */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex items-baseline justify-between mb-12">
-          <h2 className="font-sans text-xs uppercase tracking-widest text-muted">
-            Experience
-          </h2>
-          <Link
-            href="/experience"
-            className="font-sans text-xs text-muted hover:text-ink transition-colors"
-          >
-            Full Experience →
-          </Link>
-        </div>
-
-        <div className="divide-y divide-border">
-          {experiences.map((exp) => (
-            <div
-              key={`${exp.company}-${exp.dates}`}
-              className="flex items-baseline justify-between py-5 gap-8"
-            >
-              <div>
-                <span className="font-sans text-sm font-medium text-ink">
-                  {exp.role}
-                </span>
-                <span className="font-sans text-sm text-muted">
-                  {" "}
-                  — {exp.company}
-                </span>
-              </div>
-              <span className="font-sans text-xs text-muted shrink-0">
-                {exp.dates}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="border-t border-border" />
-
-      {/* Contact CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="font-serif font-light text-2xl text-ink mb-4">
-          Get in touch
-        </h2>
-        <p className="font-sans text-sm text-muted mb-8 max-w-sm">
-          Open to conversations about investing, strategy, and interesting
-          company-building.
-        </p>
-        <div className="flex gap-8">
-          <a
-            href="mailto:hello@jimmycho.com"
-            className="font-sans text-sm text-ink underline underline-offset-4 hover:text-muted transition-colors"
-          >
-            hello@jimmycho.com
-          </a>
-          <a
-            href="https://linkedin.com/in/jimmycho"
-            className="font-sans text-sm text-ink underline underline-offset-4 hover:text-muted transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
