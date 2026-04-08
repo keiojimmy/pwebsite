@@ -29,6 +29,17 @@ export default function ClientShell({
       <Nav onSearchOpen={() => setSearchOpen(true)} />
       <main className="flex-1">{children}</main>
       <Footer />
+
+      {/* Hanko seal — fixed bottom left */}
+      <div
+        className="fixed bottom-12 left-12 z-40 hidden sm:flex items-center justify-center w-9 h-9 border border-accent/35 rounded-sm opacity-35 hover:opacity-70 transition-opacity duration-500 cursor-default select-none"
+        aria-hidden="true"
+      >
+        <span className="font-serif text-[13px] text-accent font-medium leading-none tracking-[-0.05em]">
+          JC
+        </span>
+      </div>
+
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );

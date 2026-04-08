@@ -6,47 +6,48 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div className="px-8 sm:px-14 pt-36 sm:pt-40 pb-28 sm:pb-32 max-w-[1200px]">
 
       {/* Page header */}
-      <div className="mb-12 sm:mb-16">
-        <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink">
+      <div className="mb-20 sm:mb-24">
+        <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           contact
         </h1>
-        <p className="mt-2 font-sans text-[13px] text-muted">
+        <p className="font-sans text-[15px] text-faint italic">
           open to investing, advisory, and interesting conversations.
         </p>
-        <div className="mt-6 h-px bg-border" />
+        <div className="mt-8 h-px bg-border" />
       </div>
 
       {/* Content */}
-      <div className="max-w-lg">
-        <p className="font-sans text-[15px] text-muted leading-[1.8] mb-12 sm:mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[900px]">
+
+        <p className="font-sans text-[16px] leading-[1.9] text-muted">
           Open to conversations about investing, strategy, and interesting
-          company-building — especially in Southeast Asia and emerging
-          markets.
+          company-building — especially in Southeast Asia and emerging markets.
+          If you&apos;re building something ambitious, I&apos;d like to hear from you.
         </p>
 
-        <div className="space-y-10">
+        <div className="space-y-12">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
+            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
               Email
             </p>
             <a
               href="mailto:hello@jimmycho.com"
-              className="font-serif text-xl sm:text-2xl text-ink hover:text-accent transition-colors break-all"
+              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent border-b border-transparent hover:border-accent/30 transition-all duration-500 pb-0.5 break-all"
             >
               hello@jimmycho.com
             </a>
           </div>
 
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
+            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
               LinkedIn
             </p>
             <a
               href="https://linkedin.com/in/jimmycho"
-              className="font-serif text-xl sm:text-2xl text-ink hover:text-accent transition-colors break-all"
+              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent border-b border-transparent hover:border-accent/30 transition-all duration-500 pb-0.5 break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,10 +56,10 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
+            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
               Based in
             </p>
-            <p className="font-serif text-xl sm:text-2xl text-ink">
+            <p className="font-serif text-[22px] sm:text-[24px] font-light text-ink">
               Singapore
             </p>
           </div>

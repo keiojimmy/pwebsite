@@ -7,63 +7,61 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div className="px-8 sm:px-14 pt-36 sm:pt-40 pb-28 sm:pb-32 max-w-[1200px]">
 
       {/* Page header */}
-      <div className="mb-12 sm:mb-16">
-        <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink">
+      <div className="mb-20 sm:mb-24">
+        <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           cv
         </h1>
-        <p className="mt-2 font-sans text-[13px] text-muted">
+        <p className="font-sans text-[15px] text-faint italic">
           roles, education, and the work behind the work.
         </p>
-        <div className="mt-6 h-px bg-border" />
+        <div className="mt-8 h-px bg-border" />
       </div>
 
-      {/* Two-column layout — stacks on mobile */}
-      <div className="flex flex-col sm:flex-row sm:gap-16">
+      {/* Two-column layout */}
+      <div className="flex flex-col sm:flex-row sm:gap-20">
 
-        {/* Sidebar — shown above on mobile */}
-        <aside className="w-full sm:w-40 sm:shrink-0 mb-8 sm:mb-0">
-          <nav className="flex gap-6 sm:flex-col sm:gap-0 sm:space-y-1.5 sm:sticky sm:top-20">
-            <a href="#roles" className="font-sans text-[13px] text-muted hover:text-ink transition-colors py-0.5">
+        {/* Sidebar */}
+        <aside className="w-full sm:w-36 sm:shrink-0 mb-10 sm:mb-0">
+          <nav className="flex gap-8 sm:flex-col sm:gap-0 sm:space-y-2 sm:sticky sm:top-24">
+            <a href="#roles" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
               Roles
             </a>
-            <a href="#education" className="font-sans text-[13px] text-muted hover:text-ink transition-colors py-0.5">
+            <a href="#education" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
               Education
             </a>
           </nav>
         </aside>
 
-        {/* Main content */}
         <div className="flex-1">
 
           {/* Roles */}
-          <section id="roles" className="mb-16 sm:mb-20">
-            <div className="flex items-center gap-4 mb-8">
-              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted whitespace-nowrap">
+          <section id="roles" className="mb-20 sm:mb-24">
+            <div className="flex items-center gap-5 mb-12">
+              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                 Roles
               </p>
               <div className="flex-1 h-px bg-border" />
             </div>
             <div className="divide-y divide-border">
               {experiences.map((exp) => (
-                <div key={`${exp.company}-${exp.dates}`} className="py-7 sm:py-8">
-                  {/* Role + dates — stacks on mobile */}
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-2 sm:mb-3">
+                <div key={`${exp.company}-${exp.dates}`} className="py-8 sm:py-10">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-3">
                     <div>
-                      <h2 className="font-serif text-lg sm:text-xl text-ink leading-tight">
+                      <h2 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-tight">
                         {exp.role}
                       </h2>
-                      <p className="font-sans text-[13px] text-muted mt-1">
+                      <p className="font-sans text-[14.5px] text-faint italic mt-1">
                         {exp.company}{exp.location && ` · ${exp.location}`}
                       </p>
                     </div>
-                    <span className="font-sans text-[12px] text-muted/70 mt-1 sm:mt-0 sm:shrink-0 sm:pt-1.5">
+                    <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
                       {exp.dates}
                     </span>
                   </div>
-                  <p className="font-sans text-[14px] text-muted leading-relaxed">
+                  <p className="font-sans text-[14.5px] text-muted leading-[1.85]">
                     {exp.description}
                   </p>
                 </div>
@@ -73,25 +71,25 @@ export default function ExperiencePage() {
 
           {/* Education */}
           <section id="education">
-            <div className="flex items-center gap-4 mb-8">
-              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted whitespace-nowrap">
+            <div className="flex items-center gap-5 mb-12">
+              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                 Education
               </p>
               <div className="flex-1 h-px bg-border" />
             </div>
             <div className="divide-y divide-border">
               {education.map((edu) => (
-                <div key={`${edu.school}-${edu.year}`} className="py-7 sm:py-8">
+                <div key={`${edu.school}-${edu.year}`} className="py-8 sm:py-10">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8">
                     <div>
-                      <h2 className="font-serif text-lg sm:text-xl text-ink leading-tight">
+                      <h2 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-tight">
                         {edu.degree}
                       </h2>
-                      <p className="font-sans text-[13px] text-muted mt-1">
+                      <p className="font-sans text-[14.5px] text-faint italic mt-1">
                         {edu.school}{edu.note && ` · ${edu.note}`}
                       </p>
                     </div>
-                    <span className="font-sans text-[12px] text-muted/70 mt-1 sm:mt-0 sm:shrink-0 sm:pt-1.5">
+                    <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
                       {edu.year}
                     </span>
                   </div>

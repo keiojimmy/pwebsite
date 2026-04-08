@@ -6,78 +6,115 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-
-      {/* Name */}
-      <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink mb-2">
-        jimmy cho
-      </h1>
-
-      {/* Accent subtitle */}
-      <p className="font-sans text-[13px] text-muted mb-10 sm:mb-14 flex flex-wrap gap-x-2">
-        <span>[Firm Name]</span>
-        <span className="text-border">·</span>
-        <span>Singapore</span>
-        <span className="text-border">·</span>
-        <a href="mailto:hello@jimmycho.com" className="text-accent hover:text-ink transition-colors">
-          hello@jimmycho.com
-        </a>
-      </p>
-
-      {/* Bio + photo — stacks on mobile, side by side on sm+ */}
-      <div className="flex flex-col sm:flex-row sm:gap-14 gap-10 mb-12 sm:mb-16">
-        {/* Bio text */}
-        <div className="flex-1 space-y-5 font-sans text-[15px] leading-[1.8] text-ink/85">
-          <p>
-            I&apos;m Jimmy Cho — an investor and operator focused on
-            technology and emerging markets. I spend most of my time in
-            Southeast Asia, where I&apos;ve built and backed businesses across
-            fintech, B2B software, and consumer technology.
-          </p>
-          <p>
-            My path has been deliberately varied: investment banking at
-            Goldman Sachs, management consulting at McKinsey, operational
-            leadership at a high-growth startup, and now venture investing. I
-            don&apos;t think these are separate careers — they&apos;re
-            different vantage points on the same question of what makes
-            businesses work.
-          </p>
-          <p>
-            I care most about the early, hard stages of company building — the
-            period where the decisions that determine long-term outcomes are
-            made with the least information. That&apos;s where I think I can
-            add the most value, both as an investor and as an operator.
-          </p>
-          <p>
-            Outside of work, I&apos;m a reader (mostly history and philosophy
-            of science), an occasional writer, and a slow but enthusiastic
-            distance runner.
+    <div>
+      {/* ——— Hero ——— */}
+      <section className="min-h-screen grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 items-end pb-16 sm:pb-20 md:pb-20">
+        <div className="pb-2 max-w-xl pt-40 md:pt-0">
+          <h1 className="font-serif text-[58px] sm:text-[68px] md:text-[72px] font-light leading-[1.02] tracking-[-0.03em] text-ink mb-10 sm:mb-12">
+            Jimmy<br />Cho
+          </h1>
+          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-md">
+            Investor and operator building at the intersection of technology and
+            emerging markets across Southeast Asia.
           </p>
         </div>
 
-        {/* Profile photo */}
-        <div className="w-full sm:w-60 sm:shrink-0 self-start">
-          <div className="w-full aspect-[3/4] bg-surface flex items-center justify-center">
-            <span className="font-sans text-xs text-muted">photo</span>
+        <div className="hidden md:flex justify-end items-end pt-36 self-stretch">
+          <div className="relative w-72 lg:w-80">
+            {/* Red accent line — left of photo */}
+            <div className="absolute top-6 -left-4 w-0.5 h-16 bg-accent opacity-70" />
+            <div className="w-full aspect-[340/460] bg-surface flex items-end p-7">
+              <span className="font-sans text-[11px] tracking-[0.15em] text-ghost lowercase italic">portrait</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Divider */}
-      <div className="h-px bg-border mb-10 sm:mb-12" />
+      <div className="mx-8 sm:mx-14 h-px bg-border" />
 
-      {/* Photo grid — 3 cols on mobile, 5 on sm+ */}
-      <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div
-            key={i}
-            className="aspect-square bg-surface flex items-center justify-center"
-          >
-            <span className="font-sans text-xs text-muted/50">{i + 1}</span>
-          </div>
-        ))}
-      </div>
+      {/* ——— Belief ——— */}
+      <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[1200px]">
+        {/* Italic statement with red left border */}
+        <div className="relative pl-7">
+          <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-45" />
+          <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
+            I care most about the early, hard stages — where long-term outcomes
+            are shaped with the least information.
+          </p>
+        </div>
 
+        {/* Body */}
+        <div className="pt-0 md:pt-2.5 space-y-5">
+          <p className="font-sans text-[15.5px] leading-[1.9] text-muted max-w-md">
+            My career has been deliberately varied, not out of restlessness, but
+            from a belief that the question of what makes businesses work is best
+            understood from multiple vantage points.
+          </p>
+          <p className="font-sans text-[15.5px] leading-[1.9] text-muted max-w-md">
+            I&apos;ve underwritten risk, advised on strategy, operated through
+            rapid scale, and now invest at the earliest stages. Each chapter
+            sharpened a different instinct. Together, they form a point of view.
+          </p>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-8 sm:mx-14 h-px bg-border" />
+
+      {/* ——— Path ——— */}
+      <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-28 sm:pb-32 max-w-[1200px]">
+        <p className="font-sans text-[12px] uppercase tracking-[0.15em] text-ghost italic mb-16">
+          Path
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-border">
+          {[
+            { index: "I", role: "Investment Banking", org: "Goldman Sachs" },
+            { index: "II", role: "Management Consulting", org: "McKinsey & Company" },
+            { index: "III", role: "Operational Leadership", org: "High-growth startup" },
+            { index: "IV", role: "Venture Investing", org: "Current" },
+          ].map((item, i, arr) => (
+            <div
+              key={item.index}
+              className={`group relative py-10 pr-8 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
+                i < arr.length - 1 ? "border-r border-border" : ""
+              }`}
+            >
+              <div className="font-serif text-[26px] font-light text-border group-hover:text-accent/20 mb-6 transition-colors duration-500">
+                {item.index}
+              </div>
+              <div className="font-sans text-[15px] text-ink mb-1">{item.role}</div>
+              <div className="font-sans text-[14px] text-faint italic">{item.org}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="mx-8 sm:mx-14 h-px bg-border" />
+
+      {/* ——— Elsewhere ——— */}
+      <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[0.4fr_1fr] gap-12 md:gap-20 max-w-[1200px]">
+        <div>
+          <p className="font-sans text-[12px] uppercase tracking-[0.15em] text-ghost italic pt-1">
+            Elsewhere
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-12 sm:gap-16">
+          {[
+            "History &\nphilosophy of science",
+            "Occasional\nwriting",
+            "Distance\nrunning",
+          ].map((item) => (
+            <div key={item} className="font-sans text-[15.5px] text-muted leading-[1.5]">
+              <div className="w-3.5 h-px bg-accent opacity-30 mb-3.5" />
+              {item.split("\n").map((line, i) => (
+                <span key={i}>{line}{i === 0 && <br />}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

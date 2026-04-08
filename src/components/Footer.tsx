@@ -1,26 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border mt-16 sm:mt-24">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10 flex items-center justify-between">
-        <p className="font-sans text-[11px] text-muted/60">
-          © {new Date().getFullYear()} Jimmy Cho
-        </p>
-        <div className="flex gap-5 sm:gap-6">
-          <a
-            href="mailto:hello@jimmycho.com"
-            className="font-sans text-[11px] text-muted/60 hover:text-ink transition-colors"
-          >
-            Email
-          </a>
-          <a
-            href="https://linkedin.com/in/jimmycho"
-            className="font-sans text-[11px] text-muted/60 hover:text-ink transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
+    <footer className="px-8 sm:px-14 py-10 sm:py-11 flex items-baseline justify-between border-t border-border mb-12 sm:mb-0">
+      <a
+        href="mailto:hello@jimmycho.com"
+        className="font-sans text-[15px] text-muted hover:text-accent border-b border-transparent hover:border-accent transition-all duration-400"
+      >
+        hello@jimmycho.com
+      </a>
+      <div className="flex items-center gap-8 sm:gap-9">
+        <span className="font-sans text-[13px] tracking-[0.08em] text-ghost italic">
+          Singapore
+        </span>
+        <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-30" />
       </div>
     </footer>
   );

@@ -10,35 +10,35 @@ export default function WorkPage() {
   const sections = Array.from(new Set(projects.map((p) => p.section)));
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div className="px-8 sm:px-14 pt-36 sm:pt-40 pb-28 sm:pb-32 max-w-[1200px]">
 
       {/* Page header */}
-      <div className="mb-12 sm:mb-16">
-        <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink">
+      <div className="mb-20 sm:mb-24">
+        <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           projects
         </h1>
-        <p className="mt-2 font-sans text-[13px] text-muted">
+        <p className="font-sans text-[15px] text-faint italic">
           selected work across strategy, investing, and operations.
         </p>
-        <div className="mt-6 h-px bg-border" />
+        <div className="mt-8 h-px bg-border" />
       </div>
 
       {/* Sections */}
-      <div className="space-y-16 sm:space-y-24">
+      <div className="space-y-20 sm:space-y-28">
         {sections.map((section) => {
           const sectionProjects = projects.filter((p) => p.section === section);
           return (
             <div key={section}>
-              {/* Section label with line */}
-              <div className="flex items-center gap-4 mb-8 sm:mb-10">
-                <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted whitespace-nowrap">
+              {/* Section label */}
+              <div className="flex items-center gap-5 mb-10 sm:mb-12">
+                <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
                   {section}
                 </p>
                 <div className="flex-1 h-px bg-border" />
               </div>
 
-              {/* Card grid — 1 col mobile, 2 col sm, 3 col md+ */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+              {/* Card grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12">
                 {sectionProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
@@ -47,7 +47,6 @@ export default function WorkPage() {
           );
         })}
       </div>
-
     </div>
   );
 }

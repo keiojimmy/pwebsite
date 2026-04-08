@@ -6,23 +6,23 @@ type Props = {
 
 export default function ProjectCard({ project }: Props) {
   return (
-    <div className="group bg-bg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer overflow-hidden">
+    <div className="group cursor-pointer hover:bg-accent/[0.04] transition-colors duration-500">
       {/* Image area */}
-      <div className="aspect-[4/3] bg-surface flex items-center justify-center overflow-hidden">
-        <span className="font-sans text-xs text-muted/40 group-hover:text-accent/40 transition-colors">
+      <div className="aspect-[4/3] bg-surface flex items-end p-5 overflow-hidden mb-5">
+        <span className="font-sans text-[11px] tracking-[0.12em] text-ghost italic lowercase">
           {project.year}
         </span>
       </div>
 
       {/* Content */}
-      <div className="p-5 sm:p-6">
-        <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-accent mb-3">
+      <div className="px-1">
+        <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-faint italic mb-3">
           {project.category}
         </p>
-        <h3 className="font-serif text-lg sm:text-xl text-ink leading-snug mb-2">
+        <h3 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-[1.3] mb-3">
           {project.title}
         </h3>
-        <p className="font-sans text-[13px] text-muted leading-relaxed">
+        <p className="font-sans text-[14.5px] text-muted leading-[1.85]">
           {project.description}
         </p>
       </div>

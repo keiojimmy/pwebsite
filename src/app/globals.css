@@ -1,29 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "EB Garamond", Georgia, serif;
 
-  /* 和 palette — refined */
-  --color-bg: #fafaf6;         /* 生成 kinari — near-white with warmth */
-  --color-ink: #181512;        /* 墨 sumi — rich warm black */
-  --color-muted: #9b8e82;      /* warm gray */
-  --color-border: #e8e0d6;     /* soft divider */
-  --color-surface: #f2ede5;    /* card / section bg */
-  --color-accent: #b8261a;     /* 朱 shu-iro — refined vermilion */
+  /* 和 design system */
+  --color-bg: #f4f1eb;
+  --color-ink: #1c1c1c;
+  --color-muted: #6b6860;       /* ink-light */
+  --color-faint: #a8a49b;       /* ink-faint */
+  --color-ghost: #ccc8c0;       /* ink-ghost */
+  --color-border: #ddd9d2;      /* ink-whisper — dividers */
+  --color-surface: #edeae3;     /* bg-warm — photo/card bg */
+  --color-accent: #b83a2a;      /* 朱 shu-iro */
 }
 
 /* Dark mode */
 html.dark {
-  --color-bg: #0f0e0d;
-  --color-ink: #ede7de;
+  --color-bg: #141210;
+  --color-ink: #e8e2d9;
   --color-muted: #8a7d72;
-  --color-border: #2a2522;
-  --color-surface: #1a1816;
-  --color-accent: #d4362a;
+  --color-faint: #6b6558;
+  --color-ghost: #4a4540;
+  --color-border: #2e2a26;
+  --color-surface: #1c1916;
+  --color-accent: #d4402e;
 }
 
 *,
@@ -33,6 +37,7 @@ html.dark {
 }
 
 html {
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,16 +45,30 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
+  font-family: var(--font-sans);
   line-height: 1.75;
+  overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* Subtle paper grain texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 1;
+}
+
 ::selection {
-  background-color: var(--color-accent);
-  color: #fff;
+  background-color: rgba(184, 58, 42, 0.08);
+  color: var(--color-ink);
 }
 
 a,
 button {
-  transition: color 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+  transition: color 0.4s ease, opacity 0.3s ease, border-color 0.4s ease;
 }
