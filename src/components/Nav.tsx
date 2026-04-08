@@ -35,11 +35,7 @@ function MoonIcon() {
   );
 }
 
-export default function Nav({
-  onSearchOpen,
-}: {
-  onSearchOpen: () => void;
-}) {
+export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
   const pathname = usePathname();
   const [dark, setDark] = useState(false);
 
@@ -60,30 +56,27 @@ export default function Nav({
 
   return (
     <header className="sticky top-0 z-50 bg-bg border-b border-border">
-      <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <nav className="max-w-5xl mx-auto px-4 sm:px-6 h-12 sm:h-14 flex items-center justify-between">
+
         {/* Name — hidden on homepage */}
-        {pathname !== "/" && (
-          <Link
-            href="/"
-            className="font-sans text-sm font-normal text-muted hover:text-ink transition-colors"
-          >
+        {pathname !== "/" ? (
+          <Link href="/" className="font-sans text-sm font-normal text-muted hover:text-ink transition-colors">
             jimmy cho
           </Link>
+        ) : (
+          <span />
         )}
-        {pathname === "/" && <span />}
 
-        <div className="flex items-center gap-7">
-          {/* Nav links */}
+        <div className="flex items-center gap-4 sm:gap-7">
+          {/* Nav links — hidden on mobile, shown sm+ */}
           {links.map(({ href, label }) => {
             const isActive =
-              href === "/"
-                ? pathname === "/"
-                : pathname === href || pathname.startsWith(href + "/");
+              href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
             return (
               <Link
                 key={href}
                 href={href}
-                className={`font-sans text-sm transition-colors ${
+                className={`hidden sm:block font-sans text-sm transition-colors ${
                   isActive
                     ? "text-accent underline underline-offset-4 decoration-accent"
                     : "text-muted hover:text-ink"
@@ -94,29 +87,44 @@ export default function Nav({
             );
           })}
 
-          {/* Search trigger — magnifying glass + ctrl k */}
+          {/* Search — icon always visible, "ctrl k" text hidden on mobile */}
           <button
             onClick={onSearchOpen}
             className="flex items-center gap-1.5 font-sans text-xs text-muted hover:text-ink transition-colors"
             aria-label="Open search"
           >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
               <circle cx="5" cy="5" r="3.5"/>
               <line x1="7.5" y1="7.5" x2="11" y2="11"/>
             </svg>
-            ctrl k
+            <span className="hidden sm:inline">ctrl k</span>
           </button>
 
-          {/* Theme toggle — sun / moon */}
-          <button
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            className="text-muted hover:text-ink transition-colors"
-          >
+          {/* Theme toggle */}
+          <button onClick={toggleTheme} aria-label="Toggle theme" className="text-muted hover:text-ink transition-colors">
             {dark ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
       </nav>
+
+      {/* Mobile bottom nav — shown only on small screens */}
+      <div className="sm:hidden border-t border-border flex">
+        {links.map(({ href, label }) => {
+          const isActive =
+            href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
+          return (
+            <Link
+              key={href}
+              href={href}
+              className={`flex-1 text-center py-2.5 font-sans text-xs transition-colors ${
+                isActive ? "text-accent" : "text-muted hover:text-ink"
+              }`}
+            >
+              {label}
+            </Link>
+          );
+        })}
+      </div>
     </header>
   );
 }
