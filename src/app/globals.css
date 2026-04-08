@@ -7,23 +7,23 @@
   --font-serif: "Inter", system-ui, -apple-system, sans-serif;
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* 和 palette */
-  --color-bg: #f5f0e8;       /* washi — warm rice paper */
-  --color-ink: #1c1917;      /* sumi — warm near-black */
+  /* 和 palette — KBB-inspired */
+  --color-bg: #f8f4ee;       /* washi — light ivory, near-white */
+  --color-ink: #1a1514;      /* sumi — deep warm black */
   --color-muted: #7a6b5d;    /* warm gray-brown */
-  --color-border: #ddd5c8;   /* warm beige line */
-  --color-surface: #ede7dc;  /* slightly deeper washi */
-  --color-accent: #b85c38;   /* 柿渋 kakishibu — persimmon */
+  --color-border: #e2d8ce;   /* warm beige line */
+  --color-surface: #ede5d8;  /* slightly deeper ivory */
+  --color-accent: #c8271a;   /* 朱 shu-iro — vermilion red */
 }
 
 /* Dark mode */
 html.dark {
-  --color-bg: #13100e;
-  --color-ink: #eee8df;
+  --color-bg: #110e0c;
+  --color-ink: #f0eae1;
   --color-muted: #8a7b6e;
-  --color-border: #2e2620;
-  --color-surface: #1e1916;
-  --color-accent: #d4704a;
+  --color-border: #2c2420;
+  --color-surface: #1c1714;
+  --color-accent: #d93d2e;
 }
 
 *,
