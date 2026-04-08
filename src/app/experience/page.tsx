@@ -10,7 +10,7 @@ export default function ExperiencePage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">experience</h1>
+        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">cv</h1>
         <p className="mt-2 font-sans text-sm text-accent">Roles, education, and the work behind the work.</p>
       </div>
 

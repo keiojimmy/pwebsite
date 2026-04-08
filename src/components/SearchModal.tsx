@@ -14,8 +14,8 @@ type SearchItem = {
 
 const searchIndex: SearchItem[] = [
   { group: "Navigation", label: "about", href: "/about" },
-  { group: "Navigation", label: "work", href: "/work" },
-  { group: "Navigation", label: "experience", href: "/experience" },
+  { group: "Navigation", label: "projects", href: "/work" },
+  { group: "Navigation", label: "cv", href: "/experience" },
   { group: "Navigation", label: "contact", href: "/contact" },
   ...projects.map((p) => ({
     group: "Work",
