@@ -10,7 +10,7 @@ export default function ExperiencePage() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Page header */}
       <div className="mb-16 pb-8 border-b border-border">
-        <h1 className="font-serif font-normal text-5xl text-ink">Experience</h1>
+        <h1 className="font-serif font-light text-[32px] tracking-tight text-ink">Experience</h1>
       </div>
 
       <div className="flex gap-16">
@@ -47,7 +47,7 @@ export default function ExperiencePage() {
                 >
                   <div className="flex items-start justify-between gap-8 mb-3">
                     <div>
-                      <h2 className="font-serif font-normal text-2xl text-ink leading-tight">
+                      <h2 className="font-serif font-normal text-lg text-ink leading-tight">
                         {exp.role}
                       </h2>
                       <p className="font-sans text-sm text-muted mt-0.5">
@@ -77,7 +77,7 @@ export default function ExperiencePage() {
                 <div key={`${edu.school}-${edu.year}`} className="py-8">
                   <div className="flex items-start justify-between gap-8">
                     <div>
-                      <h2 className="font-serif font-normal text-2xl text-ink leading-tight">
+                      <h2 className="font-serif font-normal text-lg text-ink leading-tight">
                         {edu.degree}
                       </h2>
                       <p className="font-sans text-sm text-muted mt-0.5">

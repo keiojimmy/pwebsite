@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: Props) {
         </span>
         <span className="font-sans text-xs text-muted shrink-0">{project.year}</span>
       </div>
-      <h3 className="font-serif text-xl font-normal text-ink leading-snug mb-3">
+      <h3 className="font-serif text-base font-normal text-ink leading-snug mb-3">
         {project.title}
       </h3>
       <p className="font-sans text-sm text-muted leading-relaxed">
