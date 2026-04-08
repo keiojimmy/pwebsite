@@ -9,39 +9,44 @@ export default function ContactPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
       {/* Page header */}
-      <div className="mb-10 sm:mb-16 pb-6 sm:pb-8 border-b border-border">
-        <h1 className="font-serif font-light text-[28px] sm:text-[32px] tracking-tight text-ink">contact</h1>
-        <p className="mt-1 font-sans text-sm text-accent">open to investing, advisory, and interesting conversations.</p>
+      <div className="mb-12 sm:mb-16">
+        <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink">
+          contact
+        </h1>
+        <p className="mt-2 font-sans text-[13px] text-muted">
+          open to investing, advisory, and interesting conversations.
+        </p>
+        <div className="mt-6 h-px bg-border" />
       </div>
 
-      {/* No sidebar on contact — full width content */}
-      <div className="max-w-md">
-        <p className="font-sans text-base text-muted leading-relaxed mb-10 sm:mb-16">
+      {/* Content */}
+      <div className="max-w-lg">
+        <p className="font-sans text-[15px] text-muted leading-[1.8] mb-12 sm:mb-16">
           Open to conversations about investing, strategy, and interesting
           company-building — especially in Southeast Asia and emerging
           markets.
         </p>
 
-        <div className="space-y-8">
+        <div className="space-y-10">
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-muted mb-2">
+            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
               Email
             </p>
             <a
               href="mailto:hello@jimmycho.com"
-              className="font-serif font-normal text-base sm:text-lg text-ink hover:text-muted transition-colors break-all"
+              className="font-serif text-xl sm:text-2xl text-ink hover:text-accent transition-colors break-all"
             >
               hello@jimmycho.com
             </a>
           </div>
 
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-muted mb-2">
+            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
               LinkedIn
             </p>
             <a
               href="https://linkedin.com/in/jimmycho"
-              className="font-serif font-normal text-base sm:text-lg text-ink hover:text-muted transition-colors break-all"
+              className="font-serif text-xl sm:text-2xl text-ink hover:text-accent transition-colors break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -50,10 +55,10 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-muted mb-2">
+            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
               Based in
             </p>
-            <p className="font-serif font-normal text-base sm:text-lg text-ink">
+            <p className="font-serif text-xl sm:text-2xl text-ink">
               Singapore
             </p>
           </div>

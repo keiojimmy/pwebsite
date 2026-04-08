@@ -1,29 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-serif: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* 和 palette — KBB-inspired */
-  --color-bg: #f8f4ee;       /* washi — light ivory, near-white */
-  --color-ink: #1a1514;      /* sumi — deep warm black */
-  --color-muted: #7a6b5d;    /* warm gray-brown */
-  --color-border: #e2d8ce;   /* warm beige line */
-  --color-surface: #ede5d8;  /* slightly deeper ivory */
-  --color-accent: #c8271a;   /* 朱 shu-iro — vermilion red */
+  /* 和 palette — refined */
+  --color-bg: #fafaf6;         /* 生成 kinari — near-white with warmth */
+  --color-ink: #181512;        /* 墨 sumi — rich warm black */
+  --color-muted: #9b8e82;      /* warm gray */
+  --color-border: #e8e0d6;     /* soft divider */
+  --color-surface: #f2ede5;    /* card / section bg */
+  --color-accent: #b8261a;     /* 朱 shu-iro — refined vermilion */
 }
 
 /* Dark mode */
 html.dark {
-  --color-bg: #110e0c;
-  --color-ink: #f0eae1;
-  --color-muted: #8a7b6e;
-  --color-border: #2c2420;
-  --color-surface: #1c1714;
-  --color-accent: #d93d2e;
+  --color-bg: #0f0e0d;
+  --color-ink: #ede7de;
+  --color-muted: #8a7d72;
+  --color-border: #2a2522;
+  --color-surface: #1a1816;
+  --color-accent: #d4362a;
 }
 
 *,
@@ -42,6 +42,11 @@ body {
   color: var(--color-ink);
   line-height: 1.75;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
 a,

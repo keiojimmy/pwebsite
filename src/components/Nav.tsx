@@ -13,7 +13,7 @@ const links = [
 
 function SunIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true">
       <circle cx="12" cy="12" r="5"/>
       <line x1="12" y1="1" x2="12" y2="3"/>
       <line x1="12" y1="21" x2="12" y2="23"/>
@@ -29,7 +29,7 @@ function SunIcon() {
 
 function MoonIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" aria-hidden="true">
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   );
@@ -55,19 +55,19 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-bg border-b border-border">
+    <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur-sm border-b border-border">
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 h-12 sm:h-14 flex items-center justify-between">
 
         {/* Name — hidden on homepage */}
         {pathname !== "/" ? (
-          <Link href="/" className="font-sans text-sm font-normal text-muted hover:text-ink transition-colors">
+          <Link href="/" className="font-serif text-base tracking-wide text-muted hover:text-ink transition-colors">
             jimmy cho
           </Link>
         ) : (
           <span />
         )}
 
-        <div className="flex items-center gap-4 sm:gap-7">
+        <div className="flex items-center gap-5 sm:gap-8">
           {/* Nav links — hidden on mobile, shown sm+ */}
           {links.map(({ href, label }) => {
             const isActive =
@@ -76,9 +76,9 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
               <Link
                 key={href}
                 href={href}
-                className={`hidden sm:block font-sans text-sm transition-colors ${
+                className={`hidden sm:block font-sans text-[13px] tracking-wide transition-colors ${
                   isActive
-                    ? "text-accent underline underline-offset-4 decoration-accent"
+                    ? "text-accent"
                     : "text-muted hover:text-ink"
                 }`}
               >
@@ -115,7 +115,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             <Link
               key={href}
               href={href}
-              className={`flex-1 text-center py-2.5 font-sans text-xs transition-colors ${
+              className={`flex-1 text-center py-2.5 font-sans text-[11px] tracking-wide transition-colors ${
                 isActive ? "text-accent" : "text-muted hover:text-ink"
               }`}
             >

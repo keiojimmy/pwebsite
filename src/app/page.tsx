@@ -9,25 +9,25 @@ export default function HomePage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
       {/* Name */}
-      <h1 className="font-sans font-light text-[28px] sm:text-[32px] leading-tight tracking-tight text-ink mb-1">
+      <h1 className="font-serif text-[36px] sm:text-[44px] font-light leading-[1.1] tracking-tight text-ink mb-2">
         jimmy cho
       </h1>
 
       {/* Accent subtitle */}
-      <p className="font-sans text-sm text-accent mb-8 sm:mb-10 flex flex-wrap gap-x-1">
+      <p className="font-sans text-[13px] text-muted mb-10 sm:mb-14 flex flex-wrap gap-x-2">
         <span>[Firm Name]</span>
-        <span className="text-muted">|</span>
+        <span className="text-border">·</span>
         <span>Singapore</span>
-        <span className="text-muted">|</span>
-        <a href="mailto:hello@jimmycho.com" className="hover:underline underline-offset-2">
+        <span className="text-border">·</span>
+        <a href="mailto:hello@jimmycho.com" className="text-accent hover:text-ink transition-colors">
           hello@jimmycho.com
         </a>
       </p>
 
       {/* Bio + photo — stacks on mobile, side by side on sm+ */}
-      <div className="flex flex-col sm:flex-row sm:gap-12 gap-8 mb-10 sm:mb-14">
+      <div className="flex flex-col sm:flex-row sm:gap-14 gap-10 mb-12 sm:mb-16">
         {/* Bio text */}
-        <div className="flex-1 space-y-5 font-sans text-base leading-relaxed text-ink">
+        <div className="flex-1 space-y-5 font-sans text-[15px] leading-[1.8] text-ink/85">
           <p>
             I&apos;m Jimmy Cho — an investor and operator focused on
             technology and emerging markets. I spend most of my time in
@@ -56,21 +56,24 @@ export default function HomePage() {
         </div>
 
         {/* Profile photo */}
-        <div className="w-full sm:w-56 sm:shrink-0 self-start">
-          <div className="w-full aspect-[3/4] bg-surface border border-border flex items-center justify-center">
+        <div className="w-full sm:w-60 sm:shrink-0 self-start">
+          <div className="w-full aspect-[3/4] bg-surface flex items-center justify-center">
             <span className="font-sans text-xs text-muted">photo</span>
           </div>
         </div>
       </div>
+
+      {/* Divider */}
+      <div className="h-px bg-border mb-10 sm:mb-12" />
 
       {/* Photo grid — 3 cols on mobile, 5 on sm+ */}
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className="aspect-square bg-surface border border-border flex items-center justify-center"
+            className="aspect-square bg-surface flex items-center justify-center"
           >
-            <span className="font-sans text-xs text-muted">{i + 1}</span>
+            <span className="font-sans text-xs text-muted/50">{i + 1}</span>
           </div>
         ))}
       </div>

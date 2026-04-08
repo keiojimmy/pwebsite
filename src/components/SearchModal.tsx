@@ -104,14 +104,11 @@ export default function SearchModal({
     return () => window.removeEventListener("keydown", handler);
   }, [open, flat, activeIndex, navigate, onClose]);
 
-  // Global Ctrl+K listener (handled here so layout can just render this component)
+  // Global Ctrl+K listener
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
-        if (!open) {
-          // signal parent to open — handled via the prop
-        }
       }
     };
     window.addEventListener("keydown", handler);
@@ -128,35 +125,39 @@ export default function SearchModal({
       onClick={onClose}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-ink/10 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-ink/8 backdrop-blur-sm" />
 
       {/* Modal */}
       <div
-        className="relative w-full max-w-lg mx-4 bg-bg border border-border shadow-2xl"
+        className="relative w-full max-w-lg mx-4 bg-bg border border-border shadow-2xl rounded-sm overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search input */}
-        <div className="flex items-center border-b border-border px-4">
+        <div className="flex items-center gap-3 border-b border-border px-4">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="text-muted shrink-0" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="15.5" y1="15.5" x2="22" y2="22"/>
+          </svg>
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type to start searching"
-            className="w-full py-4 font-sans text-sm text-ink bg-transparent placeholder:text-muted outline-none"
+            placeholder="Search..."
+            className="w-full py-4 font-sans text-[14px] text-ink bg-transparent placeholder:text-muted/60 outline-none"
           />
         </div>
 
         {/* Results */}
         <div className="max-h-80 overflow-y-auto">
           {Object.keys(grouped).length === 0 ? (
-            <p className="px-4 py-6 font-sans text-sm text-muted text-center">
+            <p className="px-4 py-8 font-sans text-[13px] text-muted text-center">
               No results
             </p>
           ) : (
             Object.entries(grouped).map(([group, items]) => (
               <div key={group}>
-                <p className="px-4 pt-4 pb-1 font-sans text-[10px] uppercase tracking-widest text-muted">
+                <p className="px-4 pt-4 pb-1.5 font-sans text-[10px] uppercase tracking-[0.15em] text-muted/70">
                   {group}
                 </p>
                 {items.map((item) => {
@@ -171,11 +172,11 @@ export default function SearchModal({
                         isActive ? "bg-surface" : "hover:bg-surface"
                       }`}
                     >
-                      <span className="font-sans text-sm text-ink">
+                      <span className="font-sans text-[13px] text-ink">
                         {item.label}
                       </span>
                       {item.sublabel && (
-                        <span className="font-sans text-xs text-muted">
+                        <span className="font-sans text-[11px] text-muted">
                           {item.sublabel}
                         </span>
                       )}
@@ -188,10 +189,10 @@ export default function SearchModal({
         </div>
 
         {/* Footer hint */}
-        <div className="border-t border-border px-4 py-2 flex items-center gap-4">
-          <span className="font-sans text-[10px] text-muted">↑↓ to navigate</span>
-          <span className="font-sans text-[10px] text-muted">↵ to select</span>
-          <span className="font-sans text-[10px] text-muted">esc to close</span>
+        <div className="border-t border-border px-4 py-2.5 flex items-center gap-4">
+          <span className="font-sans text-[10px] text-muted/60">↑↓ navigate</span>
+          <span className="font-sans text-[10px] text-muted/60">↵ select</span>
+          <span className="font-sans text-[10px] text-muted/60">esc close</span>
         </div>
       </div>
     </div>
