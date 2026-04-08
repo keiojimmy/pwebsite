@@ -61,13 +61,16 @@ export default function Nav({
   return (
     <header className="sticky top-0 z-50 bg-bg border-b border-border">
       <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        {/* Name */}
-        <Link
-          href="/"
-          className="font-sans text-sm font-normal text-ink hover:text-muted transition-colors"
-        >
-          Jimmy Cho
-        </Link>
+        {/* Name — hidden on homepage */}
+        {pathname !== "/" && (
+          <Link
+            href="/"
+            className="font-sans text-sm font-normal text-muted hover:text-ink transition-colors"
+          >
+            jimmy cho
+          </Link>
+        )}
+        {pathname === "/" && <span />}
 
         <div className="flex items-center gap-7">
           {/* Nav links */}
