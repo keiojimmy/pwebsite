@@ -87,17 +87,16 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             );
           })}
 
-          {/* Search — icon always visible, "ctrl k" text hidden on mobile */}
+          {/* Search */}
           <button
             onClick={onSearchOpen}
-            className="flex items-center gap-1.5 font-sans text-xs text-muted hover:text-ink transition-colors"
+            className="text-muted hover:text-ink transition-colors"
             aria-label="Open search"
           >
-            <svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
-              <circle cx="5" cy="5" r="3.5"/>
-              <line x1="7.5" y1="7.5" x2="11" y2="11"/>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5"/>
+              <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
-            <span className="hidden sm:inline">ctrl k</span>
           </button>
 
           {/* Theme toggle */}
