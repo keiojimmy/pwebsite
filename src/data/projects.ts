@@ -6,6 +6,7 @@ export type Project = {
   year: string;
   tags: string[];
   featured: boolean;
+  section: string;
 };
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     year: "2024",
     tags: ["Strategy", "Growth", "Consumer Tech"],
     featured: true,
+    section: "investing & strategy",
   },
   {
     id: "fintech-portfolio",
@@ -28,16 +30,7 @@ export const projects: Project[] = [
     year: "2023",
     tags: ["Investing", "Fintech", "Venture"],
     featured: true,
-  },
-  {
-    id: "saas-turnaround",
-    title: "Operational Turnaround — B2B SaaS",
-    category: "Operating",
-    description:
-      "Stepped in as interim COO during a post-Series B reset; rebuilt the GTM team, re-segmented the customer base, and drove a 40% reduction in churn.",
-    year: "2022",
-    tags: ["Operations", "SaaS", "GTM"],
-    featured: true,
+    section: "investing & strategy",
   },
   {
     id: "climate-fund-thesis",
@@ -48,6 +41,18 @@ export const projects: Project[] = [
     year: "2022",
     tags: ["Investing", "Climate", "Infrastructure"],
     featured: false,
+    section: "investing & strategy",
+  },
+  {
+    id: "saas-turnaround",
+    title: "Operational Turnaround — B2B SaaS",
+    category: "Operating",
+    description:
+      "Stepped in as interim COO during a post-Series B reset; rebuilt the GTM team, re-segmented the customer base, and drove a 40% reduction in churn.",
+    year: "2022",
+    tags: ["Operations", "SaaS", "GTM"],
+    featured: true,
+    section: "operating & founding",
   },
   {
     id: "apac-partnership",
@@ -58,6 +63,7 @@ export const projects: Project[] = [
     year: "2021",
     tags: ["BD", "Partnerships", "APAC"],
     featured: false,
+    section: "operating & founding",
   },
   {
     id: "enterprise-saas-founding",
@@ -68,6 +74,7 @@ export const projects: Project[] = [
     year: "2019",
     tags: ["Founding", "SaaS", "0-to-1"],
     featured: false,
+    section: "operating & founding",
   },
 ];
 
