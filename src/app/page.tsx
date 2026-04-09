@@ -34,7 +34,7 @@ export default function HomePage() {
       <div className="mx-8 sm:mx-14 h-px bg-border" />
 
       {/* ——— Belief ——— */}
-      <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[1200px]">
+      <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-12 sm:pb-14 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[1200px]">
         {/* Italic statement with red left border */}
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-45" />
@@ -74,11 +74,11 @@ export default function HomePage() {
       </section>
 
       {/* ——— Path ——— */}
-      <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-28 sm:pb-32 max-w-[1200px]">
-        <div className="flex items-center gap-4 mb-16">
+      <section className="px-8 sm:px-14 pt-10 sm:pt-12 pb-28 sm:pb-32 max-w-[1200px]">
+        <div className="flex items-center gap-5 mb-10 sm:mb-12">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
-          <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
-            Path
+          <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
+            path
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
@@ -143,10 +143,10 @@ export default function HomePage() {
       {/* ——— Elsewhere ——— */}
       <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[0.4fr_1fr] gap-12 md:gap-20 max-w-[1200px]">
         <div>
-          <div className="flex items-center gap-4 pt-1">
+          <div className="flex items-center gap-5 pt-1">
             <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
-            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
-              Elsewhere
+            <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
+              elsewhere
             </p>
           </div>
         </div>
