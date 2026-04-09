@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
           {/* Desktop: fills column height, no fixed aspect ratio */}
           <div
-            className="hidden md:block w-full h-full relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
+            className="hidden md:block w-full h-full relative overflow-hidden bg-surface rounded-sm shadow-[0_2px_8px_rgba(0,0,0,0.06),0_8px_24px_rgba(0,0,0,0.09),0_20px_56px_rgba(0,0,0,0.10)]"
             style={{ transform: 'translateZ(0)' }}
           >
             <Image
