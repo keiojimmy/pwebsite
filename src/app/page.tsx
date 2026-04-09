@@ -120,13 +120,13 @@ export default function HomePage() {
                 i < arr.length - 1 ? "border-r border-border" : ""
               }`}
             >
-              <div className="font-serif text-[22px] sm:text-[26px] font-light text-border group-hover:text-accent/20 mb-5 transition-colors duration-500">
+              <div className="font-serif text-[22px] sm:text-[26px] font-light text-accent/50 group-hover:text-accent/80 mb-5 transition-colors duration-500">
                 {item.index}
               </div>
               <div className="font-sans text-[13px] sm:text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
-              <div className="font-sans text-[12px] sm:text-[13px] text-faint italic mb-3">{item.org}</div>
+              <div className="font-sans text-[12px] sm:text-[13px] text-muted italic mb-3">{item.org}</div>
               {item.note && (
-                <p className="font-sans text-[12px] text-ghost leading-[1.7] hidden sm:block">{item.note}</p>
+                <p className="font-sans text-[12px] text-muted/70 leading-[1.7] hidden sm:block">{item.note}</p>
               )}
             </div>
           ))}
