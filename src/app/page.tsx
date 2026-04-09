@@ -114,22 +114,20 @@ export default function HomePage() {
                 ))}
               </div>
 
-              {/* Desktop: 5-column borderless grid */}
-              <div className="hidden md:grid md:grid-cols-5 border-t border-border">
-                {items.map((item, i, arr) => (
+              {/* Desktop: 5-column card grid */}
+              <div className="hidden md:grid md:grid-cols-5 gap-3">
+                {items.map((item) => (
                   <div
                     key={item.index}
-                    className={`group relative py-10 pr-7 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
-                      i < arr.length - 1 ? "border-r border-border" : ""
-                    }`}
+                    className="group border border-border p-7 flex flex-col hover:bg-accent/[0.05] hover:border-accent/25 transition-all duration-500 cursor-default"
                   >
-                    <div className="font-serif text-[26px] font-light text-accent/50 group-hover:text-accent/80 mb-5 transition-colors duration-500">
+                    <div className="font-serif text-[28px] font-light text-accent/45 group-hover:text-accent/75 mb-8 transition-colors duration-500">
                       {item.index}
                     </div>
-                    <div className="font-sans text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
-                    <div className="font-sans text-[13px] text-muted italic mb-3">{item.org}</div>
+                    <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">{item.role}</div>
+                    <div className="font-sans text-[13px] text-muted italic mb-4">{item.org}</div>
                     {item.note && (
-                      <p className="font-sans text-[12px] text-muted/70 leading-[1.7]">{item.note}</p>
+                      <p className="font-sans text-[12px] text-muted/65 leading-[1.75] mt-auto">{item.note}</p>
                     )}
                   </div>
                 ))}
