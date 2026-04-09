@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Jimmy Cho",
@@ -23,8 +24,14 @@ export default function HomePage() {
         <div className="hidden md:flex justify-end items-end pt-16 self-stretch">
           <div className="relative w-72 lg:w-80">
             <div className="absolute top-6 -left-4 w-0.5 h-16 bg-accent opacity-70" />
-            <div className="w-full aspect-[340/460] bg-surface flex items-end p-7">
-              <span className="font-sans text-[11px] tracking-[0.15em] text-ghost lowercase italic">portrait</span>
+            <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface">
+              <Image
+                src="/profile.jpg"
+                alt="Jimmy Cho"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </div>
         </div>
