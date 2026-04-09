@@ -100,7 +100,7 @@ export default function HomePage() {
                 {items.map((item) => (
                   <div
                     key={item.index}
-                    className="group border border-border p-5 flex flex-col h-[240px] overflow-hidden hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
+                    className="group border border-border p-5 flex flex-col min-h-[190px] hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
                   >
                     <div className="font-serif text-[20px] font-light text-accent/50 group-hover:text-accent/80 mb-4 transition-colors duration-300">
                       {item.index}
