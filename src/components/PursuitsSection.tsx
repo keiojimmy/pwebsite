@@ -96,20 +96,33 @@ export default function PursuitsSection() {
         ))}
       </div>
 
-      {/* Desktop: hoverable card grid */}
+      {/* Desktop: clickable card grid */}
       <div className="hidden md:grid md:grid-cols-5 gap-3">
-        {pursuits.map(({ Icon, text }) => (
-          <div
+        {pursuits.map(({ Icon, text }, i) => (
+          <button
             key={text}
-            className="group border border-border p-5 flex flex-col gap-4 hover:border-accent/30 hover:bg-accent/[0.05] transition-all duration-300 cursor-default"
+            onClick={() => setActive(active === i ? null : i)}
+            className={`text-left border p-5 flex flex-col gap-4 transition-all duration-300 ${
+              active === i
+                ? "border-accent/40 bg-accent/[0.07]"
+                : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
+            }`}
           >
-            <span className="text-muted/40 group-hover:text-accent/70 transition-colors duration-300">
+            <span
+              className={`transition-colors duration-300 ${
+                active === i ? "text-accent/70" : "text-muted/40"
+              }`}
+            >
               <Icon />
             </span>
-            <span className="font-sans text-[13.5px] text-muted group-hover:text-ink leading-[1.7] transition-colors duration-300">
+            <span
+              className={`font-sans text-[13.5px] leading-[1.7] transition-colors duration-300 ${
+                active === i ? "text-ink" : "text-muted"
+              }`}
+            >
               {text}
             </span>
-          </div>
+          </button>
         ))}
       </div>
     </>

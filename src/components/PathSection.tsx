@@ -57,12 +57,21 @@ export default function PathSection() {
 
       {/* Desktop: 5-column card grid */}
       <div className="hidden md:grid md:grid-cols-5 gap-3">
-        {items.map((item) => (
-          <div
+        {items.map((item, i) => (
+          <button
             key={item.index}
-            className="group border border-border p-7 flex flex-col hover:bg-accent/[0.05] hover:border-accent/25 transition-all duration-500 cursor-default"
+            onClick={() => setActive(active === i ? null : i)}
+            className={`text-left border p-7 flex flex-col transition-all duration-300 ${
+              active === i
+                ? "border-accent/40 bg-accent/[0.07]"
+                : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
+            }`}
           >
-            <div className="font-serif text-[28px] font-light text-accent/45 group-hover:text-accent/75 mb-8 transition-colors duration-500">
+            <div
+              className={`font-serif text-[28px] font-light mb-8 transition-colors duration-300 ${
+                active === i ? "text-accent/80" : "text-accent/45"
+              }`}
+            >
               {item.index}
             </div>
             <div className="min-h-[72px]">
@@ -74,11 +83,13 @@ export default function PathSection() {
               </div>
             </div>
             {item.note && (
-              <p className="font-sans text-[12px] text-muted/65 leading-[1.75]">
+              <p className={`font-sans text-[12px] leading-[1.75] transition-colors duration-300 ${
+                active === i ? "text-muted/90" : "text-muted/65"
+              }`}>
                 {item.note}
               </p>
             )}
-          </div>
+          </button>
         ))}
       </div>
     </>
