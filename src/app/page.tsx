@@ -25,13 +25,15 @@ export default function HomePage() {
         {/* Photo — right column on desktop, above name on mobile */}
         <div className="order-1 md:order-2 self-stretch">
           <div className="w-full aspect-[3/4] md:aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]">
-            <Image
-              src="/profile.jpg"
-              alt="Jimmy Cho"
-              fill
-              className="object-cover object-top"
-              priority
-            />
+            <div className="absolute inset-x-0 top-[-15%] h-[115%]">
+              <Image
+                src="/profile.jpg"
+                alt="Jimmy Cho"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
