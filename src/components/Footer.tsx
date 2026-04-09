@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="px-8 sm:px-14 py-10 sm:py-11 flex items-baseline justify-between border-t border-border mb-12 sm:mb-0">
+    <footer className="px-8 sm:px-14 py-10 sm:py-11 flex items-baseline justify-between border-t border-border mb-12 sm:mb-0 max-w-[1200px] mx-auto">
       <a
         href="mailto:hello@jimmycho.com"
         className="font-sans text-[15px] text-muted hover:text-accent border-b border-transparent hover:border-accent transition-all duration-400"

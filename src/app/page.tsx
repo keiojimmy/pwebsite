@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
       <section className="grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end max-w-[1200px]">
         <div className="pb-2 max-w-xl">
