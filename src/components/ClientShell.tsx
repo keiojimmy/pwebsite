@@ -13,8 +13,17 @@ function randomBetween(a: number, b: number) {
 
 export default function ClientShell({ children }: { children: React.ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [cookieVisible, setCookieVisible] = useState(true);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setCookieVisible(window.scrollY < window.innerHeight * 0.6);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -121,7 +130,9 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       {/* Bonus easter egg — fixed bottom right */}
       <button
         onClick={triggerFireworks}
-        className="fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-75 hover:opacity-95 transition-opacity duration-500 select-none cursor-pointer"
+        className={`fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm transition-all duration-500 select-none cursor-pointer ${
+          cookieVisible ? "opacity-75 hover:opacity-95 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
         aria-label="Surprise"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
