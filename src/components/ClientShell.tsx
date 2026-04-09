@@ -124,9 +124,8 @@ export default function ClientShell({ children }: { children: React.ReactNode })
         className="fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-35 hover:opacity-70 transition-opacity duration-500 select-none cursor-pointer"
         aria-label="Surprise"
       >
-        <span className="font-serif text-[13px] text-accent font-medium leading-none tracking-[-0.05em]">
-          Bonus
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/fortunecookie.svg" alt="Fortune cookie" width={28} height={28} />
       </button>
 
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
