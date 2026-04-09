@@ -14,15 +14,14 @@ export default function HomePage() {
             Jimmy<br />Cho
           </h1>
           <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
-          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-md">
-            Investor and operator building at the intersection of technology and
-            emerging markets across Southeast Asia.
+          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
+            Investor and operator, fluent in Japanese, Korean, and English —
+            and the harder language of getting things done across cultures.
           </p>
         </div>
 
         <div className="hidden md:flex justify-end items-end pt-16 self-stretch">
           <div className="relative w-72 lg:w-80">
-            {/* Red accent line — left of photo */}
             <div className="absolute top-6 -left-4 w-0.5 h-16 bg-accent opacity-70" />
             <div className="w-full aspect-[340/460] bg-surface flex items-end p-7">
               <span className="font-sans text-[11px] tracking-[0.15em] text-ghost lowercase italic">portrait</span>
@@ -40,22 +39,32 @@ export default function HomePage() {
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-45" />
           <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
-            I care most about the early, hard stages — where long-term outcomes
-            are shaped with the least information.
+            New ideas emerge when people and places collide.
+            I&apos;ve spent my career proving it.
           </p>
         </div>
 
-        {/* Body */}
+        {/* Bio */}
         <div className="pt-0 md:pt-2.5 space-y-5">
-          <p className="font-sans text-[15.5px] leading-[1.9] text-muted max-w-md">
-            My career has been deliberately varied, not out of restlessness, but
-            from a belief that the question of what makes businesses work is best
-            understood from multiple vantage points.
+          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+            In the span of 20 months as a child, I attended preschool in Korea,
+            kindergarten in Germany and Japan, and started first grade in Tennessee.
+            Life ping-ponged me across cultures — and I came to believe that
+            the most interesting things happen at the edges, where people and
+            places collide.
           </p>
-          <p className="font-sans text-[15.5px] leading-[1.9] text-muted max-w-md">
-            I&apos;ve underwritten risk, advised on strategy, operated through
-            rapid scale, and now invest at the earliest stages. Each chapter
-            sharpened a different instinct. Together, they form a point of view.
+          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+            My career has followed the same logic. Strategy consulting at L.E.K.
+            in Tokyo. Running Cinnabon and Jamba Juice across Japan. Working out
+            of the CEO&apos;s office at a then fast-growing hospitality unicorn
+            expanding aggressively across Asia. Getting my hands dirty through
+            COVID. Building a startup — a tea brand into cafés across Japan,
+            international franchise deals. Two years at Harvard Business School
+            confirmed what a decade of operating had already suggested.
+          </p>
+          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+            I now back founders at the earliest stages, where the outcomes are
+            uncertain and the decisions matter most.
           </p>
         </div>
       </section>
@@ -68,24 +77,53 @@ export default function HomePage() {
         <p className="font-sans text-[12px] uppercase tracking-[0.15em] text-ghost italic mb-16">
           Path
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-border">
+        <div className="grid grid-cols-2 md:grid-cols-5 border-t border-border">
           {[
-            { index: "I", role: "Investment Banking", org: "Goldman Sachs" },
-            { index: "II", role: "Management Consulting", org: "McKinsey & Company" },
-            { index: "III", role: "Operational Leadership", org: "High-growth startup" },
-            { index: "IV", role: "Venture Investing", org: "Current" },
+            {
+              index: "I",
+              role: "Strategy Consulting",
+              org: "L.E.K. Consulting",
+              note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S.",
+            },
+            {
+              index: "II",
+              role: "Operator",
+              org: "Japan & Asia",
+              note: "Running international food brands. CEO's office at a fast-growing hospitality unicorn. Hands-on through COVID.",
+            },
+            {
+              index: "III",
+              role: "Founder",
+              org: "Tokyo",
+              note: "Built a tea brand into cafés across Japan. Structured international franchise deals, including a Texas BBQ chain.",
+            },
+            {
+              index: "IV",
+              role: "Harvard Business School",
+              org: "MBA",
+              note: "",
+            },
+            {
+              index: "V",
+              role: "Investor",
+              org: "Current",
+              note: "Backing founders at the earliest stages.",
+            },
           ].map((item, i, arr) => (
             <div
               key={item.index}
-              className={`group relative py-10 pr-8 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
+              className={`group relative py-8 sm:py-10 pr-5 sm:pr-7 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
                 i < arr.length - 1 ? "border-r border-border" : ""
               }`}
             >
-              <div className="font-serif text-[26px] font-light text-border group-hover:text-accent/20 mb-6 transition-colors duration-500">
+              <div className="font-serif text-[22px] sm:text-[26px] font-light text-border group-hover:text-accent/20 mb-5 transition-colors duration-500">
                 {item.index}
               </div>
-              <div className="font-sans text-[15px] text-ink mb-1">{item.role}</div>
-              <div className="font-sans text-[14px] text-faint italic">{item.org}</div>
+              <div className="font-sans text-[13px] sm:text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
+              <div className="font-sans text-[12px] sm:text-[13px] text-faint italic mb-3">{item.org}</div>
+              {item.note && (
+                <p className="font-sans text-[12px] text-ghost leading-[1.7] hidden sm:block">{item.note}</p>
+              )}
             </div>
           ))}
         </div>
