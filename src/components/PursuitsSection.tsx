@@ -96,23 +96,22 @@ export default function PursuitsSection() {
         ))}
       </div>
 
-      {/* Desktop: sliding line list with icon */}
-      <ul className="hidden md:block divide-y divide-border/50">
+      {/* Desktop: hoverable card grid */}
+      <div className="hidden md:grid md:grid-cols-5 gap-3">
         {pursuits.map(({ Icon, text }) => (
-          <li
+          <div
             key={text}
-            className="group flex items-center gap-3 py-4 cursor-default overflow-hidden"
+            className="group border border-border p-5 flex flex-col gap-4 hover:border-accent/30 hover:bg-accent/[0.05] transition-all duration-300 cursor-default"
           >
-            <span className="text-muted/40 group-hover:text-accent/70 transition-colors duration-300 shrink-0">
+            <span className="text-muted/40 group-hover:text-accent/70 transition-colors duration-300">
               <Icon />
             </span>
-            <div className="shrink-0 w-0 group-hover:w-4 h-px bg-accent/70 transition-[width] duration-500 mr-0 group-hover:mr-1" />
-            <span className="font-sans text-[15.5px] text-muted group-hover:text-ink leading-[1.8] transition-colors duration-300">
+            <span className="font-sans text-[13.5px] text-muted group-hover:text-ink leading-[1.7] transition-colors duration-300">
               {text}
             </span>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
