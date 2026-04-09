@@ -49,18 +49,20 @@ export default function HomePage() {
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
             In the span of 20 months as a child, I attended preschool in Korea,
             kindergarten in Germany and Japan, and started first grade in Tennessee.
-            Life ping-ponged me across cultures — and I came to believe that
-            the most interesting things happen at the edges, where people and
-            places collide.
+            Life ping-ponged me across cultures, and I came to believe that the
+            most interesting things happen at the edges, where people and places
+            collide.
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
             My career has followed the same logic. Strategy consulting at L.E.K.
-            in Tokyo. Running Cinnabon and Jamba Juice across Japan. Working out
-            of the CEO&apos;s office at a then fast-growing hospitality unicorn
-            expanding aggressively across Asia. Getting my hands dirty through
-            COVID. Building a startup — a tea brand into cafés across Japan,
-            international franchise deals. Two years at Harvard Business School
-            confirmed what a decade of operating had already suggested.
+            in Tokyo. Managing Cinnabon and Jamba Juice across Japan and Korea.
+            Working out of the CEO&apos;s office at a then fast-growing hospitality
+            unicorn expanding aggressively across Asia. Getting my hands dirty
+            through COVID when the business had to do a full pivot. Building an
+            artisanal tea brand into cafés including Godiva across Japan, and
+            structuring international franchise deals. Two years at Harvard
+            Business School confirmed what my operating experience had already
+            suggested.
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
             I now back founders at the earliest stages, where the outcomes are
