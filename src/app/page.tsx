@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-45" />
           <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
-            New ideas emerge when people and places collide.
+            The most interesting things happen at the edges, where people and places collide.
           </p>
         </div>
 
