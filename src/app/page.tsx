@@ -48,7 +48,6 @@ export default function HomePage() {
           <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-45" />
           <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
             New ideas emerge when people and places collide.
-            I&apos;ve spent my career proving it.
           </p>
         </div>
 
