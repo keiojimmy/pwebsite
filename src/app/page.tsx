@@ -126,7 +126,7 @@ export default function HomePage() {
               <div className="font-sans text-[13px] sm:text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
               <div className="font-sans text-[12px] sm:text-[13px] text-muted italic mb-3">{item.org}</div>
               {item.note && (
-                <p className="font-sans text-[12px] text-muted/70 leading-[1.7] hidden sm:block">{item.note}</p>
+                <p className="font-sans text-[12px] text-muted/70 leading-[1.7]">{item.note}</p>
               )}
             </div>
           ))}
