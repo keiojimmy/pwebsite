@@ -19,7 +19,10 @@ export default function ClientShell({ children }: { children: React.ReactNode })
 
   useEffect(() => {
     const onScroll = () => {
-      setCookieVisible(window.scrollY < window.innerHeight * 0.6);
+      const threshold = window.innerWidth >= 640
+        ? window.innerHeight * 0.3
+        : window.innerHeight * 0.6;
+      setCookieVisible(window.scrollY < threshold);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
