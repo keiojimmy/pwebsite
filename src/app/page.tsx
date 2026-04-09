@@ -88,7 +88,7 @@ export default function HomePage() {
         {(() => {
           const items = [
             { index: "I",   role: "Strategy Consulting",    org: "L.E.K. Consulting", note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S." },
-            { index: "II",  role: "Operator",               org: "Japan & Asia",       note: "Running international food brands. CEO's office at a fast-growing hospitality unicorn. Hands-on through COVID." },
+            { index: "II",  role: "Operator",               org: "Enterprise & Startups", note: "Running international food brands across Japan and Korea. CEO's office at a fast-growing hospitality unicorn expanding across Asia." },
             { index: "III", role: "Founder",                org: "Tokyo",              note: "Built a startup — an artisanal tea brand into cafés including Godiva across Japan, and structured international franchise deals." },
             { index: "IV",  role: "Harvard Business School",org: "MBA",                note: "" },
             { index: "V",   role: "Investor",               org: "Current",            note: "Backing founders at the early stages, in the US and Japan." },
