@@ -64,7 +64,7 @@ export default function HomePage() {
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
             I now back founders at the earliest stages, where the outcomes are
-            uncertain and the decisions matter most.
+            uncertain and the path is least defined.
           </p>
         </div>
       </section>
