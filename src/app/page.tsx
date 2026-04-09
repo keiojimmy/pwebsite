@@ -24,7 +24,7 @@ export default function HomePage() {
 
         {/* Photo — right column, desktop only, aligned with bio text below */}
         <div className="hidden md:block self-stretch">
-          <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface">
+          <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]">
             <Image
               src="/profile.jpg"
               alt="Jimmy Cho"
