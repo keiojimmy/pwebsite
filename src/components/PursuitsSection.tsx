@@ -62,16 +62,11 @@ const pursuits = [
 
 export default function PursuitsSection() {
   const [active, setActive] = useState<number | null>(null);
-  const [dancing, setDancing] = useState<number | null>(null);
+  const [animKeys, setAnimKeys] = useState<Record<number, number>>({});
 
   const handleClick = (i: number) => {
-    setActive(active === i ? null : i);
-    setDancing(null);
-    // tiny delay so re-clicking same card still re-triggers animation
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => setDancing(i));
-    });
-    setTimeout(() => setDancing(null), 700);
+    setActive(prev => prev === i ? null : i);
+    setAnimKeys(prev => ({ ...prev, [i]: (prev[i] ?? 0) + 1 }));
   };
 
   return (
@@ -91,7 +86,8 @@ export default function PursuitsSection() {
             }`}
           >
             <span
-              className={`block mb-3 origin-center ${dancing === i ? "animate-icon-dance" : ""}`}
+              key={animKeys[i] ?? 0}
+              className={`block mb-3 origin-center ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
               <Icon />
             </span>
@@ -119,9 +115,10 @@ export default function PursuitsSection() {
             }`}
           >
             <span
+              key={animKeys[i] ?? 0}
               className={`transition-colors duration-300 origin-center ${
                 active === i ? "text-accent/70" : "text-muted/40"
-              } ${dancing === i ? "animate-icon-dance" : ""}`}
+              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
               <Icon />
             </span>
