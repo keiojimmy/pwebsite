@@ -13,7 +13,7 @@ const links = [
 
 function SunIcon() {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
       <circle cx="12" cy="12" r="5"/>
       <line x1="12" y1="1" x2="12" y2="3"/>
       <line x1="12" y1="21" x2="12" y2="23"/>
@@ -29,7 +29,7 @@ function SunIcon() {
 
 function MoonIcon() {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   );
@@ -78,7 +78,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
               <Link
                 key={href}
                 href={href}
-                className={`font-sans text-[14px] tracking-[0.02em] transition-colors duration-500 ${
+                className={`font-sans text-[16px] tracking-[0.02em] transition-colors duration-500 ${
                   isActive ? "text-accent" : "text-faint hover:text-accent"
                 }`}
               >
@@ -92,7 +92,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             className="text-faint hover:text-accent transition-colors duration-500"
             aria-label="Open search"
           >
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
@@ -106,7 +106,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
         {/* Mobile: icons only in row 1 */}
         <div className="flex sm:hidden items-center gap-5 pointer-events-auto">
           <button onClick={onSearchOpen} className="text-faint hover:text-accent transition-colors" aria-label="Open search">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
@@ -126,7 +126,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             <Link
               key={href}
               href={href}
-              className={`font-sans text-[13px] tracking-[0.02em] transition-colors duration-500 ${
+              className={`font-sans text-[15px] tracking-[0.02em] transition-colors duration-500 ${
                 isActive ? "text-accent" : "text-faint hover:text-accent"
               }`}
             >
