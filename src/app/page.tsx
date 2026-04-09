@@ -9,23 +9,39 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-8 md:gap-24 max-w-[1200px]">
-        {/* Text — left column */}
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-28 sm:pt-36 pb-16 sm:pb-24 items-end gap-6 md:gap-24 max-w-[1200px]">
+
+        {/* Text — left column (desktop) / below photo (mobile) */}
         <div className="pb-2 max-w-xl order-2 md:order-1">
-          <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
+          <h1 className="font-sans text-[48px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-4 sm:mb-6">
             Jimmy<br />Cho
           </h1>
-          <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
-          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
+          <div className="w-10 h-px bg-accent opacity-60 mb-5 sm:mb-10" />
+          <p className="font-sans text-[16px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
             Investor and operator, fluent in Japanese, Korean, and English —
             and the harder language of getting things done across cultures.
           </p>
         </div>
 
-        {/* Photo — right column on desktop, above name on mobile */}
+        {/* Photo */}
         <div className="order-1 md:order-2 self-stretch">
+          {/* Mobile: landscape crop, shows person */}
           <div
-            className="w-full aspect-[3/4] md:aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
+            className="md:hidden w-full aspect-[4/3] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
+            style={{ transform: 'translateZ(0)' }}
+          >
+            <Image
+              src="/profile.jpg"
+              alt="Jimmy Cho"
+              fill
+              className="object-cover"
+              style={{ objectPosition: '30% 55%' }}
+              priority
+            />
+          </div>
+          {/* Desktop: portrait with top crop */}
+          <div
+            className="hidden md:block w-full aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
             style={{ transform: 'translateZ(0)' }}
           >
             <div className="absolute inset-x-0 top-[-100%] h-[200%]">
@@ -39,6 +55,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Divider */}
