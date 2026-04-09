@@ -121,7 +121,7 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       {/* Bonus easter egg — fixed bottom right */}
       <button
         onClick={triggerFireworks}
-        className="fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-60 hover:opacity-90 transition-opacity duration-500 select-none cursor-pointer"
+        className="fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-75 hover:opacity-95 transition-opacity duration-500 select-none cursor-pointer"
         aria-label="Surprise"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
