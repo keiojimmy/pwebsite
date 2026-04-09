@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import PursuitsSection from "@/components/PursuitsSection";
 
 export const metadata: Metadata = {
   title: "Jimmy Cho",
@@ -173,25 +174,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <ul className="divide-y divide-border/50">
-          {[
-            "Music, always — playing and singing",
-            "Basketball, on a bad ankle",
-            "Onsens and fine sashimi",
-            "Quiet cafés and something sweet",
-            "Late-night Korean dramas",
-          ].map((item) => (
-            <li
-              key={item}
-              className="group flex items-center py-4 cursor-default overflow-hidden"
-            >
-              <div className="shrink-0 w-3 md:w-0 group-hover:w-5 h-px bg-accent/70 transition-[width] duration-500 mr-3 md:mr-0 group-hover:mr-4" />
-              <span className="font-sans text-[15.5px] text-ink md:text-muted group-hover:text-ink leading-[1.8] transition-colors duration-300">
-                {item}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <PursuitsSection />
       </section>
     </div>
   );
