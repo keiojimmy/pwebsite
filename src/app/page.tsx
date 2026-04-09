@@ -146,7 +146,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <ul className="mt-1 space-y-3">
+        <ul className="divide-y divide-border/50">
           {[
             "Music, always — playing and singing",
             "Basketball, on a bad ankle",
@@ -154,9 +154,14 @@ export default function HomePage() {
             "Quiet cafés and something sweet",
             "Late-night Korean dramas",
           ].map((item) => (
-            <li key={item} className="font-sans text-[15.5px] text-muted leading-[1.8] flex items-baseline gap-3">
-              <span className="w-1 h-1 rounded-full bg-accent/30 shrink-0 mt-[0.55em]" />
-              {item}
+            <li
+              key={item}
+              className="group flex items-center py-4 cursor-default overflow-hidden"
+            >
+              <div className="shrink-0 w-0 group-hover:w-5 h-px bg-accent/70 transition-[width] duration-500 mr-0 group-hover:mr-4" />
+              <span className="font-sans text-[15.5px] text-muted group-hover:text-ink leading-[1.8] transition-colors duration-300">
+                {item}
+              </span>
             </li>
           ))}
         </ul>
