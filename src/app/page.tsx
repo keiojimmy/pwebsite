@@ -124,10 +124,13 @@ export default function HomePage() {
                     <div className="font-serif text-[28px] font-light text-accent/45 group-hover:text-accent/75 mb-8 transition-colors duration-500">
                       {item.index}
                     </div>
-                    <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">{item.role}</div>
-                    <div className="font-sans text-[13px] text-muted italic mb-4">{item.org}</div>
+                    {/* Fixed-height block so note starts at same position across all cards */}
+                    <div className="min-h-[72px]">
+                      <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">{item.role}</div>
+                      <div className="font-sans text-[13px] text-muted italic">{item.org}</div>
+                    </div>
                     {item.note && (
-                      <p className="font-sans text-[12px] text-muted/65 leading-[1.75] mt-auto">{item.note}</p>
+                      <p className="font-sans text-[12px] text-muted/65 leading-[1.75]">{item.note}</p>
                     )}
                   </div>
                 ))}
