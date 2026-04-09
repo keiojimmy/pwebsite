@@ -9,9 +9,9 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-16 md:gap-24 max-w-[1200px]">
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-8 md:gap-24 max-w-[1200px]">
         {/* Text — left column */}
-        <div className="pb-2 max-w-xl">
+        <div className="pb-2 max-w-xl order-2 md:order-1">
           <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
             Jimmy<br />Cho
           </h1>
@@ -22,9 +22,9 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Photo — right column, desktop only, aligned with bio text below */}
-        <div className="hidden md:block self-stretch">
-          <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]">
+        {/* Photo — right column on desktop, above name on mobile */}
+        <div className="order-1 md:order-2 self-stretch">
+          <div className="w-full aspect-[3/4] md:aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]">
             <Image
               src="/profile.jpg"
               alt="Jimmy Cho"
@@ -164,8 +164,8 @@ export default function HomePage() {
               key={item}
               className="group flex items-center py-4 cursor-default overflow-hidden"
             >
-              <div className="shrink-0 w-0 group-hover:w-5 h-px bg-accent/70 transition-[width] duration-500 mr-0 group-hover:mr-4" />
-              <span className="font-sans text-[15.5px] text-muted group-hover:text-ink leading-[1.8] transition-colors duration-300">
+              <div className="shrink-0 w-3 md:w-0 group-hover:w-5 h-px bg-accent/70 transition-[width] duration-500 mr-3 md:mr-0 group-hover:mr-4" />
+              <span className="font-sans text-[15.5px] text-ink md:text-muted group-hover:text-ink leading-[1.8] transition-colors duration-300">
                 {item}
               </span>
             </li>
