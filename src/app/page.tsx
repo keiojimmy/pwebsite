@@ -73,9 +73,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-8 sm:mx-14 h-px bg-border" />
-
       {/* ——— Path ——— */}
       <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-28 sm:pb-32 max-w-[1200px]">
         <div className="flex items-center gap-4 mb-16">
