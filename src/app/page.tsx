@@ -10,7 +10,7 @@ export default function HomePage() {
       {/* ——— Hero ——— */}
       <section className="grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end">
         <div className="pb-2 max-w-xl">
-          <h1 className="font-serif text-[58px] sm:text-[68px] md:text-[72px] font-light leading-[1.02] tracking-[-0.03em] text-ink mb-5 sm:mb-6">
+          <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
             Jimmy<br />Cho
           </h1>
           <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
