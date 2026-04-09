@@ -66,8 +66,9 @@ export default function HomePage() {
             suggested.
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            I now back founders at the earliest stages, where the outcomes are
+            I now back founders at the early stages, where the outcomes are
             uncertain and the path is least defined.
+
           </p>
         </div>
       </section>
@@ -90,7 +91,7 @@ export default function HomePage() {
             { index: "II",  role: "Operator",               org: "Japan & Asia",       note: "Running international food brands. CEO's office at a fast-growing hospitality unicorn. Hands-on through COVID." },
             { index: "III", role: "Founder",                org: "Tokyo",              note: "Built a startup — an artisanal tea brand into cafés including Godiva across Japan, and structured international franchise deals." },
             { index: "IV",  role: "Harvard Business School",org: "MBA",                note: "" },
-            { index: "V",   role: "Investor",               org: "Current",            note: "Backing founders at the earliest stages." },
+            { index: "V",   role: "Investor",               org: "Current",            note: "Backing founders at the early stages, in the US and Japan." },
           ];
           return (
             <>
@@ -99,7 +100,7 @@ export default function HomePage() {
                 {items.map((item) => (
                   <div
                     key={item.index}
-                    className="group border border-border p-5 flex flex-col hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
+                    className="group border border-border p-5 flex flex-col min-h-[190px] hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
                   >
                     <div className="font-serif text-[20px] font-light text-accent/50 group-hover:text-accent/80 mb-4 transition-colors duration-300">
                       {item.index}
