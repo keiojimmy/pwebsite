@@ -137,7 +137,7 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     setFortune(picked);
     setFortuneVisible(true);
     if (fortuneTimerRef.current) clearTimeout(fortuneTimerRef.current);
-    fortuneTimerRef.current = setTimeout(() => setFortuneVisible(false), 3500);
+    fortuneTimerRef.current = setTimeout(() => setFortuneVisible(false), 3000);
   }, []);
 
   return (
