@@ -13,7 +13,7 @@ const links = [
 
 function SunIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
       <circle cx="12" cy="12" r="5"/>
       <line x1="12" y1="1" x2="12" y2="3"/>
       <line x1="12" y1="21" x2="12" y2="23"/>
@@ -29,7 +29,7 @@ function SunIcon() {
 
 function MoonIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   );
@@ -55,12 +55,12 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
   };
 
   return (
-    <>
-      {/* Desktop nav — fixed with gradient fade */}
-      <header
-        className="fixed top-0 w-full z-50 px-8 sm:px-14 pt-8 pb-10 flex items-baseline justify-between pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, var(--color-bg) 55%, transparent)" }}
-      >
+    <header
+      className="fixed top-0 w-full z-50 pointer-events-none"
+      style={{ background: "linear-gradient(to bottom, var(--color-bg) 55%, transparent)" }}
+    >
+      {/* Row 1: wordmark + nav links (desktop) + icons */}
+      <div className="px-8 sm:px-14 pt-8 pb-2 sm:pb-10 flex items-baseline justify-between pointer-events-none">
         {/* Wordmark */}
         <Link
           href="/"
@@ -69,6 +69,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
           jimmy cho
         </Link>
 
+        {/* Desktop: links + icons */}
         <div className="hidden sm:flex items-center gap-10 pointer-events-auto">
           {links.map(({ href, label }) => {
             const isActive =
@@ -86,28 +87,26 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             );
           })}
 
-          {/* Search */}
           <button
             onClick={onSearchOpen}
             className="text-faint hover:text-accent transition-colors duration-500"
             aria-label="Open search"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
           </button>
 
-          {/* Theme toggle */}
           <button onClick={toggleTheme} aria-label="Toggle theme" className="text-faint hover:text-accent transition-colors duration-500">
             {dark ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
 
-        {/* Mobile icons */}
-        <div className="flex sm:hidden items-center gap-4 pointer-events-auto">
+        {/* Mobile: icons only in row 1 */}
+        <div className="flex sm:hidden items-center gap-5 pointer-events-auto">
           <button onClick={onSearchOpen} className="text-faint hover:text-accent transition-colors" aria-label="Open search">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
@@ -116,10 +115,10 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             {dark ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
-      </header>
+      </div>
 
-      {/* Mobile bottom tab bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-bg/95 backdrop-blur-sm flex">
+      {/* Row 2: nav links — mobile only, sits below row 1 */}
+      <div className="sm:hidden px-8 pb-4 flex items-center gap-7 pointer-events-auto">
         {links.map(({ href, label }) => {
           const isActive =
             href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
@@ -127,7 +126,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             <Link
               key={href}
               href={href}
-              className={`flex-1 text-center py-3 font-sans text-[12px] tracking-[0.02em] transition-colors ${
+              className={`font-sans text-[13px] tracking-[0.02em] transition-colors duration-500 ${
                 isActive ? "text-accent" : "text-faint hover:text-accent"
               }`}
             >
@@ -136,6 +135,6 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
           );
         })}
       </div>
-    </>
+    </header>
   );
 }
