@@ -7,6 +7,19 @@ import SearchModal from "@/components/SearchModal";
 
 const COLORS = ["#b83a2a", "#f59e0b", "#facc15", "#34d399", "#60a5fa", "#c084fc", "#f472b6", "#fb923c"];
 
+const FORTUNES = [
+  "The most interesting things happen at the edges.",
+  "A good ankle is overrated anyway.",
+  "Tokyo is always a good idea.",
+  "The next great founder is already building.",
+  "Three languages are never enough.",
+  "The best café is always the next one.",
+  "Pivot early, pivot often.",
+  "Uncertainty is just opportunity in disguise.",
+  "The path forward is least defined for a reason.",
+  "Great things happen where people and places collide.",
+];
+
 function randomBetween(a: number, b: number) {
   return a + Math.random() * (b - a);
 }
@@ -14,6 +27,9 @@ function randomBetween(a: number, b: number) {
 export default function ClientShell({ children }: { children: React.ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [cookieVisible, setCookieVisible] = useState(true);
+  const [fortune, setFortune] = useState<string | null>(null);
+  const [fortuneVisible, setFortuneVisible] = useState(false);
+  const fortuneTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -49,7 +65,6 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Origin: center of the Bonus box — responsive position
     const isMobile = window.innerWidth < 640;
     const edge = isMobile ? 24 : 48;
     const ox = window.innerWidth - edge - 24;
@@ -116,6 +131,13 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     };
 
     rafRef.current = requestAnimationFrame(animate);
+
+    // Show a random fortune
+    const picked = FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
+    setFortune(picked);
+    setFortuneVisible(true);
+    if (fortuneTimerRef.current) clearTimeout(fortuneTimerRef.current);
+    fortuneTimerRef.current = setTimeout(() => setFortuneVisible(false), 3500);
   }, []);
 
   return (
@@ -125,12 +147,24 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       <Footer />
 
       {/* Confetti canvas */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 z-50 pointer-events-none"
-      />
+      <canvas ref={canvasRef} className="fixed inset-0 z-50 pointer-events-none" />
 
-      {/* Bonus easter egg — fixed bottom right */}
+      {/* Fortune message popup */}
+      <div
+        className={`fixed bottom-20 right-6 sm:bottom-24 sm:right-12 z-40 max-w-[200px] pointer-events-none transition-all duration-500 ${
+          fortuneVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+        }`}
+      >
+        <div className="bg-[#fffdf7] border border-accent/20 rounded-sm px-3.5 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+          <p className="font-serif text-[12.5px] italic text-ink/80 leading-[1.6]">
+            &ldquo;{fortune}&rdquo;
+          </p>
+        </div>
+        {/* little triangle pointing down to the cookie */}
+        <div className="absolute bottom-[-5px] right-5 w-2.5 h-2.5 bg-[#fffdf7] border-r border-b border-accent/20 rotate-45" />
+      </div>
+
+      {/* Fortune cookie easter egg — fixed bottom right */}
       <button
         onClick={triggerFireworks}
         className={`fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm transition-all duration-500 select-none cursor-pointer ${
