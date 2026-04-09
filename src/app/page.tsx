@@ -81,7 +81,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 border-t border-border">
+        <div className="grid grid-cols-1 md:grid-cols-5 border-t border-border">
           {[
             {
               index: "I",
@@ -117,7 +117,7 @@ export default function HomePage() {
             <div
               key={item.index}
               className={`group relative py-8 sm:py-10 pr-5 sm:pr-7 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
-                i < arr.length - 1 ? "border-r border-border" : ""
+                i < arr.length - 1 ? "md:border-r md:border-border" : ""
               }`}
             >
               <div className="font-serif text-[22px] sm:text-[26px] font-light text-accent/50 group-hover:text-accent/80 mb-5 transition-colors duration-500">
