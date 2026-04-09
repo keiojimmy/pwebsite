@@ -89,7 +89,7 @@ export default function HomePage() {
             across Japan and Korea. Acting as Chief of Staff at a fast-growing
             hospitality tech unicorn expanding aggressively across Asia.
             Getting my hands dirty through COVID when the business had to do a
-            full pivot. Building a startup—an artisanal tea brand distributed
+            full pivot. Building a startup—an artisanal tea brand that distributed
             to café chains across Japan, including Godiva. Two years at Harvard
             Business School confirmed what my operating experience had already
             suggested.
