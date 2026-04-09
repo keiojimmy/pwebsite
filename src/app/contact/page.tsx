@@ -34,8 +34,8 @@ export default function ContactPage() {
 
         <div className="space-y-12">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
-              Email
+            <p className="font-serif text-[14px] italic text-ghost mb-4">
+              email
             </p>
             <a
               href="mailto:hello@jimmycho.com"
@@ -46,8 +46,8 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
-              LinkedIn
+            <p className="font-serif text-[14px] italic text-ghost mb-4">
+              linkedin
             </p>
             <a
               href="https://linkedin.com/in/jimmycho"
@@ -60,8 +60,8 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic mb-4">
-              Based in
+            <p className="font-serif text-[14px] italic text-ghost mb-4">
+              based in
             </p>
             <p className="font-serif text-[22px] sm:text-[24px] font-light text-ink">
               Singapore

@@ -33,7 +33,7 @@ export default function WorkPage() {
               {/* Section label */}
               <div className="flex items-center gap-5 mb-10 sm:mb-12">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
-                <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
+                <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
                   {section}
                 </p>
                 <div className="flex-1 h-px bg-border" />
