@@ -58,8 +58,9 @@ export default function HomePage() {
             in Tokyo. Managing Cinnabon and Jamba Juice across Japan and Korea.
             Working out of the CEO&apos;s office at a then fast-growing hospitality
             unicorn expanding aggressively across Asia. Getting my hands dirty
-            through COVID when the business had to do a full pivot. Building an
-            artisanal tea brand into cafés including Godiva across Japan, and
+            through COVID when the business had to do a full pivot. Building a
+            startup — an artisanal tea brand into cafés including Godiva across
+            Japan, and
             structuring international franchise deals. Two years at Harvard
             Business School confirmed what my operating experience had already
             suggested.
@@ -83,56 +84,58 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 border-t border-border">
-          {[
-            {
-              index: "I",
-              role: "Strategy Consulting",
-              org: "L.E.K. Consulting",
-              note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S.",
-            },
-            {
-              index: "II",
-              role: "Operator",
-              org: "Japan & Asia",
-              note: "Running international food brands. CEO's office at a fast-growing hospitality unicorn. Hands-on through COVID.",
-            },
-            {
-              index: "III",
-              role: "Founder",
-              org: "Tokyo",
-              note: "Built a tea brand into cafés across Japan. Structured international franchise deals, including a Texas BBQ chain.",
-            },
-            {
-              index: "IV",
-              role: "Harvard Business School",
-              org: "MBA",
-              note: "",
-            },
-            {
-              index: "V",
-              role: "Investor",
-              org: "Current",
-              note: "Backing founders at the earliest stages.",
-            },
-          ].map((item, i, arr) => (
-            <div
-              key={item.index}
-              className={`group relative py-8 sm:py-10 pr-5 sm:pr-7 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
-                i < arr.length - 1 ? "md:border-r md:border-border" : ""
-              }`}
-            >
-              <div className="font-serif text-[22px] sm:text-[26px] font-light text-accent/50 group-hover:text-accent/80 mb-5 transition-colors duration-500">
-                {item.index}
+        {(() => {
+          const items = [
+            { index: "I",   role: "Strategy Consulting",    org: "L.E.K. Consulting", note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S." },
+            { index: "II",  role: "Operator",               org: "Japan & Asia",       note: "Running international food brands. CEO's office at a fast-growing hospitality unicorn. Hands-on through COVID." },
+            { index: "III", role: "Founder",                org: "Tokyo",              note: "Built a startup — an artisanal tea brand into cafés including Godiva across Japan, and structured international franchise deals." },
+            { index: "IV",  role: "Harvard Business School",org: "MBA",                note: "" },
+            { index: "V",   role: "Investor",               org: "Current",            note: "Backing founders at the earliest stages." },
+          ];
+          return (
+            <>
+              {/* Mobile: square card grid */}
+              <div className="md:hidden grid grid-cols-2 gap-3">
+                {items.map((item) => (
+                  <div
+                    key={item.index}
+                    className="group border border-border p-5 flex flex-col hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
+                  >
+                    <div className="font-serif text-[20px] font-light text-accent/50 group-hover:text-accent/80 mb-4 transition-colors duration-300">
+                      {item.index}
+                    </div>
+                    <div className="font-sans text-[13px] text-ink mb-1 leading-snug">{item.role}</div>
+                    <div className="font-sans text-[12px] text-muted italic mb-2">{item.org}</div>
+                    {item.note && (
+                      <p className="font-sans text-[11px] text-muted/70 leading-[1.7] mt-2">{item.note}</p>
+                    )}
+                  </div>
+                ))}
               </div>
-              <div className="font-sans text-[13px] sm:text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
-              <div className="font-sans text-[12px] sm:text-[13px] text-muted italic mb-3">{item.org}</div>
-              {item.note && (
-                <p className="font-sans text-[12px] text-muted/70 leading-[1.7]">{item.note}</p>
-              )}
-            </div>
-          ))}
-        </div>
+
+              {/* Desktop: 5-column borderless grid */}
+              <div className="hidden md:grid md:grid-cols-5 border-t border-border">
+                {items.map((item, i, arr) => (
+                  <div
+                    key={item.index}
+                    className={`group relative py-10 pr-7 border-b border-border hover:bg-accent/[0.04] transition-colors duration-500 ${
+                      i < arr.length - 1 ? "border-r border-border" : ""
+                    }`}
+                  >
+                    <div className="font-serif text-[26px] font-light text-accent/50 group-hover:text-accent/80 mb-5 transition-colors duration-500">
+                      {item.index}
+                    </div>
+                    <div className="font-sans text-[14px] text-ink mb-1 leading-snug">{item.role}</div>
+                    <div className="font-sans text-[13px] text-muted italic mb-3">{item.org}</div>
+                    {item.note && (
+                      <p className="font-sans text-[12px] text-muted/70 leading-[1.7]">{item.note}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          );
+        })()}
       </section>
 
       {/* Divider */}
