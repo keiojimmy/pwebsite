@@ -74,28 +74,30 @@ export default function HomePage() {
         {/* Bio */}
         <div className="pt-0 md:pt-2.5 space-y-5">
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            In the span of 20 months as a child, I attended preschool in Korea,
-            kindergarten in Germany and Japan, and started first grade in Tennessee.
-            Life ping-ponged me across cultures, and I came to believe that the
-            most interesting things happen at the edges, where people and places
-            collide.
+            In the span of 20 months, I attended preschool in Korea, started
+            kindergarten in Germany, and finished it in Japan. I then spent
+            first grade in Tennessee, second in Colorado, third and fourth in
+            Korea, middle school in Texas, and high school back in Seoul. As
+            life continued to ping-pong me between college in the U.S., the
+            army in Korea, and a career in Japan, I came to believe that the
+            most interesting things happen at the edges, where people and
+            places collide.
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            My career has followed the same logic. Strategy consulting at L.E.K.
-            in Tokyo. Managing Cinnabon and Jamba Juice across Japan and Korea.
-            Working out of the CEO&apos;s office at a then fast-growing hospitality
-            unicorn expanding aggressively across Asia. Getting my hands dirty
-            through COVID when the business had to do a full pivot. Building a
-            startup — an artisanal tea brand into cafés including Godiva across
-            Japan, and
-            structuring international franchise deals. Two years at Harvard
+            My career has been built on navigating those exact edges. Strategy
+            consulting at L.E.K. in Tokyo. Managing Cinnabon and Jamba Juice
+            across Japan and Korea. Acting as Chief of Staff at a fast-growing
+            hospitality tech unicorn expanding aggressively across Asia.
+            Getting my hands dirty through COVID when the business had to do a
+            full pivot. Building a startup—an artisanal tea brand distributed
+            to café chains across Japan, including Godiva. Two years at Harvard
             Business School confirmed what my operating experience had already
             suggested.
           </p>
           <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            I now back founders at the early stages, where the outcomes are
-            uncertain and the path is least defined.
-
+            I now back early-stage founders building at those exact
+            edges—where outcomes are uncertain, new ideas collide, and the
+            path forward is least defined.
           </p>
         </div>
       </section>
