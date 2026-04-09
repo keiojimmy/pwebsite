@@ -142,24 +142,24 @@ export default function HomePage() {
         <div className="flex items-center gap-5 mb-10 sm:mb-12">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
-            elsewhere
+            other pursuits
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="flex flex-wrap gap-12 sm:gap-16">
+        <ul className="mt-1 space-y-3">
           {[
-            "History &\nphilosophy of science",
-            "Occasional\nwriting",
-            "Distance\nrunning",
+            "Music, always — playing and singing",
+            "Basketball, on a bad ankle",
+            "Onsens and fine sashimi",
+            "Quiet cafés and something sweet",
+            "Late-night Korean dramas",
           ].map((item) => (
-            <div key={item} className="font-sans text-[15.5px] text-muted leading-[1.5]">
-              <div className="w-3.5 h-px bg-accent opacity-30 mb-3.5" />
-              {item.split("\n").map((line, i) => (
-                <span key={i}>{line}{i === 0 && <br />}</span>
-              ))}
-            </div>
+            <li key={item} className="font-sans text-[15.5px] text-muted leading-[1.8] flex items-baseline gap-3">
+              <span className="w-1 h-1 rounded-full bg-accent/30 shrink-0 mt-[0.55em]" />
+              {item}
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     </div>
   );
