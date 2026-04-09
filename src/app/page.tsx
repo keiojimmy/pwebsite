@@ -9,8 +9,22 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1fr_0.55fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end max-w-[1200px]">
-        <div className="pb-2 max-w-xl">
+      <section className="grid grid-cols-1 md:grid-cols-[0.55fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-12 md:gap-16 max-w-[1200px]">
+        {/* Photo — left column, desktop only */}
+        <div className="hidden md:block self-stretch">
+          <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface">
+            <Image
+              src="/profile.jpg"
+              alt="Jimmy Cho"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Text — right column */}
+        <div className="pb-2">
           <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
             Jimmy<br />Cho
           </h1>
@@ -19,21 +33,6 @@ export default function HomePage() {
             Investor and operator, fluent in Japanese, Korean, and English —
             and the harder language of getting things done across cultures.
           </p>
-        </div>
-
-        <div className="hidden md:flex justify-end items-end pt-16 self-stretch">
-          <div className="relative w-72 lg:w-80">
-            <div className="absolute top-6 -left-4 w-0.5 h-16 bg-accent opacity-70" />
-            <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface">
-              <Image
-                src="/profile.jpg"
-                alt="Jimmy Cho"
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </div>
-          </div>
         </div>
       </section>
 
