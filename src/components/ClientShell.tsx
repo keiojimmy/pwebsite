@@ -37,9 +37,11 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Origin: center of the Bonus box (bottom-right: 48px from edge, box 48x36)
-    const ox = window.innerWidth - 48 - 24;
-    const oy = window.innerHeight - 48 - 18;
+    // Origin: center of the Bonus box — responsive position
+    const isMobile = window.innerWidth < 640;
+    const edge = isMobile ? 24 : 48;
+    const ox = window.innerWidth - edge - 24;
+    const oy = window.innerHeight - edge - 18;
 
     type Particle = {
       x: number; y: number;
@@ -119,7 +121,7 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       {/* Bonus easter egg — fixed bottom right */}
       <button
         onClick={triggerFireworks}
-        className="fixed bottom-12 right-12 z-40 hidden sm:flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-35 hover:opacity-70 transition-opacity duration-500 select-none cursor-pointer"
+        className="fixed bottom-6 right-6 sm:bottom-12 sm:right-12 z-40 flex items-center justify-center w-12 h-9 border border-accent/35 rounded-sm opacity-35 hover:opacity-70 transition-opacity duration-500 select-none cursor-pointer"
         aria-label="Surprise"
       >
         <span className="font-serif text-[13px] text-accent font-medium leading-none tracking-[-0.05em]">
