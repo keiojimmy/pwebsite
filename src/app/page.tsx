@@ -9,8 +9,20 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[0.55fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-12 md:gap-16 max-w-[1200px]">
-        {/* Photo — left column, desktop only */}
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-32 sm:pt-36 pb-20 sm:pb-24 items-end gap-16 md:gap-24 max-w-[1200px]">
+        {/* Text — left column */}
+        <div className="pb-2 max-w-xl">
+          <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
+            Jimmy<br />Cho
+          </h1>
+          <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
+          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
+            Investor and operator, fluent in Japanese, Korean, and English —
+            and the harder language of getting things done across cultures.
+          </p>
+        </div>
+
+        {/* Photo — right column, desktop only, aligned with bio text below */}
         <div className="hidden md:block self-stretch">
           <div className="w-full aspect-[340/460] relative overflow-hidden bg-surface">
             <Image
@@ -21,18 +33,6 @@ export default function HomePage() {
               priority
             />
           </div>
-        </div>
-
-        {/* Text — right column */}
-        <div className="pb-2">
-          <h1 className="font-sans text-[58px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-5 sm:mb-6">
-            Jimmy<br />Cho
-          </h1>
-          <div className="w-10 h-px bg-accent opacity-60 mb-8 sm:mb-10" />
-          <p className="font-sans text-[17px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
-            Investor and operator, fluent in Japanese, Korean, and English —
-            and the harder language of getting things done across cultures.
-          </p>
         </div>
       </section>
 
