@@ -137,18 +137,14 @@ export default function HomePage() {
         })()}
       </section>
 
-      {/* Divider */}
-      <div className="mx-8 sm:mx-14 h-px bg-border" />
-
       {/* ——— Elsewhere ——— */}
-      <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[0.4fr_1fr] gap-12 md:gap-20 max-w-[1200px]">
-        <div>
-          <div className="flex items-center gap-5 pt-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
-            <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
-              elsewhere
-            </p>
-          </div>
+      <section className="px-8 sm:px-14 py-24 sm:py-28 max-w-[1200px]">
+        <div className="flex items-center gap-5 mb-10 sm:mb-12">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
+          <p className="font-serif text-[15px] italic text-accent/70 whitespace-nowrap">
+            elsewhere
+          </p>
+          <div className="flex-1 h-px bg-border" />
         </div>
         <div className="flex flex-wrap gap-12 sm:gap-16">
           {[
