@@ -74,9 +74,13 @@ export default function HomePage() {
 
       {/* ——— Path ——— */}
       <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-28 sm:pb-32 max-w-[1200px]">
-        <p className="font-sans text-[12px] uppercase tracking-[0.15em] text-ghost italic mb-16">
-          Path
-        </p>
+        <div className="flex items-center gap-4 mb-16">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
+          <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
+            Path
+          </p>
+          <div className="flex-1 h-px bg-border" />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-5 border-t border-border">
           {[
             {
@@ -135,9 +139,12 @@ export default function HomePage() {
       {/* ——— Elsewhere ——— */}
       <section className="px-8 sm:px-14 py-24 sm:py-28 grid grid-cols-1 md:grid-cols-[0.4fr_1fr] gap-12 md:gap-20 max-w-[1200px]">
         <div>
-          <p className="font-sans text-[12px] uppercase tracking-[0.15em] text-ghost italic pt-1">
-            Elsewhere
-          </p>
+          <div className="flex items-center gap-4 pt-1">
+            <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
+            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
+              Elsewhere
+            </p>
+          </div>
         </div>
         <div className="flex flex-wrap gap-12 sm:gap-16">
           {[

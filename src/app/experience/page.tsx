@@ -42,7 +42,7 @@ export default function ExperiencePage() {
           <section id="roles" className="mb-20 sm:mb-24">
             <div className="flex items-center gap-5 mb-12">
               <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
-              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
+              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
                 Roles
               </p>
               <div className="flex-1 h-px bg-border" />
@@ -75,7 +75,7 @@ export default function ExperiencePage() {
           <section id="education">
             <div className="flex items-center gap-5 mb-12">
               <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 shrink-0" />
-              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-ghost italic whitespace-nowrap">
+              <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-accent italic whitespace-nowrap">
                 Education
               </p>
               <div className="flex-1 h-px bg-border" />
