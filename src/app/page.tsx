@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PursuitsSection from "@/components/PursuitsSection";
+import PathSection from "@/components/PathSection";
 
 export const metadata: Metadata = {
   title: "Jimmy Cho",
@@ -45,15 +46,14 @@ export default function HomePage() {
             className="hidden md:block w-full aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
             style={{ transform: 'translateZ(0)' }}
           >
-            <div className="absolute inset-x-0 top-[-100%] h-[200%]">
-              <Image
+            <Image
                 src="/profile.jpg"
                 alt="Jimmy Cho"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
+                style={{ objectPosition: "center 15%" }}
                 priority
               />
-            </div>
           </div>
         </div>
 
@@ -110,59 +110,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        {(() => {
-          const items = [
-            { index: "I",   role: "Strategy Consulting",    org: "L.E.K. Consulting", note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S." },
-            { index: "II",  role: "Operator",               org: "Enterprise & Startups", note: "Running international food brands across Japan and Korea. CEO's office at a fast-growing hospitality unicorn expanding across Asia." },
-            { index: "III", role: "Founder",                org: "Tokyo",              note: "Built a startup — an artisanal tea brand into cafés including Godiva across Japan, and structured international franchise deals." },
-            { index: "IV",  role: "Harvard Business School",org: "MBA",                note: "" },
-            { index: "V",   role: "Investor",               org: "Current",            note: "Backing founders at the early stages, in the US and Japan." },
-          ];
-          return (
-            <>
-              {/* Mobile: square card grid */}
-              <div className="md:hidden grid grid-cols-2 gap-3">
-                {items.map((item) => (
-                  <div
-                    key={item.index}
-                    className="group border border-border p-5 flex flex-col min-h-[190px] hover:bg-accent/[0.08] hover:border-accent/30 active:bg-accent/[0.12] transition-all duration-300 cursor-default"
-                  >
-                    <div className="font-serif text-[20px] font-light text-accent/50 group-hover:text-accent/80 mb-4 transition-colors duration-300">
-                      {item.index}
-                    </div>
-                    <div className="font-sans text-[13px] text-ink mb-1 leading-snug">{item.role}</div>
-                    <div className="font-sans text-[12px] text-muted italic mb-2">{item.org}</div>
-                    {item.note && (
-                      <p className="font-sans text-[11px] text-muted/70 leading-[1.7] mt-2">{item.note}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              {/* Desktop: 5-column card grid */}
-              <div className="hidden md:grid md:grid-cols-5 gap-3">
-                {items.map((item) => (
-                  <div
-                    key={item.index}
-                    className="group border border-border p-7 flex flex-col hover:bg-accent/[0.05] hover:border-accent/25 transition-all duration-500 cursor-default"
-                  >
-                    <div className="font-serif text-[28px] font-light text-accent/45 group-hover:text-accent/75 mb-8 transition-colors duration-500">
-                      {item.index}
-                    </div>
-                    {/* Fixed-height block so note starts at same position across all cards */}
-                    <div className="min-h-[72px]">
-                      <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">{item.role}</div>
-                      <div className="font-sans text-[13px] text-muted italic">{item.org}</div>
-                    </div>
-                    {item.note && (
-                      <p className="font-sans text-[12px] text-muted/65 leading-[1.75]">{item.note}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </>
-          );
-        })()}
+        <PathSection />
       </section>
 
       {/* ——— Elsewhere ——— */}
