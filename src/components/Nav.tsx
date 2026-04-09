@@ -60,7 +60,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
       style={{ background: "linear-gradient(to bottom, var(--color-bg) 55%, transparent)" }}
     >
       {/* Row 1: wordmark + nav links (desktop) + icons */}
-      <div className="px-8 sm:px-14 pt-8 pb-2 sm:pb-10 flex items-baseline justify-between pointer-events-none">
+      <div className="px-8 sm:px-14 pt-8 pb-2 sm:pb-10 flex items-baseline justify-between pointer-events-none max-w-[1200px] mx-auto">
         {/* Wordmark */}
         <Link
           href="/"
@@ -118,7 +118,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
       </div>
 
       {/* Row 2: nav links — mobile only, sits below row 1 */}
-      <div className="sm:hidden px-8 pb-4 flex items-center gap-7 pointer-events-auto">
+      <div className="sm:hidden px-8 pb-4 flex items-center gap-7 pointer-events-auto max-w-[1200px] mx-auto">
         {links.map(({ href, label }) => {
           const isActive =
             href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
