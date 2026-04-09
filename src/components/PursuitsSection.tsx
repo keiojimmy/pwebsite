@@ -62,6 +62,17 @@ const pursuits = [
 
 export default function PursuitsSection() {
   const [active, setActive] = useState<number | null>(null);
+  const [dancing, setDancing] = useState<number | null>(null);
+
+  const handleClick = (i: number) => {
+    setActive(active === i ? null : i);
+    setDancing(null);
+    // tiny delay so re-clicking same card still re-triggers animation
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setDancing(i));
+    });
+    setTimeout(() => setDancing(null), 700);
+  };
 
   return (
     <>
@@ -70,7 +81,7 @@ export default function PursuitsSection() {
         {pursuits.map(({ Icon, text }, i) => (
           <button
             key={text}
-            onClick={() => setActive(active === i ? null : i)}
+            onClick={() => handleClick(i)}
             className={`text-left p-4 border transition-all duration-300 rounded-sm ${
               i === pursuits.length - 1 ? "col-span-2" : ""
             } ${
@@ -80,8 +91,7 @@ export default function PursuitsSection() {
             }`}
           >
             <span
-              className="block mb-3 transition-transform duration-300 origin-left"
-              style={{ transform: active === i ? "scale(1.15)" : "scale(1)" }}
+              className={`block mb-3 origin-center ${dancing === i ? "animate-icon-dance" : ""}`}
             >
               <Icon />
             </span>
@@ -101,7 +111,7 @@ export default function PursuitsSection() {
         {pursuits.map(({ Icon, text }, i) => (
           <button
             key={text}
-            onClick={() => setActive(active === i ? null : i)}
+            onClick={() => handleClick(i)}
             className={`text-left border p-5 flex flex-col gap-4 transition-all duration-300 ${
               active === i
                 ? "border-accent/40 bg-accent/[0.07]"
@@ -109,9 +119,9 @@ export default function PursuitsSection() {
             }`}
           >
             <span
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 origin-center ${
                 active === i ? "text-accent/70" : "text-muted/40"
-              }`}
+              } ${dancing === i ? "animate-icon-dance" : ""}`}
             >
               <Icon />
             </span>
