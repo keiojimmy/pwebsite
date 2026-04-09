@@ -51,7 +51,7 @@ export default function HomePage() {
               alt="Jimmy Cho"
               fill
               className="object-cover"
-              style={{ objectPosition: "30% 75%" }}
+              style={{ objectPosition: "30% 95%" }}
               priority
             />
           </div>
