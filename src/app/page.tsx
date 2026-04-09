@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-28 sm:pt-36 pb-16 sm:pb-24 items-end gap-6 md:gap-24 max-w-[1200px]">
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-28 sm:pt-36 pb-16 sm:pb-24 items-start gap-6 md:gap-24 max-w-[1200px]">
 
         {/* Text — left column (desktop) / below photo (mobile) */}
         <div className="pb-2 max-w-xl order-2 md:order-1">
@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
 
         {/* Photo */}
-        <div className="order-1 md:order-2 self-stretch">
+        <div className="order-1 md:order-2 md:self-stretch">
           {/* Mobile: landscape crop, shows person */}
           <div
             className="md:hidden w-full aspect-[4/3] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
@@ -41,19 +41,19 @@ export default function HomePage() {
               priority
             />
           </div>
-          {/* Desktop: portrait with top crop */}
+          {/* Desktop: fills column height, no fixed aspect ratio */}
           <div
-            className="hidden md:block w-full aspect-[340/460] relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
+            className="hidden md:block w-full h-full relative overflow-hidden bg-surface rounded-sm shadow-[0_12px_40px_rgba(28,22,18,0.13)]"
             style={{ transform: 'translateZ(0)' }}
           >
             <Image
-                src="/profile.jpg"
-                alt="Jimmy Cho"
-                fill
-                className="object-cover"
-                style={{ objectPosition: "center 15%" }}
-                priority
-              />
+              src="/profile.jpg"
+              alt="Jimmy Cho"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "center 15%" }}
+              priority
+            />
           </div>
         </div>
 
