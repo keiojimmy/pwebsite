@@ -79,7 +79,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
                 key={href}
                 href={href}
                 className={`font-sans text-[16px] tracking-[0.02em] transition-colors duration-500 ${
-                  isActive ? "text-accent" : "text-faint hover:text-accent"
+                  isActive ? "text-accent/80" : "text-faint hover:text-accent/80"
                 }`}
               >
                 {label}

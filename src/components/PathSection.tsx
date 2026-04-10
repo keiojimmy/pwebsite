@@ -31,7 +31,7 @@ export default function PathSection() {
           >
             <div
               className={`font-serif text-[20px] font-light mb-4 transition-colors duration-300 ${
-                active === i ? "text-accent/80" : "text-accent/50"
+                active === i ? "text-accent/80" : "text-accent/40"
               }`}
             >
               {item.index}
@@ -69,7 +69,7 @@ export default function PathSection() {
           >
             <div
               className={`font-serif text-[28px] font-light mb-8 transition-colors duration-300 ${
-                active === i ? "text-accent/80" : "text-accent/45"
+                active === i ? "text-accent/80" : "text-accent/40"
               }`}
             >
               {item.index}

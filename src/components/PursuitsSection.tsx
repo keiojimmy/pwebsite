@@ -81,7 +81,7 @@ export default function PursuitsSection() {
               i === pursuits.length - 1 ? "col-span-2" : ""
             } ${
               active === i
-                ? "border-accent/40 bg-accent/[0.07] text-accent"
+                ? "border-accent/40 bg-accent/[0.07] text-accent/80"
                 : "border-border/60 text-muted/50 active:bg-accent/[0.04]"
             }`}
           >
@@ -117,7 +117,7 @@ export default function PursuitsSection() {
             <span
               key={animKeys[i] ?? 0}
               className={`transition-colors duration-300 origin-center ${
-                active === i ? "text-accent/70" : "text-muted/40"
+                active === i ? "text-accent/80" : "text-muted/40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
               <Icon />
