@@ -9,11 +9,11 @@ export default function ContactPage() {
     <div className="px-8 sm:px-14 pt-36 sm:pt-40 pb-28 sm:pb-32 max-w-[1200px] mx-auto">
 
       {/* Page header */}
-      <div className="mb-20 sm:mb-24">
+      <div className="mb-12 sm:mb-14">
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           contact
         </h1>
-        <div className="w-8 h-px bg-accent opacity-55 my-4" />
+        <div className="w-8 h-px bg-accent opacity-60 my-4" />
         <p className="font-sans text-[15px] text-faint italic">
           open to investing, advisory, and interesting conversations.
         </p>
@@ -32,14 +32,14 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           <div>
             <p className="font-serif text-[14px] italic text-ghost mb-4">
               email
             </p>
             <a
               href="mailto:hello@jimmycho.com"
-              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent border-b border-transparent hover:border-accent/30 transition-all duration-500 pb-0.5 break-all"
+              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
             >
               hello@jimmycho.com
             </a>
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </p>
             <a
               href="https://linkedin.com/in/jimmycho"
-              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent border-b border-transparent hover:border-accent/30 transition-all duration-500 pb-0.5 break-all"
+              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
