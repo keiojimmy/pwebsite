@@ -87,7 +87,9 @@ export default function PursuitsSection() {
           >
             <span
               key={animKeys[i] ?? 0}
-              className={`block mb-3 origin-center ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
+              className={`block mb-3 origin-center transition-colors duration-300 ${
+                active === i ? "text-accent/80" : "text-accent/40"
+              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
               <Icon />
             </span>
@@ -117,7 +119,7 @@ export default function PursuitsSection() {
             <span
               key={animKeys[i] ?? 0}
               className={`transition-colors duration-300 origin-center ${
-                active === i ? "text-accent/80" : "text-muted/40"
+                active === i ? "text-accent/80" : "text-accent/40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
               <Icon />
