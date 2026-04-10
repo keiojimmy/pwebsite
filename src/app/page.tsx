@@ -59,7 +59,7 @@ export default function HomePage() {
       </section>
 
       {/* ——— Bio ——— */}
-      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-10 sm:pb-12 max-w-[1200px]">
+      <section className="px-8 sm:px-14 pt-[27px] sm:pt-[34px] pb-10 sm:pb-12 max-w-[1200px]">
         <div className="flex items-center gap-5 mb-7 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
@@ -134,7 +134,7 @@ export default function HomePage() {
       </section>
 
       {/* ——— Path ——— */}
-      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-14 sm:pb-16 max-w-[1200px]">
+      <section className="px-8 sm:px-14 pt-[27px] sm:pt-[34px] pb-14 sm:pb-16 max-w-[1200px]">
         <div className="flex items-center gap-5 mb-7 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* ——— Elsewhere ——— */}
-      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-24 sm:pb-28 max-w-[1200px]">
+      <section className="px-8 sm:px-14 pt-[27px] sm:pt-[34px] pb-24 sm:pb-28 max-w-[1200px]">
         <div className="flex items-center gap-5 mb-7 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
