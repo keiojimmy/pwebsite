@@ -39,12 +39,12 @@ export default function PathSection() {
             <div className="font-sans text-[13px] text-ink mb-1 leading-snug">
               {item.role}
             </div>
-            <div className="font-sans text-[13px] text-muted italic mb-2">
+            <div className="font-sans text-[12px] text-muted italic mb-2">
               {item.org}
             </div>
             {item.note && (
               <p
-                className={`font-sans text-[13px] leading-[1.7] mt-2 transition-colors duration-300 ${
+                className={`font-sans text-[12px] leading-[1.7] mt-2 transition-colors duration-300 ${
                   active === i ? "text-muted/90" : "text-muted/70"
                 }`}
               >
@@ -78,12 +78,12 @@ export default function PathSection() {
               <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">
                 {item.role}
               </div>
-              <div className="font-sans text-[14px] text-muted italic">
+              <div className="font-sans text-[13px] text-muted italic">
                 {item.org}
               </div>
             </div>
             {item.note && (
-              <p className={`font-sans text-[14px] leading-[1.75] transition-colors duration-300 ${
+              <p className={`font-sans text-[13px] leading-[1.75] transition-colors duration-300 ${
                 active === i ? "text-muted/90" : "text-muted/65"
               }`}>
                 {item.note}

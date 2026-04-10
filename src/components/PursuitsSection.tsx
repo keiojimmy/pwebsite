@@ -94,7 +94,7 @@ export default function PursuitsSection() {
               <Icon />
             </span>
             <p
-              className={`font-sans text-[13px] leading-[1.6] transition-colors duration-300 ${
+              className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}
             >
@@ -125,7 +125,7 @@ export default function PursuitsSection() {
               <Icon />
             </span>
             <span
-              className={`font-sans text-[14px] leading-[1.7] transition-colors duration-300 ${
+              className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}
             >
