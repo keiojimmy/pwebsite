@@ -77,8 +77,7 @@ export default function HomePage() {
 
             {/* Flags */}
             <div className="hidden md:block mt-10 select-none">
-              <p className="font-serif text-[11px] italic text-faint mb-3">places</p>
-              <div className="flex flex-wrap gap-[9px]">
+              <div className="flex flex-wrap justify-center gap-[9px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
                   '/logos/Flag_of_Germany.svg.png',
@@ -89,7 +88,11 @@ export default function HomePage() {
                   <div
                     key={src}
                     style={{ width: 40, height: 27 }}
-                    className="shrink-0 rounded-md overflow-hidden shadow-[0_3px_10px_rgba(0,0,0,0.14),0_1px_3px_rgba(0,0,0,0.08)]"
+                    className="shrink-0 rounded-md overflow-hidden cursor-pointer
+                      shadow-[0_3px_10px_rgba(0,0,0,0.14),0_1px_3px_rgba(0,0,0,0.08)]
+                      transition-all duration-200 ease-out
+                      hover:-translate-y-1.5 hover:scale-110
+                      hover:shadow-[0_8px_24px_rgba(0,0,0,0.18),0_3px_8px_rgba(0,0,0,0.10)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt="" draggable={false} className="w-full h-full object-cover" />
