@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { projects } from "@/data/projects";
-import ProjectAccordion from "@/components/ProjectAccordion";
+import ProjectsLayout from "@/components/ProjectsLayout";
 
 export const metadata: Metadata = {
   title: "Projects — Jimmy Cho",
@@ -21,7 +21,7 @@ export default function WorkPage() {
         </p>
       </div>
 
-      <ProjectAccordion projects={projects} />
+      <ProjectsLayout projects={projects} />
 
     </div>
   );
