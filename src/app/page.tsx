@@ -58,47 +58,53 @@ export default function HomePage() {
 
       </section>
 
-      {/* Divider */}
-      <div className="mx-8 sm:mx-14 h-px bg-border" />
-
-      {/* ——— Belief ——— */}
-      <section className="px-8 sm:px-14 pt-14 sm:pt-16 pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-12 md:gap-24 max-w-[1200px]">
-        {/* Italic statement with red left border */}
-        <div className="relative pl-7">
-          <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-40" />
-          <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
-            The most interesting things happen at the edges, where people and places collide.
+      {/* ——— Bio ——— */}
+      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-10 sm:pb-12 max-w-[1200px]">
+        <div className="flex items-center gap-5 mb-7 sm:mb-8">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
+          <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
+            bio
           </p>
+          <div className="flex-1 h-px bg-border" />
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-12 md:gap-24">
+          {/* Italic statement with red left border */}
+          <div className="relative pl-7">
+            <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-40" />
+            <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
+              The most interesting things happen at the edges, where people and places collide.
+            </p>
+          </div>
 
-        {/* Bio */}
-        <div className="pt-0 md:pt-2.5 space-y-5">
-          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            In the span of 20 months, I attended preschool in Korea, started
-            kindergarten in Germany, and finished it in Japan. I then spent
-            first grade in Tennessee, second in Colorado, third and fourth in
-            Korea, middle school in Texas, and high school back in Seoul. As
-            life continued to ping-pong me between college in the U.S., the
-            army in Korea, and a career in Japan, I came to believe that the
-            most interesting things happen at the edges, where people and
-            places collide.
-          </p>
-          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            My career has been built on navigating those exact edges. Strategy
-            consulting at L.E.K. in Tokyo. Managing Cinnabon and Jamba Juice
-            across Japan and Korea. Acting as Chief of Staff at a fast-growing
-            hospitality tech unicorn expanding aggressively across Asia.
-            Getting my hands dirty through COVID when the business had to do a
-            full pivot. Building a startup—an artisanal tea brand that distributed
-            to café chains across Japan, including Godiva. Two years at Harvard
-            Business School confirmed what my operating experience had already
-            suggested.
-          </p>
-          <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
-            I now back early-stage founders building at those exact
-            edges—where outcomes are uncertain, new ideas collide, and the
-            path forward is least defined.
-          </p>
+          {/* Bio */}
+          <div className="pt-0 md:pt-2.5 space-y-5">
+            <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+              In the span of 20 months, I attended preschool in Korea, started
+              kindergarten in Germany, and finished it in Japan. I then spent
+              first grade in Tennessee, second in Colorado, third and fourth in
+              Korea, middle school in Texas, and high school back in Seoul. As
+              life continued to ping-pong me between college in the U.S., the
+              army in Korea, and a career in Japan, I came to believe that the
+              most interesting things happen at the edges, where people and
+              places collide.
+            </p>
+            <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+              My career has been built on navigating those exact edges. Strategy
+              consulting at L.E.K. in Tokyo. Managing Cinnabon and Jamba Juice
+              across Japan and Korea. Acting as Chief of Staff at a fast-growing
+              hospitality tech unicorn expanding aggressively across Asia.
+              Getting my hands dirty through COVID when the business had to do a
+              full pivot. Building a startup—an artisanal tea brand that distributed
+              to café chains across Japan, including Godiva. Two years at Harvard
+              Business School confirmed what my operating experience had already
+              suggested.
+            </p>
+            <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
+              I now back early-stage founders building at those exact
+              edges—where outcomes are uncertain, new ideas collide, and the
+              path forward is least defined.
+            </p>
+          </div>
         </div>
       </section>
 
