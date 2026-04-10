@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-28 sm:pt-36 pb-16 sm:pb-24 items-start gap-6 md:gap-24 max-w-[1200px]">
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-28 sm:pt-36 pb-10 sm:pb-16 items-start gap-6 md:gap-24 max-w-[1200px]">
 
         {/* Text — left column (desktop) / below photo (mobile) */}
         <div className="pb-2 max-w-xl order-2 md:order-1">
@@ -62,7 +62,7 @@ export default function HomePage() {
       <div className="mx-8 sm:mx-14 h-px bg-border" />
 
       {/* ——— Belief ——— */}
-      <section className="px-8 sm:px-14 pt-24 sm:pt-28 pb-12 sm:pb-14 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-16 md:gap-24 max-w-[1200px]">
+      <section className="px-8 sm:px-14 pt-14 sm:pt-16 pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-12 md:gap-24 max-w-[1200px]">
         {/* Italic statement with red left border */}
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-40" />
@@ -103,8 +103,8 @@ export default function HomePage() {
       </section>
 
       {/* ——— Path ——— */}
-      <section className="px-8 sm:px-14 pt-10 sm:pt-12 pb-28 sm:pb-32 max-w-[1200px]">
-        <div className="flex items-center gap-5 mb-10 sm:mb-12">
+      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-14 sm:pb-16 max-w-[1200px]">
+        <div className="flex items-center gap-5 mb-7 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
             path
@@ -115,8 +115,8 @@ export default function HomePage() {
       </section>
 
       {/* ——— Elsewhere ——— */}
-      <section className="px-8 sm:px-14 py-24 sm:py-28 max-w-[1200px]">
-        <div className="flex items-center gap-5 mb-10 sm:mb-12">
+      <section className="px-8 sm:px-14 pt-8 sm:pt-10 pb-14 sm:pb-16 max-w-[1200px]">
+        <div className="flex items-center gap-5 mb-7 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
             other pursuits
