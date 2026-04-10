@@ -60,7 +60,7 @@ export default function PursuitsSection() {
           <button
             key={text}
             onClick={() => handleClick(i)}
-            className={`text-left border p-5 flex flex-col gap-4 transition-all duration-300 ${
+            className={`text-left border p-5 transition-all duration-300 ${
               active === i
                 ? "border-accent/40 bg-accent/[0.07]"
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
@@ -68,7 +68,7 @@ export default function PursuitsSection() {
           >
             <span
               key={animKeys[i] ?? 0}
-              className={`block text-[21px] leading-none transition-opacity duration-300 origin-center ${
+              className={`block mb-4 text-[21px] leading-none transition-opacity duration-300 origin-center ${
                 active === i ? "opacity-80" : "opacity-40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
