@@ -55,7 +55,7 @@ function TvIcon() {
 const pursuits = [
   { Icon: MusicIcon,      text: "Music, always — playing and singing" },
   { Icon: BasketballIcon, text: "Basketball, on a bad ankle" },
-  { Icon: OnsenIcon,      text: "Onsens and fine sashimi" },
+  { Icon: OnsenIcon,      text: "Onsens and sashimi" },
   { Icon: CafeIcon,       text: "Quiet cafés and something sweet" },
   { Icon: TvIcon,         text: "Late-night Korean dramas" },
 ];
