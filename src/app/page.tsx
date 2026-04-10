@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* Text — left column (desktop) / below photo (mobile) */}
         <div className="pb-2 max-w-xl order-2 md:order-1">
           <h1 className="font-sans text-[36px] sm:text-[68px] md:text-[72px] font-normal leading-[1.05] tracking-[-0.02em] text-ink mb-4 sm:mb-6">
-            Jimmy<br className="hidden sm:block" />Cho
+            Jimmy<br className="hidden sm:block" /> Cho
           </h1>
           <div className="w-10 h-px bg-accent opacity-60 mb-5 sm:mb-10" />
           <p className="font-sans text-[16px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
