@@ -78,7 +78,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
               <Link
                 key={href}
                 href={href}
-                className={`font-sans text-[16px] tracking-[0.02em] transition-colors duration-500 ${
+                className={`font-sans text-[15.5px] tracking-[0.02em] transition-colors duration-500 ${
                   isActive ? "text-accent/80" : "text-faint hover:text-accent/80"
                 }`}
               >
@@ -126,7 +126,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             <Link
               key={href}
               href={href}
-              className={`font-sans text-[15px] tracking-[0.02em] transition-colors duration-500 ${
+              className={`font-sans text-[15.5px] tracking-[0.02em] transition-colors duration-500 ${
                 isActive ? "text-accent" : "text-faint hover:text-accent"
               }`}
             >
