@@ -75,10 +75,8 @@ export default function HomePage() {
               The most interesting things happen at the edges, where people and places collide.
             </p>
 
-            {/* Two-row collage: flags then logos */}
-            <div className="hidden md:block mt-10 select-none space-y-5">
-
-              {/* Row 1 — flags, no rotation */}
+            {/* Flags — accent-tinted monotone */}
+            <div className="hidden md:block mt-10 select-none">
               <div className="flex flex-wrap gap-[10px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
@@ -90,43 +88,14 @@ export default function HomePage() {
                   <div
                     key={src}
                     style={{ width: 64, height: 43 }}
-                    className="shrink-0 rounded-[2px] overflow-hidden border border-black/[0.06] shadow-[0_2px_6px_rgba(0,0,0,0.10)]"
+                    className="shrink-0 relative rounded-[2px] overflow-hidden border border-accent/20 shadow-[0_2px_6px_rgba(0,0,0,0.08)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover" />
+                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover grayscale" />
+                    <div className="absolute inset-0 mix-blend-multiply" style={{ backgroundColor: 'var(--color-accent)', opacity: 0.55 }} />
                   </div>
                 ))}
               </div>
-
-              {/* Row 2 — all logos, monochrome */}
-              <div className="flex flex-wrap gap-x-[18px] gap-y-[14px] items-center">
-                {([
-                  { src: '/logos/WashU_St._Louis_seal.svg',                    w: 52, h: 48 },
-                  { src: '/logos/katusa_veteran.png',                           w: 80, h: 48 },
-                  { src: '/logos/2ID-Logo-Transparent.png',                    w: 96, h: 48 },
-                  { src: '/logos/Keio_University_Logo.png',                    w: 72, h: 48 },
-                  { src: '/logos/LEK_Logo.png',                                w: 72, h: 48 },
-                  { src: '/logos/Cinnabon_logo.svg.png',                       w: 88, h: 48 },
-                  { src: '/logos/Jamba_logo.svg',                              w: 80, h: 48 },
-                  { src: '/logos/seattles-best-coffee-logo-png-transparent.png',w: 96, h: 48 },
-                  { src: '/logos/slowtea_logo.png',                            w: 80, h: 48 },
-                  { src: '/logos/OYO_Rooms_logo.png',                          w: 48, h: 48 },
-                  { src: '/logos/Logo_JR_Kyushu.svg',                          w: 44, h: 48 },
-                  { src: '/logos/HBS-styleguide-primary-logo-3.png',           w: 96, h: 48 },
-                  { src: '/logos/McKinsey_Script_Mark_2019.svg',               w: 68, h: 48 },
-                  { src: '/logos/Softbank_mobile_logo.svg.png',                w: 64, h: 48 },
-                ] as { src: string; w: number; h: number }[]).map((l) => (
-                  <div
-                    key={l.src}
-                    style={{ width: l.w, height: l.h }}
-                    className="shrink-0 flex items-center justify-center overflow-hidden"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={l.src} alt="" draggable={false} className="max-w-full max-h-full object-contain grayscale" />
-                  </div>
-                ))}
-              </div>
-
             </div>
           </div>
 
