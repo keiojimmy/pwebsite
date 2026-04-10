@@ -77,7 +77,7 @@ export default function PursuitsSection() {
           <button
             key={text}
             onClick={() => handleClick(i)}
-            className={`text-left p-4 border transition-all duration-300 rounded-sm ${
+            className={`text-left p-3.5 border transition-all duration-300 rounded-sm ${
               i === pursuits.length - 1 ? "col-span-2" : ""
             } ${
               active === i
