@@ -74,19 +74,19 @@ export default function HomePage() {
             <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
               The most interesting things happen at the edges, where people and places collide.
             </p>
-            {/* Three overlapping circles — edges where worlds collide */}
-            <div className="hidden md:block mt-10 text-accent opacity-20">
+            {/* Concentric circles — ripple from a collision point */}
+            <div className="hidden md:block mt-12">
               <svg
-                viewBox="0 0 240 210"
+                viewBox="0 0 320 280"
                 fill="none"
-                className="w-full max-w-[210px]"
+                className="w-full"
                 aria-hidden="true"
               >
-                <circle cx="80"  cy="130" r="62" stroke="currentColor" strokeWidth="0.8" />
-                <circle cx="160" cy="130" r="62" stroke="currentColor" strokeWidth="0.8" />
-                <circle cx="120" cy="72"  r="62" stroke="currentColor" strokeWidth="0.8" />
-                {/* Subtle fill at triple intersection */}
-                <circle cx="120" cy="107" r="10" fill="currentColor" fillOpacity="0.12" />
+                <circle cx="160" cy="140" r="28"  stroke="var(--color-accent)" strokeWidth="1.25" opacity="0.55" />
+                <circle cx="160" cy="140" r="72"  stroke="var(--color-accent)" strokeWidth="1"    opacity="0.35" />
+                <circle cx="160" cy="140" r="116" stroke="var(--color-accent)" strokeWidth="0.8"  opacity="0.2"  />
+                <circle cx="160" cy="140" r="160" stroke="var(--color-accent)" strokeWidth="0.6"  opacity="0.1"  />
+                <circle cx="160" cy="140" r="4"   fill="var(--color-accent)"   opacity="0.55" />
               </svg>
             </div>
           </div>
