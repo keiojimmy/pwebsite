@@ -29,14 +29,14 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
   return (
     <>
       {/* ── Accordion: all screen sizes ── */}
-      <div className="divide-y divide-border">
+      <div className="flex flex-col gap-2">
         {projects.map((project) => {
           const isOpen = activeId === project.id;
           return (
-            <div key={project.id}>
+            <div key={project.id} className={`border transition-colors duration-300 ${isOpen ? "border-accent/40 bg-accent/[0.03]" : "border-border"}`}>
               <button
                 onClick={() => setActiveId(isOpen ? "" : project.id)}
-                className="w-full text-left py-5 flex items-center justify-between gap-4"
+                className="w-full text-left px-5 py-4 flex items-center justify-between gap-4"
               >
                 <div>
                   <div className="mb-1.5">
@@ -54,7 +54,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
               {/* Inline detail */}
               <div className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
-                  <div className="pb-10 pt-1 sm:max-w-3xl">
+                  <div className="px-5 pb-6 pt-1 sm:max-w-3xl">
                     <p className="font-sans text-[12px] text-ghost mb-4">{project.year} · {project.company}</p>
                     <p className="font-sans text-[15.5px] text-muted leading-[1.9] mb-7">{project.description}</p>
                     <PhotoGrid count={project.photos} />
