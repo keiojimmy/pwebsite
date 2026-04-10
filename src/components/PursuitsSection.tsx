@@ -37,7 +37,7 @@ export default function PursuitsSection() {
           >
             <span
               key={animKeys[i] ?? 0}
-              className={`block mb-3 text-[22px] leading-none transition-opacity duration-300 origin-center ${
+              className={`block mb-3 text-[21px] leading-none transition-opacity duration-300 origin-center ${
                 active === i ? "opacity-80" : "opacity-40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
@@ -68,7 +68,7 @@ export default function PursuitsSection() {
           >
             <span
               key={animKeys[i] ?? 0}
-              className={`text-[26px] leading-none transition-opacity duration-300 origin-center ${
+              className={`text-[24px] leading-none transition-opacity duration-300 origin-center ${
                 active === i ? "opacity-80" : "opacity-40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
