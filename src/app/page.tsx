@@ -20,7 +20,7 @@ export default function HomePage() {
           </h1>
           <div className="w-10 h-px bg-accent opacity-60 mb-5 sm:mb-10" />
           <p className="font-sans text-[16px] sm:text-[17.5px] leading-[1.8] text-muted max-w-lg">
-            Shaped by consulting, operations, and entrepreneurship across Japan, Korea, and the U.S., now investing in early-stage companies.
+            Shaped by strategy consulting, hands-on operations, and entrepreneurship across Japan, Korea, and the U.S., now investing in early-stage companies.
           </p>
         </div>
 
