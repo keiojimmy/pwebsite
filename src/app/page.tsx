@@ -77,7 +77,7 @@ export default function HomePage() {
 
             {/* Flags */}
             <div className="block mt-8 md:mt-10 select-none">
-              <div className="flex gap-[28px]">
+              <div className="flex gap-[14px] md:gap-[28px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
                   '/logos/Flag_of_Germany.svg.png',
@@ -87,8 +87,7 @@ export default function HomePage() {
                 ].map((src) => (
                   <div
                     key={src}
-                    style={{ width: 46, height: 31 }}
-                    className="shrink-0 rounded-md overflow-hidden cursor-pointer
+                    className="shrink-0 w-8 h-[21px] md:w-[46px] md:h-[31px] rounded-md overflow-hidden cursor-pointer
                       shadow-[0_2px_6px_rgba(0,0,0,0.09)]
                       transition-all duration-200 ease-out
                       hover:-translate-y-1.5 hover:scale-110
