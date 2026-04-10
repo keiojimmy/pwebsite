@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="px-8 sm:px-14 pt-28 sm:pt-36 pb-28 sm:pb-32 max-w-[1200px] mx-auto">
+    <div className="px-8 sm:px-14 pt-56 sm:pt-36 pb-28 sm:pb-32 max-w-[1200px] mx-auto">
 
       {/* Page header */}
       <div className="mb-12 sm:mb-14">
