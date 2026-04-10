@@ -21,7 +21,6 @@ export default function WorkPage() {
         <p className="font-sans text-[15px] text-faint italic">
           selected work across strategy, investing, and operations.
         </p>
-        <div className="mt-8 h-px bg-border" />
       </div>
 
       {/* Sections */}
