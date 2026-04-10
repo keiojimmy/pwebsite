@@ -42,7 +42,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
                   <div className="mb-1.5">
                     <CategoryBadge category={project.category} />
                   </div>
-                  <span className={`font-serif text-[17.5px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
+                  <span className={`font-serif text-[15.5px] sm:text-[17.5px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
                     {project.title}
                   </span>
                 </div>
