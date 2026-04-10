@@ -88,11 +88,10 @@ export default function HomePage() {
                   <div
                     key={src}
                     style={{ width: 64, height: 43 }}
-                    className="shrink-0 relative rounded-[2px] overflow-hidden border border-accent/20 shadow-[0_2px_6px_rgba(0,0,0,0.08)]"
+                    className="shrink-0 rounded-[2px] overflow-hidden border border-black/[0.06] shadow-[0_2px_6px_rgba(0,0,0,0.10)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt="" draggable={false} className="w-full h-full object-cover grayscale" />
-                    <div className="absolute inset-0 mix-blend-multiply" style={{ backgroundColor: 'var(--color-accent)', opacity: 0.55 }} />
                   </div>
                 ))}
               </div>
