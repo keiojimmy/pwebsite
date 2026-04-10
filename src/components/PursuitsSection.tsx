@@ -68,7 +68,7 @@ export default function PursuitsSection() {
           >
             <span
               key={animKeys[i] ?? 0}
-              className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
+              className={`block text-[21px] leading-none transition-opacity duration-300 origin-center ${
                 active === i ? "opacity-80" : "opacity-40"
               } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
             >
