@@ -76,7 +76,7 @@ export default function HomePage() {
             </p>
 
             {/* Flags */}
-            <div className="hidden md:block mt-10 select-none">
+            <div className="block mt-8 md:mt-10 select-none">
               <div className="flex justify-between">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
