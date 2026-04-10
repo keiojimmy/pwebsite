@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { projects } from "@/data/projects";
-import WorkNav from "@/components/WorkNav";
+import ProjectAccordion from "@/components/ProjectAccordion";
 
 export const metadata: Metadata = {
   title: "Projects — Jimmy Cho",
@@ -21,82 +21,8 @@ export default function WorkPage() {
         </p>
       </div>
 
-      {/* Mobile: horizontal scroll nav */}
-      <div className="sm:hidden -mx-8 px-8 mb-10 overflow-x-auto">
-        <div className="flex gap-2 pb-2 w-max">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={`#${project.id}`}
-              className="flex-shrink-0 border border-border rounded-sm px-3 py-1.5 font-sans text-[12px] text-muted hover:text-ink hover:border-accent/40 transition-all duration-300 whitespace-nowrap"
-            >
-              {project.title}
-            </a>
-          ))}
-        </div>
-      </div>
+      <ProjectAccordion projects={projects} />
 
-      {/* Desktop: sidebar + content */}
-      <div className="flex gap-16 lg:gap-20">
-
-        {/* Sticky sidebar */}
-        <aside className="hidden sm:block w-44 shrink-0">
-          <WorkNav projects={projects.map(p => ({ id: p.id, title: p.title, category: p.category }))} />
-        </aside>
-
-        {/* Project list */}
-        <div className="flex-1 divide-y divide-border">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              id={project.id}
-              className="py-14 sm:py-16 scroll-mt-28"
-            >
-              {/* Meta row */}
-              <div className="flex items-baseline justify-between mb-4">
-                <span className="font-serif text-[13px] italic text-accent/80">
-                  {project.category}
-                </span>
-                <span className="font-sans text-[12px] tracking-[0.04em] text-ghost">
-                  {project.year}
-                </span>
-              </div>
-
-              {/* Title + company */}
-              <h2 className="font-serif text-[26px] sm:text-[32px] font-light text-ink leading-tight tracking-[-0.01em] mb-1">
-                {project.title}
-              </h2>
-              <p className="font-sans text-[13px] text-faint italic mb-6">
-                {project.company}
-              </p>
-
-              {/* Description */}
-              <p className="font-sans text-[15px] text-muted leading-[1.9] max-w-2xl mb-10">
-                {project.description}
-              </p>
-
-              {/* Photo placeholders */}
-              <div className={`grid gap-2.5 ${
-                project.photos === 4
-                  ? "grid-cols-2 sm:grid-cols-4"
-                  : "grid-cols-2 sm:grid-cols-3"
-              }`}>
-                {Array.from({ length: project.photos }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-[4/3] bg-surface border border-border/60 rounded-sm flex items-center justify-center"
-                  >
-                    <span className="font-sans text-[11px] text-ghost/50 select-none">
-                      photo {i + 1}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-      </div>
     </div>
   );
 }
