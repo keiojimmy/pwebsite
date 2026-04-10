@@ -35,7 +35,7 @@ export default function PursuitsSection() {
                 : "border-border/60 active:bg-accent/[0.04]"
             }`}
           >
-            <div className="flex-1 flex items-end">
+            <div className="flex-1 flex items-center">
               <span
                 key={animKeys[i] ?? 0}
                 className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
@@ -68,7 +68,7 @@ export default function PursuitsSection() {
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
             }`}
           >
-            <div className="flex-1 flex items-end">
+            <div className="flex-1 flex items-center">
               <span
                 key={animKeys[i] ?? 0}
                 className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
