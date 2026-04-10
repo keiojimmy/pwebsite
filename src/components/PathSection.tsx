@@ -6,7 +6,7 @@ const items = [
   { index: "I",   role: "Strategy Consulting",    org: "Consumer & Pharma",      note: "Growth strategy, M&A diligence, and financial modeling for companies across APAC and the U.S." },
   { index: "II",  role: "Operator",               org: "Enterprise & Startups",  note: "Running international food brands across Japan and Korea. Chief of Staff at a fast-growing hospitality tech unicorn." },
   { index: "III", role: "Founder",                org: "Food & Beverage",                  note: "Built a startup — an artisanal tea brand distributed to café chains including Godiva Cafés across Japan." },
-  { index: "IV",  role: "Harvard Business School",org: "MBA",                    note: "" },
+  { index: "IV",  role: "Harvard Business School",org: "MBA",                    note: "Co-chair of the HBS Asia Business Conference — one of the largest student-run business conferences in the world, bringing together senior executives from across the globe." },
   { index: "V",   role: "Investor",               org: "Current",                note: "Backing founders at the early stages, in Japan and the U.S." },
 ];
 
