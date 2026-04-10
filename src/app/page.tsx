@@ -110,11 +110,7 @@ export default function HomePage() {
                       width:  item.w,
                       height: 44,
                     }}
-                    className={`shrink-0 overflow-hidden border shadow-[0_2px_8px_rgba(0,0,0,0.11)] ${
-                      item.flag
-                        ? 'rounded-[2px] border-black/[0.06]'
-                        : 'rounded-[3px] border-black/[0.07] bg-white flex items-center justify-center p-1'
-                    }`}
+                    className={`shrink-0 overflow-hidden ${item.flag ? 'rounded-[2px] border border-black/[0.06] shadow-[0_2px_8px_rgba(0,0,0,0.11)]' : 'flex items-center justify-center'}`}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
