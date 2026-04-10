@@ -67,7 +67,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-12 md:gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-6 md:gap-24">
           {/* Italic statement with red left border */}
           <div className="relative pl-7">
             <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-40" />
@@ -76,7 +76,7 @@ export default function HomePage() {
             </p>
 
             {/* Flags */}
-            <div className="block mt-8 md:mt-10 select-none">
+            <div className="block mt-4 md:mt-10 select-none">
               <div className="flex gap-[14px] md:gap-[28px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
