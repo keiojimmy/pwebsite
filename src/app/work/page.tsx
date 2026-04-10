@@ -17,7 +17,7 @@ export default function WorkPage() {
         </h1>
         <div className="w-8 h-px bg-accent opacity-60 my-4" />
         <p className="font-sans text-[15px] text-faint italic">
-          selected work across operations, founding, and business development.
+          selected projects across founding, operations, and business development.
         </p>
       </div>
 
