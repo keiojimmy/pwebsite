@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const items = [
-  { index: "I",   role: "Strategy Consulting",    org: "Consumer, Pharma & Manufacturing",      note: "M&A diligence, commercial strategy, and financial modeling across Japan and the U.S." },
+  { index: "I",   role: "Strategy Consulting",    org: "Consumer, Pharma & Manufacturing",      note: "Growth strategy, M&A diligence, and financial modeling for companies across APAC and the U.S." },
   { index: "II",  role: "Operator",               org: "Enterprise & Startups",  note: "Running international food brands across Japan and Korea. Chief of Staff at a fast-growing hospitality tech unicorn." },
   { index: "III", role: "Founder",                org: "Food & Beverage",                  note: "Built a startup — an artisanal tea brand distributed to café chains including Godiva Cafés across Japan." },
   { index: "IV",  role: "Harvard Business School",org: "MBA",                    note: "" },
