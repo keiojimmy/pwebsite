@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Three horizontal stripes: blue, white, blue -->
+  <rect y="0"   width="900" height="200" fill="#003DA5"/>
+  <rect y="200" width="900" height="200" fill="#ffffff"/>
+  <rect y="400" width="900" height="200" fill="#003DA5"/>
+  <!-- Gold disc behind the C -->
+  <circle cx="260" cy="300" r="138" fill="#FFD700"/>
+  <!-- Red C: outer r=200, inner r=138, opening ±60° from right -->
+  <!-- Top outer (60° above right): (260+200*cos60, 300-200*sin60) = (360, 126.8) -->
+  <!-- Bottom outer: (360, 473.2) -->
+  <!-- Top inner: (260+138*cos60, 300-138*sin60) = (329, 180.5) -->
+  <!-- Bottom inner: (329, 419.5) -->
+  <path d="M360,127 A200,200,0,1,0,360,473 L329,420 A138,138,0,1,1,329,180 Z" fill="#BF0A30"/>
+</svg>

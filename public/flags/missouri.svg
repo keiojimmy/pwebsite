@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Three horizontal stripes: red, white, blue -->
+  <rect y="0"   width="900" height="200" fill="#BF0A30"/>
+  <rect y="200" width="900" height="200" fill="#ffffff"/>
+  <rect y="400" width="900" height="200" fill="#003DA5"/>
+  <!-- Simplified state seal: outer blue ring, white ring, inner blue circle -->
+  <circle cx="450" cy="300" r="130" fill="#003DA5"/>
+  <circle cx="450" cy="300" r="108" fill="#ffffff"/>
+  <circle cx="450" cy="300" r="88"  fill="#003DA5"/>
+  <!-- Two bears silhouettes (simplified rectangles) flanking a shield -->
+  <rect x="368" y="258" width="164" height="84" rx="4" fill="#ffffff" opacity="0.9"/>
+  <!-- Shield: blue left, red right -->
+  <rect x="378" y="264" width="68" height="72" rx="2" fill="#003DA5"/>
+  <rect x="450" y="264" width="68" height="72" rx="2" fill="#BF0A30"/>
+  <!-- Crescent and star on shield -->
+  <path d="M412,282 A18,18,0,1,1,412,312 A10,10,0,1,0,412,282Z" fill="#ffffff"/>
+  <polygon points="484,272 488,284 500,284 490,292 494,304 484,296 474,304 478,292 468,284 480,284" fill="#ffffff" transform="scale(0.7) translate(208,120)"/>
+</svg>
