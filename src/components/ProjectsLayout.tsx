@@ -3,17 +3,9 @@
 import { useState } from "react";
 import { Project } from "@/data/projects";
 
-const CATEGORY_COLORS: Record<string, string> = {
-  "Founder":              "text-[#b83a2a]/80 border-[#b83a2a]/30 bg-[#b83a2a]/[0.06]",
-  "Operations":           "text-[#2a72b8]/80 border-[#2a72b8]/30 bg-[#2a72b8]/[0.06]",
-  "Business Development": "text-[#2a9e6e]/80 border-[#2a9e6e]/30 bg-[#2a9e6e]/[0.06]",
-  "Consulting":           "text-[#7a5c2a]/80 border-[#7a5c2a]/30 bg-[#7a5c2a]/[0.06]",
-};
-
 function CategoryBadge({ category }: { category: string }) {
-  const color = CATEGORY_COLORS[category] ?? "text-muted border-border bg-surface";
   return (
-    <span className={`inline-block font-sans text-[10px] tracking-[0.06em] uppercase border rounded-sm px-1.5 py-0.5 leading-none ${color}`}>
+    <span className="inline-block font-serif text-[11px] italic text-accent/80 border border-accent/30 bg-accent/[0.05] rounded-sm px-1.5 py-0.5 leading-none">
       {category}
     </span>
   );
@@ -46,7 +38,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
           <nav className="space-y-6">
             {categories.map((cat) => (
               <div key={cat}>
-                <p className="font-sans text-[10px] tracking-[0.08em] uppercase text-ghost mb-2">
+                <p className="font-serif text-[11px] italic text-accent/60 mb-2">
                   {cat}
                 </p>
                 <ul className="space-y-px">

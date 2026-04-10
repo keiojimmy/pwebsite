@@ -52,8 +52,8 @@ export const projects: Project[] = [
   {
     id: "godiva-consulting",
     title: "Marketing Strategy",
-    category: "Consulting",
-    company: "Godiva · Japan",
+    category: "Founder",
+    company: "Own Consulting Firm · Godiva Japan",
     year: "2020",
     description:
       "Provided marketing strategy consulting to Godiva Japan, working on brand positioning and customer engagement in a highly competitive premium confectionery market. Focused on how the brand could deepen its resonance with Japanese consumers while maintaining the equity of a globally recognized luxury name.",
@@ -62,8 +62,8 @@ export const projects: Project[] = [
   {
     id: "kaefer-jr",
     title: "Marketing & Business Development",
-    category: "Consulting",
-    company: "Kaefer × JR Group · Japan",
+    category: "Founder",
+    company: "Own Consulting Firm · Kaefer × JR Group",
     year: "2020",
     description:
       "Supported Kaefer's marketing and business development efforts in Japan, with a focus on the JR Group — one of the country's largest infrastructure and real estate operators. Work spanned opportunity mapping, stakeholder engagement, and helping a European firm navigate the relationship-driven dynamics of doing business in Japan.",
