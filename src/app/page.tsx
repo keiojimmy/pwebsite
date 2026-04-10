@@ -75,9 +75,10 @@ export default function HomePage() {
               The most interesting things happen at the edges, where people and places collide.
             </p>
 
-            {/* Flags — accent-tinted monotone */}
+            {/* Flags */}
             <div className="hidden md:block mt-10 select-none">
-              <div className="flex flex-wrap gap-[10px]">
+              <p className="font-serif text-[11px] italic text-faint mb-3">places</p>
+              <div className="flex flex-wrap gap-[9px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
                   '/logos/Flag_of_Germany.svg.png',
@@ -87,8 +88,8 @@ export default function HomePage() {
                 ].map((src) => (
                   <div
                     key={src}
-                    style={{ width: 48, height: 32 }}
-                    className="shrink-0 rounded-lg overflow-hidden shadow-[0_4px_14px_rgba(0,0,0,0.13),0_1px_4px_rgba(0,0,0,0.08)]"
+                    style={{ width: 40, height: 27 }}
+                    className="shrink-0 rounded-md overflow-hidden shadow-[0_3px_10px_rgba(0,0,0,0.14),0_1px_3px_rgba(0,0,0,0.08)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt="" draggable={false} className="w-full h-full object-cover" />
