@@ -6,7 +6,7 @@ export default function Footer() {
           Designed by Jimmy.
         </span>
         <span className="font-sans text-[12px] text-muted/60">
-          &copy; 2026 Jimmy Cho
+          &copy; 2026 Jimmy Cho.
         </span>
       </div>
     </footer>
