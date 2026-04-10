@@ -75,53 +75,63 @@ export default function HomePage() {
               The most interesting things happen at the edges, where people and places collide.
             </p>
 
-            {/* Logo collage — hectic, all the edges */}
-            <div className="hidden md:block mt-10 overflow-visible select-none">
-              <div className="flex flex-wrap" style={{ gap: '10px', rowGap: '16px' }}>
+            {/* Two-row collage: flags then logos */}
+            <div className="hidden md:block mt-10 select-none space-y-5">
+
+              {/* Row 1 — flags */}
+              <div className="flex flex-wrap gap-[10px]">
                 {([
-                  { src: '/logos/Flag_of_South_Korea.svg.webp',               flag: true,  r:  3,  ty: 10, w: 66 },
-                  { src: '/logos/katusa_veteran.png',                          flag: false, r:  8,  ty: -4, w: 44 },
-                  { src: '/logos/Flag_of_Germany.svg.png',                     flag: true,  r: -8,  ty: -2, w: 66 },
-                  { src: '/logos/WashU_St._Louis_seal.svg',                    flag: false, r:  7,  ty:  2, w: 44 },
-                  { src: '/logos/Flag_of_Japan.svg.webp',                      flag: true,  r:  6,  ty: 16, w: 66 },
-                  { src: '/logos/2ID-Logo-Transparent.png',                    flag: false, r: -4,  ty: 12, w: 44 },
-                  { src: '/logos/Flag_of_Tennessee.svg.png',                   flag: true,  r: -5,  ty:  4, w: 66 },
-                  { src: '/logos/HBS-styleguide-primary-logo-3.png',           flag: false, r:  5,  ty:  6, w: 80 },
-                  { src: '/logos/Flag_of_Colorado.svg.png',                    flag: true,  r: 11,  ty: 14, w: 66 },
-                  { src: '/logos/University_of_Texas_at_Austin_logo.svg.png',  flag: false, r:-10,  ty: 18, w: 56 },
-                  { src: '/logos/Flag_of_Texas.svg.png',                       flag: true,  r:-13,  ty:  0, w: 66 },
-                  { src: '/logos/Keio_University_Logo.png',                    flag: false, r: -6,  ty: -2, w: 48 },
-                  { src: '/logos/Flag_of_Missouri.svg.png',                    flag: true,  r:  4,  ty: 20, w: 66 },
-                  { src: '/logos/LEK_Logo.png',                                flag: false, r: 12,  ty:  8, w: 80 },
-                  { src: '/logos/Flag_of_Massachusetts.svg.png',               flag: true,  r: -7,  ty:  8, w: 66 },
-                  { src: '/logos/McKinsey_Script_Mark_2019.svg',               flag: false, r: -4,  ty: 14, w: 88 },
-                  { src: '/logos/OYO_Rooms_logo.png',                          flag: false, r:  9,  ty: -4, w: 72 },
-                  { src: '/logos/Cinnabon_logo.svg.png',                       flag: false, r:-11,  ty:  6, w: 72 },
-                  { src: '/logos/Jamba_logo.svg',                              flag: false, r:  5,  ty: 18, w: 60 },
-                  { src: '/logos/seattles-best-coffee-logo-png-transparent.png', flag: false, r: -9, ty: 0, w: 64 },
-                  { src: '/logos/Logo_JR_Kyushu.svg',                          flag: false, r: -7,  ty: 14, w: 56 },
-                  { src: '/logos/Softbank_mobile_logo.svg.png',                flag: false, r:  3,  ty: 10, w: 80 },
-                  { src: '/logos/slowtea_logo.png',                            flag: false, r: 10,  ty:  2, w: 64 },
-                ] as { src: string; flag: boolean; r: number; ty: number; w: number }[]).map((item) => (
+                  { src: '/logos/Flag_of_South_Korea.svg.webp',    r:  2, ty:  2 },
+                  { src: '/logos/Flag_of_Germany.svg.png',          r: -3, ty: -2 },
+                  { src: '/logos/Flag_of_Japan.svg.webp',           r:  3, ty:  3 },
+                  { src: '/logos/Flag_of_the_United_States.svg.png',r: -2, ty: -1 },
+                  { src: '/logos/Flag_of_Tennessee.svg.png',        r:  2, ty:  2 },
+                  { src: '/logos/Flag_of_Colorado.svg.png',         r: -3, ty: -3 },
+                  { src: '/logos/Flag_of_Texas.svg.png',            r:  3, ty:  1 },
+                  { src: '/logos/Flag_of_Missouri.svg.png',         r: -2, ty:  3 },
+                  { src: '/logos/Flag_of_Massachusetts.svg.png',    r:  2, ty: -2 },
+                ] as { src: string; r: number; ty: number }[]).map((f) => (
                   <div
-                    key={item.src}
-                    style={{
-                      transform: `rotate(${item.r}deg) translateY(${item.ty}px)`,
-                      width:  item.w,
-                      height: 44,
-                    }}
-                    className={`shrink-0 overflow-hidden ${item.flag ? 'rounded-[2px] border border-black/[0.06] shadow-[0_2px_8px_rgba(0,0,0,0.11)]' : 'flex items-center justify-center'}`}
+                    key={f.src}
+                    style={{ transform: `rotate(${f.r}deg) translateY(${f.ty}px)`, width: 64, height: 43 }}
+                    className="shrink-0 rounded-[2px] overflow-hidden border border-black/[0.06] shadow-[0_2px_6px_rgba(0,0,0,0.10)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.src}
-                      alt=""
-                      draggable={false}
-                      className={item.flag ? 'w-full h-full object-cover' : 'max-w-full max-h-full object-contain'}
-                    />
+                    <img src={f.src} alt="" draggable={false} className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
+
+              {/* Row 2 — logos */}
+              <div className="flex flex-wrap gap-x-[14px] gap-y-[10px] items-center">
+                {([
+                  { src: '/logos/katusa_veteran.png',                          r:  3, ty: -2, w: 36 },
+                  { src: '/logos/2ID-Logo-Transparent.png',                    r: -2, ty:  2, w: 36 },
+                  { src: '/logos/WashU_St._Louis_seal.svg',                    r:  3, ty:  1, w: 36 },
+                  { src: '/logos/Keio_University_Logo.png',                    r: -2, ty: -2, w: 40 },
+                  { src: '/logos/University_of_Texas_at_Austin_logo.svg.png',  r:  2, ty:  2, w: 48 },
+                  { src: '/logos/HBS-styleguide-primary-logo-3.png',           r: -3, ty: -1, w: 72 },
+                  { src: '/logos/LEK_Logo.png',                                r:  3, ty:  2, w: 64 },
+                  { src: '/logos/McKinsey_Script_Mark_2019.svg',               r: -2, ty: -2, w: 80 },
+                  { src: '/logos/OYO_Rooms_logo.png',                          r:  3, ty:  1, w: 60 },
+                  { src: '/logos/Cinnabon_logo.svg.png',                       r: -3, ty:  2, w: 64 },
+                  { src: '/logos/Jamba_logo.svg',                              r:  2, ty: -2, w: 56 },
+                  { src: '/logos/seattles-best-coffee-logo-png-transparent.png',r: -3, ty:  1, w: 56 },
+                  { src: '/logos/Logo_JR_Kyushu.svg',                          r:  2, ty: -1, w: 48 },
+                  { src: '/logos/Softbank_mobile_logo.svg.png',                r: -2, ty:  2, w: 72 },
+                  { src: '/logos/slowtea_logo.png',                            r:  3, ty: -2, w: 56 },
+                ] as { src: string; r: number; ty: number; w: number }[]).map((l) => (
+                  <div
+                    key={l.src}
+                    style={{ transform: `rotate(${l.r}deg) translateY(${l.ty}px)`, width: l.w, height: 36 }}
+                    className="shrink-0 flex items-center justify-center overflow-hidden"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={l.src} alt="" draggable={false} className="max-w-full max-h-full object-contain" />
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
 
