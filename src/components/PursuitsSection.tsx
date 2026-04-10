@@ -35,7 +35,7 @@ export default function PursuitsSection() {
                 : "border-border/60 active:bg-accent/[0.04]"
             }`}
           >
-            <div className="flex-1 flex items-start">
+            <div className="flex-1 flex items-end">
               <span
                 key={animKeys[i] ?? 0}
                 className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
@@ -45,7 +45,7 @@ export default function PursuitsSection() {
                 {emoji}
               </span>
             </div>
-            <div className="flex-1 flex items-end">
+            <div className="flex-1 flex items-start">
               <p className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}>
@@ -68,7 +68,7 @@ export default function PursuitsSection() {
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
             }`}
           >
-            <div className="flex-1 flex items-start">
+            <div className="flex-1 flex items-end">
               <span
                 key={animKeys[i] ?? 0}
                 className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
@@ -78,7 +78,7 @@ export default function PursuitsSection() {
                 {emoji}
               </span>
             </div>
-            <div className="flex-1 flex items-end">
+            <div className="flex-1 flex items-start">
               <span className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}>
