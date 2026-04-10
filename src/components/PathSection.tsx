@@ -21,7 +21,7 @@ export default function PathSection() {
           <button
             key={item.index}
             onClick={() => setActive(active === i ? null : i)}
-            className={`text-left border p-5 flex flex-col min-h-[190px] transition-all duration-300 ${
+            className={`text-left border p-3.5 flex flex-col min-h-[190px] transition-all duration-300 ${
               i === items.length - 1 ? "col-span-2" : ""
             } ${
               active === i
@@ -61,7 +61,7 @@ export default function PathSection() {
           <button
             key={item.index}
             onClick={() => setActive(active === i ? null : i)}
-            className={`text-left border p-7 flex flex-col transition-all duration-300 ${
+            className={`text-left border p-5 flex flex-col transition-all duration-300 ${
               active === i
                 ? "border-accent/40 bg-accent/[0.07]"
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
