@@ -35,14 +35,16 @@ export default function PursuitsSection() {
                 : "border-border/60 active:bg-accent/[0.04]"
             }`}
           >
-            <span
-              key={animKeys[i] ?? 0}
-              className={`block mb-3 text-[21px] leading-none transition-opacity duration-300 origin-center ${
-                active === i ? "opacity-80" : "opacity-40"
-              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
-            >
-              {emoji}
-            </span>
+            <div className="h-8 flex items-center mb-2">
+              <span
+                key={animKeys[i] ?? 0}
+                className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
+                  active === i ? "opacity-80" : "opacity-40"
+                } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
+              >
+                {emoji}
+              </span>
+            </div>
             <p
               className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
@@ -66,14 +68,16 @@ export default function PursuitsSection() {
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
             }`}
           >
-            <span
-              key={animKeys[i] ?? 0}
-              className={`block mb-4 text-[21px] leading-none transition-opacity duration-300 origin-center ${
-                active === i ? "opacity-80" : "opacity-40"
-              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
-            >
-              {emoji}
-            </span>
+            <div className="h-8 flex items-center mb-3">
+              <span
+                key={animKeys[i] ?? 0}
+                className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
+                  active === i ? "opacity-80" : "opacity-40"
+                } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
+              >
+                {emoji}
+              </span>
+            </div>
             <span
               className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
