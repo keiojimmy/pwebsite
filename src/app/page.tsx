@@ -74,6 +74,35 @@ export default function HomePage() {
             <p className="font-serif text-[26px] sm:text-[30px] font-light italic leading-[1.6] text-ink tracking-[-0.005em]">
               The most interesting things happen at the edges, where people and places collide.
             </p>
+
+            {/* Scattered flags — hectic on purpose */}
+            <div className="hidden md:block mt-10 select-none">
+              <div className="flex flex-wrap" style={{ gap: '14px', rowGap: '20px' }}>
+                {[
+                  { src: '/flags/korea.svg',         r:  4,  tx:  0, ty:  8 , w: 64 },
+                  { src: '/flags/germany.svg',        r: -9,  tx:  4, ty: -4,  w: 50 },
+                  { src: '/flags/japan.svg',          r:  8,  tx: -2, ty: 18,  w: 56 },
+                  { src: '/flags/tennessee.svg',      r: -6,  tx:  6, ty:  2,  w: 62 },
+                  { src: '/flags/colorado.svg',       r: 13,  tx: -4, ty: 12,  w: 54 },
+                  { src: '/flags/texas.svg',          r:-14,  tx:  2, ty:  0,  w: 60 },
+                  { src: '/flags/missouri.svg',       r:  3,  tx: -2, ty: 22,  w: 64 },
+                  { src: '/flags/massachusetts.svg',  r: -8,  tx:  4, ty:  6,  w: 52 },
+                ].map((f) => (
+                  <div
+                    key={f.src}
+                    style={{
+                      transform: `rotate(${f.r}deg) translate(${f.tx}px, ${f.ty}px)`,
+                      width:  f.w,
+                      height: Math.round(f.w * 2 / 3),
+                    }}
+                    className="shrink-0 rounded-[2px] overflow-hidden shadow-[0_3px_12px_rgba(0,0,0,0.14)] border border-black/[0.07]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={f.src} alt="" className="w-full h-full object-cover" draggable={false} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Bio */}
