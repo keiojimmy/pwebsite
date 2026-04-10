@@ -77,7 +77,7 @@ export default function HomePage() {
 
             {/* Flags */}
             <div className="hidden md:block mt-10 select-none">
-              <div className="flex flex-wrap justify-center gap-[9px]">
+              <div className="flex justify-between">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
                   '/logos/Flag_of_Germany.svg.png',
@@ -87,12 +87,12 @@ export default function HomePage() {
                 ].map((src) => (
                   <div
                     key={src}
-                    style={{ width: 40, height: 27 }}
+                    style={{ width: 46, height: 31 }}
                     className="shrink-0 rounded-md overflow-hidden cursor-pointer
-                      shadow-[0_3px_10px_rgba(0,0,0,0.14),0_1px_3px_rgba(0,0,0,0.08)]
+                      shadow-[0_2px_6px_rgba(0,0,0,0.09)]
                       transition-all duration-200 ease-out
                       hover:-translate-y-1.5 hover:scale-110
-                      hover:shadow-[0_8px_24px_rgba(0,0,0,0.18),0_3px_8px_rgba(0,0,0,0.10)]"
+                      hover:shadow-[0_5px_14px_rgba(0,0,0,0.13),0_2px_4px_rgba(0,0,0,0.07)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt="" draggable={false} className="w-full h-full object-cover" />
