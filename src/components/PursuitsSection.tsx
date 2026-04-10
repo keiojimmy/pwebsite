@@ -5,7 +5,7 @@ import { useState } from "react";
 const pursuits = [
   { emoji: "🎵", text: "Music, always — playing and singing" },
   { emoji: "🏀", text: "Basketball, on a bad ankle" },
-  { emoji: "♨️", text: "Onsens and sashimi" },
+  { emoji: "♨️", text: "Onsens and good sashimi" },
   { emoji: "☕", text: "Quiet cafés and something sweet" },
   { emoji: "📺", text: "Late-night Korean dramas" },
 ];
