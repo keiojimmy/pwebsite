@@ -11,7 +11,7 @@ export default function WorkPage() {
     <div className="px-8 sm:px-14 pt-30 sm:pt-36 pb-28 sm:pb-32 max-w-[1200px] mx-auto">
 
       {/* Page header */}
-      <div className="mb-12 sm:mb-16">
+      <div className="mb-6 sm:mb-8">
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           projects
         </h1>
