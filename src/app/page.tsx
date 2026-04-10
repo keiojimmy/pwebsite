@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="max-w-[1200px] mx-auto">
       {/* ——— Hero ——— */}
-      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-56 sm:pt-36 pb-10 sm:pb-16 items-start gap-6 md:gap-24 max-w-[1200px]">
+      <section className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] px-8 sm:px-14 pt-100 sm:pt-36 pb-10 sm:pb-16 items-start gap-6 md:gap-24 max-w-[1200px]">
 
         {/* Text — left column (desktop) / below photo (mobile) */}
         <div className="pb-2 max-w-xl order-2 md:order-1">
