@@ -105,7 +105,7 @@ export default function HomePage() {
           <div className="pt-0 md:pt-2.5 space-y-5">
             <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
               In the span of 20 months, I attended preschool in Korea, started
-              kindergarten in Germany, and finished it in Japan. I then spent
+              kindergarten in Germany, and finished it in Japan. I spent
               first grade in Tennessee, second in Colorado, third and fourth in
               Korea, middle school in Texas, and high school back in Seoul. As
               life continued to ping-pong me between college in the U.S., the
@@ -126,8 +126,7 @@ export default function HomePage() {
             </p>
             <p className="font-sans text-[15.5px] leading-[1.9] text-muted">
               I now back early-stage founders building at those exact
-              edges—where outcomes are uncertain, new ideas collide, and the
-              path forward is least defined.
+              edges—where new ideas collide and the path forward is least defined.
             </p>
           </div>
         </div>
