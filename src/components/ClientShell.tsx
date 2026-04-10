@@ -152,10 +152,10 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       {/* Fortune message popup */}
       <div
         className={`fixed bottom-20 right-6 sm:bottom-24 sm:right-12 z-40 max-w-[200px] pointer-events-none transition-all duration-500 ${
-          fortuneVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+          fortuneVisible ? "opacity-50 translate-y-0" : "opacity-0 translate-y-2"
         }`}
       >
-        <div className="bg-[#fffdf7]/50 border border-accent/20 rounded-sm px-3.5 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+        <div className="bg-[#fffdf7] border border-accent/20 rounded-sm px-3.5 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] backdrop-blur-sm">
           <p className="font-serif text-[12.5px] italic text-ink/80 leading-[1.6]">
             &ldquo;{fortune}&rdquo;
           </p>
