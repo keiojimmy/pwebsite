@@ -87,11 +87,11 @@ export default function HomePage() {
                 ].map((src) => (
                   <div
                     key={src}
-                    style={{ width: 64, height: 43 }}
-                    className="shrink-0 rounded-[2px] overflow-hidden border border-black/[0.06] shadow-[0_2px_6px_rgba(0,0,0,0.10)]"
+                    style={{ width: 48, height: 32 }}
+                    className="shrink-0 rounded-lg overflow-hidden shadow-[0_4px_14px_rgba(0,0,0,0.13),0_1px_4px_rgba(0,0,0,0.08)]"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover grayscale" />
+                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
