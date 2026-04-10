@@ -77,7 +77,7 @@ export default function HomePage() {
 
             {/* Flags */}
             <div className="block mt-8 md:mt-10 select-none">
-              <div className="flex justify-between">
+              <div className="flex gap-[28px]">
                 {[
                   '/logos/Flag_of_South_Korea.svg.webp',
                   '/logos/Flag_of_Germany.svg.png',
