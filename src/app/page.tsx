@@ -67,7 +67,7 @@ export default function HomePage() {
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-24">
+        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-24">
           {/* Italic statement with red left border */}
           <div className="relative pl-7">
             <div className="absolute left-0 top-2 w-0.5 h-12 bg-accent opacity-40" />
