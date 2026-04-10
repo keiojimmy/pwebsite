@@ -42,7 +42,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
                   <div className="mb-1.5">
                     <CategoryBadge category={project.category} />
                   </div>
-                  <span className={`font-serif text-[18px] sm:text-[22px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
+                  <span className={`font-serif text-[17.5px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
                     {project.title}
                   </span>
                 </div>
@@ -56,7 +56,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
                 <div className="overflow-hidden">
                   <div className="pb-10 pt-1 sm:max-w-3xl">
                     <p className="font-sans text-[12px] text-ghost mb-4">{project.year} · {project.company}</p>
-                    <p className="font-sans text-[14px] sm:text-[15px] text-muted leading-[1.9] mb-7">{project.description}</p>
+                    <p className="font-sans text-[15.5px] text-muted leading-[1.9] mb-7">{project.description}</p>
                     <PhotoGrid count={project.photos} />
                   </div>
                 </div>
