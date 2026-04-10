@@ -27,7 +27,7 @@ export default function PursuitsSection() {
           <button
             key={text}
             onClick={() => handleClick(i)}
-            className={`text-left p-3.5 border transition-all duration-300 rounded-sm ${
+            className={`text-left p-3.5 border flex flex-col transition-all duration-300 rounded-sm min-h-[120px] ${
               i === pursuits.length - 1 ? "col-span-2" : ""
             } ${
               active === i
@@ -35,21 +35,23 @@ export default function PursuitsSection() {
                 : "border-border/60 active:bg-accent/[0.04]"
             }`}
           >
-            <span
-              key={animKeys[i] ?? 0}
-              className={`block mb-3 text-[21px] leading-none transition-opacity duration-300 origin-center ${
-                active === i ? "opacity-80" : "opacity-40"
-              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
-            >
-              {emoji}
-            </span>
-            <p
-              className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
+            <div className="flex-1 flex items-start">
+              <span
+                key={animKeys[i] ?? 0}
+                className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
+                  active === i ? "opacity-80" : "opacity-40"
+                } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
+              >
+                {emoji}
+              </span>
+            </div>
+            <div className="flex-1 flex items-end">
+              <p className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
-              }`}
-            >
-              {text}
-            </p>
+              }`}>
+                {text}
+              </p>
+            </div>
           </button>
         ))}
       </div>
@@ -60,27 +62,29 @@ export default function PursuitsSection() {
           <button
             key={text}
             onClick={() => handleClick(i)}
-            className={`text-left border p-5 transition-all duration-300 ${
+            className={`text-left border p-5 flex flex-col transition-all duration-300 min-h-[140px] ${
               active === i
                 ? "border-accent/40 bg-accent/[0.07]"
                 : "border-border hover:bg-accent/[0.04] hover:border-accent/20"
             }`}
           >
-            <span
-              key={animKeys[i] ?? 0}
-              className={`block mb-3 text-[21px] leading-none transition-opacity duration-300 origin-center ${
-                active === i ? "opacity-80" : "opacity-40"
-              } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
-            >
-              {emoji}
-            </span>
-            <span
-              className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
+            <div className="flex-1 flex items-start">
+              <span
+                key={animKeys[i] ?? 0}
+                className={`text-[21px] leading-none transition-opacity duration-300 origin-center ${
+                  active === i ? "opacity-80" : "opacity-40"
+                } ${(animKeys[i] ?? 0) > 0 ? "animate-icon-dance" : ""}`}
+              >
+                {emoji}
+              </span>
+            </div>
+            <div className="flex-1 flex items-end">
+              <span className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
-              }`}
-            >
-              {text}
-            </span>
+              }`}>
+                {text}
+              </span>
+            </div>
           </button>
         ))}
       </div>
