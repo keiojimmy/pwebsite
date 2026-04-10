@@ -11,7 +11,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "tea-brand",
-    title: "Artisanal Tea Brand",
+    title: "Built an Artisanal Tea Brand",
     category: "Founder",
     company: "Startup · Tokyo",
     year: "2021–2022",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     id: "own-consulting",
-    title: "Brand & Marketing Consulting",
+    title: "Started My Own Consulting Firm",
     category: "Own Consulting Firm",
     company: "Independent · Tokyo",
     year: "2020–2021",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     id: "cinnabon-digital",
-    title: "E-Commerce & SNS Channel Launch",
+    title: "Built Cinnabon's Japan E-Commerce Channel",
     category: "Operations",
     company: "Cinnabon · Japan",
     year: "2019–2020",
@@ -41,7 +41,7 @@ export const projects: Project[] = [
   },
   {
     id: "field-operations",
-    title: "Field Operations & Brand Training",
+    title: "Introduced Cinnabon's Frozen Oven to Japan",
     category: "Operations",
     company: "Cinnabon · Auntie Anne's · Seattle's Best Coffee · Japan",
     year: "2018–2020",
@@ -50,13 +50,33 @@ export const projects: Project[] = [
     photos: 4,
   },
   {
-    id: "franchise-deals",
-    title: "International Franchise Deals",
+    id: "cinnabon-rescue",
+    title: "Saved Cinnabon from Closing in Japan",
     category: "Business Development",
-    company: "Multiple Brands · Japan",
-    year: "2018–2020",
+    company: "Cinnabon · Japan",
+    year: "2019–2020",
     description:
-      "Closed and structured international franchise agreements across multiple American food brands entering Japan — including Cinnabon, Jamba Juice, and Seattle's Best Coffee. Also helped orchestrate the entry of Dickey's Barbecue Pit into Japan, taking prospective franchisees on a site visit to Dubai to observe international operations firsthand. Each deal required navigating the gap between American brand expectations and the realities of the Japanese franchise market.",
-    photos: 3,
+      "When Cinnabon Japan faced the prospect of closing, stepped in to restructure the franchise relationship and stabilize the business. Worked across operations, franchisee negotiations, and brand alignment to keep the brand alive in the market — navigating the pressure from the U.S. parent brand while managing the realities on the ground in Japan.",
+    photos: 2,
+  },
+  {
+    id: "jamba-japan",
+    title: "Brought Jamba Juice to Japan",
+    category: "Business Development",
+    company: "Jamba Juice · Japan",
+    year: "2018–2019",
+    description:
+      "Structured and closed the franchise agreement bringing Jamba Juice into Japan — navigating the gap between the American brand's expectations and the realities of the Japanese market to get the deal across the line. Managed the full arc from initial negotiations through contract execution.",
+    photos: 2,
+  },
+  {
+    id: "dickeys-japan",
+    title: "Brought Dickey's BBQ to Japan",
+    category: "Business Development",
+    company: "Dickey's Barbecue Pit · Japan",
+    year: "2019",
+    description:
+      "Led the effort to bring Dickey's Barbecue Pit — a Texas-based BBQ chain — into Japan. Took prospective franchisees on a site visit to Dubai to observe Dickey's international operations firsthand, then closed the deal and structured the franchise agreement for the Japan market.",
+    photos: 2,
   },
 ];
