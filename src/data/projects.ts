@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: "own-consulting",
     title: "Started My Own Consulting Firm",
-    category: "Own Consulting Firm",
+    category: "Founder",
     company: "Independent · Tokyo",
     year: "2020–2021",
     description:
@@ -41,12 +41,12 @@ export const projects: Project[] = [
   },
   {
     id: "field-operations",
-    title: "Introduced Cinnabon's Frozen Oven to Japan",
+    title: "Introduced the Frozen Proof Oven (FPO) to Japan",
     category: "Operations",
-    company: "Cinnabon · Auntie Anne's · Seattle's Best Coffee · Japan",
+    company: "Auntie Anne's · Seattle's Best Coffee · Japan",
     year: "2018–2020",
     description:
-      "Drove the introduction of Cinnabon's Frozen Proof Oven (FPO) to Japan — the first deployment of the system outside the United States — working directly with factories and equipment suppliers through the full rollout. Alongside this, completed formal brand training for Cinnabon, Auntie Anne's, and Seattle's Best Coffee, and worked directly in stores across all three brands to understand operations from the ground up.",
+      "Drove the introduction of the Frozen Proof Oven (FPO) to Japan — the first deployment of the system outside the United States — working directly with factories and equipment suppliers through the full rollout. Alongside this, completed formal brand training for Cinnabon, Auntie Anne's, and Seattle's Best Coffee, and worked directly in stores across all three brands to understand operations from the ground up.",
     photos: 4,
   },
   {
@@ -60,23 +60,13 @@ export const projects: Project[] = [
     photos: 2,
   },
   {
-    id: "jamba-japan",
-    title: "Brought Jamba Juice to Japan",
+    id: "dickeys-jamba-japan",
+    title: "Brought Dickey's BBQ and Jamba Juice to Japan",
     category: "Business Development",
-    company: "Jamba Juice · Japan",
+    company: "Dickey's Barbecue Pit · Jamba Juice · Japan",
     year: "2018–2019",
     description:
-      "Structured and closed the franchise agreement bringing Jamba Juice into Japan — navigating the gap between the American brand's expectations and the realities of the Japanese market to get the deal across the line. Managed the full arc from initial negotiations through contract execution.",
-    photos: 2,
-  },
-  {
-    id: "dickeys-japan",
-    title: "Brought Dickey's BBQ to Japan",
-    category: "Business Development",
-    company: "Dickey's Barbecue Pit · Japan",
-    year: "2019",
-    description:
-      "Led the effort to bring Dickey's Barbecue Pit — a Texas-based BBQ chain — into Japan. Took prospective franchisees on a site visit to Dubai to observe Dickey's international operations firsthand, then closed the deal and structured the franchise agreement for the Japan market.",
+      "Led the effort to bring two American brands into Japan. For Dickey's Barbecue Pit, took prospective franchisees on a site visit to Dubai to observe international operations firsthand before closing the franchise agreement for the Japan market. For Jamba Juice, structured and closed the franchise agreement by navigating the gap between the American brand's expectations and the realities of the Japanese market.",
     photos: 2,
   },
 ];
