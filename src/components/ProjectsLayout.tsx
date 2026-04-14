@@ -63,7 +63,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
               <div className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
                   <div className="px-5 pb-6 pt-1 sm:max-w-3xl">
-                    <p className="font-sans text-[12px] text-muted mb-4">{project.year} · {project.company}</p>
+                    <p className="font-sans text-[12px] text-faint mb-4">{project.year} · {project.company}</p>
                     <p className="font-sans text-[15.5px] text-muted leading-[1.9] mb-7">{project.description}</p>
                     <PhotoGrid count={project.photos} />
                   </div>
