@@ -24,18 +24,26 @@ function PhotoGrid({ count }: { count: number }) {
 }
 
 export default function ProjectsLayout({ projects }: { projects: Project[] }) {
-  const [activeId, setActiveId] = useState("");
+  const [openIds, setOpenIds] = useState<Set<string>>(new Set());
+
+  const toggle = (id: string) => {
+    setOpenIds(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
 
   return (
     <>
       {/* ── Accordion: all screen sizes ── */}
       <div className="flex flex-col gap-2">
         {projects.map((project) => {
-          const isOpen = activeId === project.id;
+          const isOpen = openIds.has(project.id);
           return (
             <div key={project.id} className={`border transition-colors duration-300 ${isOpen ? "border-accent/40 bg-accent/[0.03]" : "border-border"}`}>
               <button
-                onClick={() => setActiveId(isOpen ? "" : project.id)}
+                onClick={() => toggle(project.id)}
                 className="w-full text-left px-5 py-4 flex items-center justify-between gap-4"
               >
                 <div>
