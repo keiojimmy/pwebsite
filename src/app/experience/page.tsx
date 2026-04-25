@@ -19,7 +19,7 @@ function RoleList({ items }: { items: typeof experiences }) {
                 {exp.company}{exp.location && ` · ${exp.location}`}
               </p>
             </div>
-            <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
+            <span className="font-sans text-[13px] text-faint mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
               {exp.dates}
             </span>
           </div>
@@ -92,7 +92,7 @@ export default function ExperiencePage() {
                     {edu.school}{edu.note && ` · ${edu.note}`}
                   </p>
                 </div>
-                <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
+                <span className="font-sans text-[13px] text-faint mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
                   {edu.year}
                 </span>
               </div>
