@@ -27,9 +27,17 @@ function RoleList({ items }: { items: typeof experiences }) {
               {exp.dates}
             </span>
           </div>
-          <p className="font-sans text-[13.5px] sm:text-[14px] text-muted leading-[1.6]">
-            {exp.description}
-          </p>
+          <ul className="space-y-1">
+            {exp.description.split(/(?<=\.)\s+(?=[A-Z])/).map((sentence, i) => (
+              <li
+                key={i}
+                className="font-sans text-[13.5px] sm:text-[14px] text-muted leading-[1.6] flex gap-2 items-baseline"
+              >
+                <span className="text-accent/60 shrink-0 select-none">•</span>
+                <span>{sentence}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
