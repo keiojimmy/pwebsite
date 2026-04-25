@@ -58,7 +58,7 @@ export default function ExperiencePage() {
             <a
               key={href}
               href={href}
-              className="border border-accent/40 bg-accent/[0.05] px-3.5 py-1.5 font-sans text-[13px] text-accent/80 hover:bg-accent/[0.1] hover:border-accent/60 hover:text-accent transition-all duration-200"
+              className="border border-accent/40 bg-accent/[0.05] rounded-md px-2.5 py-0.5 font-sans text-[13px] text-accent/80 hover:bg-accent/[0.1] hover:border-accent/60 hover:text-accent transition-all duration-200"
             >
               {label}
             </a>
