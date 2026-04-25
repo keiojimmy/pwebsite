@@ -87,7 +87,6 @@ export const education: Education[] = [
     degree: "MBA",
     school: "Harvard Business School",
     year: "2022 – 2024",
-    note: "Co-chair, HBS Asia Business Conference",
   },
   {
     degree: "B.S. Chemical Engineering",
