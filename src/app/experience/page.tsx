@@ -15,7 +15,7 @@ function RoleList({ items }: { items: typeof experiences }) {
   return (
     <div className="divide-y divide-border">
       {items.map((exp) => (
-        <div key={`${exp.company}-${exp.dates}`} className="py-3 sm:py-4">
+        <div key={`${exp.company}-${exp.dates}`} className="py-3 sm:py-4 first:pt-1">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-1.5">
             <div>
               <h2 className="font-serif text-[17px] sm:text-[18.5px] font-light text-ink leading-tight">
@@ -68,7 +68,7 @@ export default function ExperiencePage() {
 
       {/* Corporate */}
       <section id="corporate" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-3 sm:mb-4">
+        <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             corporate
@@ -80,7 +80,7 @@ export default function ExperiencePage() {
 
       {/* Ventures */}
       <section id="ventures" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-3 sm:mb-4">
+        <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             ventures
@@ -92,7 +92,7 @@ export default function ExperiencePage() {
 
       {/* Education */}
       <section id="education" className="scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-3 sm:mb-4">
+        <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             education
@@ -101,7 +101,7 @@ export default function ExperiencePage() {
         </div>
         <div className="divide-y divide-border">
           {education.map((edu) => (
-            <div key={`${edu.school}-${edu.year}`} className="py-3 sm:py-4">
+            <div key={`${edu.school}-${edu.year}`} className="py-3 sm:py-4 first:pt-1">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8">
                 <div>
                   <h2 className="font-serif text-[17px] sm:text-[18.5px] font-light text-ink leading-tight">
