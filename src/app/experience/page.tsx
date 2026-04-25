@@ -73,7 +73,7 @@ export default function ExperiencePage() {
       </div>
 
       {/* Corporate */}
-      <section id="corporate" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
+      <section id="corporate" className="mb-3 sm:mb-4 scroll-mt-24 sm:scroll-mt-28">
         <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
@@ -85,7 +85,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Founder */}
-      <section id="founder" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
+      <section id="founder" className="mb-3 sm:mb-4 scroll-mt-24 sm:scroll-mt-28">
         <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
