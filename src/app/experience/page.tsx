@@ -7,23 +7,24 @@ export const metadata: Metadata = {
 
 function RoleList({ items }: { items: typeof experiences }) {
   return (
-    <div className="divide-y divide-border">
+    <div className="flex flex-col gap-2">
       {items.map((exp) => (
-        <div key={`${exp.company}-${exp.dates}`} className="py-4 sm:py-5">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-2">
-            <div>
-              <h2 className="font-serif text-[18px] sm:text-[20px] font-light text-ink leading-tight">
-                {exp.role}
-              </h2>
-              <p className="font-sans text-[13.5px] text-faint italic mt-0.5">
-                {exp.company}{exp.location && ` · ${exp.location}`}
-              </p>
-            </div>
-            <span className="font-sans text-[12.5px] text-faint mt-1 sm:mt-0 sm:shrink-0 sm:pt-1">
+        <div
+          key={`${exp.company}-${exp.dates}`}
+          className="border border-border px-4 py-3 sm:px-5 sm:py-4 transition-colors duration-200 hover:bg-surface/40"
+        >
+          <div className="flex items-start justify-between gap-3 mb-0.5">
+            <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
+              {exp.role}
+            </h2>
+            <span className="font-sans text-[12px] sm:text-[12.5px] text-faint shrink-0 pt-1">
               {exp.dates}
             </span>
           </div>
-          <p className="font-sans text-[14px] text-muted leading-[1.65]">
+          <p className="font-sans text-[12.5px] sm:text-[13px] text-faint italic mb-2">
+            {exp.company}{exp.location && ` · ${exp.location}`}
+          </p>
+          <p className="font-sans text-[13.5px] sm:text-[14px] text-muted leading-[1.65]">
             {exp.description}
           </p>
         </div>
@@ -37,7 +38,7 @@ export default function ExperiencePage() {
     <div className="px-8 sm:px-14 pt-30 sm:pt-36 pb-28 sm:pb-32 max-w-[1200px] mx-auto">
 
       {/* Page header */}
-      <div className="mb-8 sm:mb-10">
+      <div className="mb-7 sm:mb-9">
         <h1 className="font-serif text-[48px] sm:text-[56px] font-light leading-[1.05] tracking-[-0.02em] text-ink mb-3">
           cv
         </h1>
@@ -63,8 +64,8 @@ export default function ExperiencePage() {
       </div>
 
       {/* Corporate */}
-      <section id="corporate" className="mb-10 sm:mb-12 scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-5 sm:mb-6">
+      <section id="corporate" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
+        <div className="flex items-center gap-5 mb-3 sm:mb-4">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             corporate
@@ -75,8 +76,8 @@ export default function ExperiencePage() {
       </section>
 
       {/* Ventures */}
-      <section id="ventures" className="mb-10 sm:mb-12 scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-5 sm:mb-6">
+      <section id="ventures" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
+        <div className="flex items-center gap-5 mb-3 sm:mb-4">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             ventures
@@ -88,29 +89,30 @@ export default function ExperiencePage() {
 
       {/* Education */}
       <section id="education" className="scroll-mt-24 sm:scroll-mt-28">
-        <div className="flex items-center gap-5 mb-5 sm:mb-6">
+        <div className="flex items-center gap-5 mb-3 sm:mb-4">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
             education
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
-        <div className="divide-y divide-border">
+        <div className="flex flex-col gap-2">
           {education.map((edu) => (
-            <div key={`${edu.school}-${edu.year}`} className="py-4 sm:py-5">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8">
-                <div>
-                  <h2 className="font-serif text-[18px] sm:text-[20px] font-light text-ink leading-tight">
-                    {edu.degree}
-                  </h2>
-                  <p className="font-sans text-[13.5px] text-faint italic mt-0.5">
-                    {edu.school}{edu.note && ` · ${edu.note}`}
-                  </p>
-                </div>
-                <span className="font-sans text-[12.5px] text-faint mt-1 sm:mt-0 sm:shrink-0 sm:pt-1">
+            <div
+              key={`${edu.school}-${edu.year}`}
+              className="border border-border px-4 py-3 sm:px-5 sm:py-4 transition-colors duration-200 hover:bg-surface/40"
+            >
+              <div className="flex items-start justify-between gap-3 mb-0.5">
+                <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
+                  {edu.degree}
+                </h2>
+                <span className="font-sans text-[12px] sm:text-[12.5px] text-faint shrink-0 pt-1">
                   {edu.year}
                 </span>
               </div>
+              <p className="font-sans text-[12.5px] sm:text-[13px] text-faint italic">
+                {edu.school}{edu.note && ` · ${edu.note}`}
+              </p>
             </div>
           ))}
         </div>
