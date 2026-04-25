@@ -17,11 +17,11 @@ function RoleList({ items }: { items: typeof experiences }) {
             <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
               {exp.role}
             </h2>
-            <span className="font-sans text-[12px] sm:text-[12.5px] text-faint shrink-0 pt-1">
+            <span className="font-sans text-[12px] sm:text-[12.5px] text-muted shrink-0 pt-1">
               {exp.dates}
             </span>
           </div>
-          <p className="font-sans text-[12.5px] sm:text-[13px] text-faint italic mb-2">
+          <p className="font-sans text-[12.5px] sm:text-[13px] text-muted italic mb-2">
             {exp.company}{exp.location && ` · ${exp.location}`}
           </p>
           <p className="font-sans text-[13.5px] sm:text-[14px] text-muted leading-[1.65]">
@@ -106,11 +106,11 @@ export default function ExperiencePage() {
                 <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
                   {edu.degree}
                 </h2>
-                <span className="font-sans text-[12px] sm:text-[12.5px] text-faint shrink-0 pt-1">
+                <span className="font-sans text-[12px] sm:text-[12.5px] text-muted shrink-0 pt-1">
                   {edu.year}
                 </span>
               </div>
-              <p className="font-sans text-[12.5px] sm:text-[13px] text-faint italic">
+              <p className="font-sans text-[12.5px] sm:text-[13px] text-muted italic">
                 {edu.school}{edu.note && ` · ${edu.note}`}
               </p>
             </div>
