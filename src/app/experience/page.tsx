@@ -19,7 +19,7 @@ function RoleList({ items }: { items: typeof experiences }) {
           <div className="flex items-start justify-between gap-3 mb-1.5">
             <h2 className="font-serif text-[16px] sm:text-[17.5px] font-light leading-tight">
               <span className="text-ink">{exp.role}</span>
-              <span className="text-muted italic">
+              <span className="text-muted italic text-[14.5px] sm:text-[15.5px]">
                 {" · "}{exp.company}{exp.location && `, ${exp.location}`}
               </span>
             </h2>
@@ -103,7 +103,7 @@ export default function ExperiencePage() {
               <div className="flex items-start justify-between gap-3">
                 <h2 className="font-serif text-[16px] sm:text-[17.5px] font-light leading-tight">
                   <span className="text-ink">{edu.degree}</span>
-                  <span className="text-muted italic">
+                  <span className="text-muted italic text-[14.5px] sm:text-[15.5px]">
                     {" · "}{edu.school}{edu.note && `, ${edu.note}`}
                   </span>
                 </h2>
