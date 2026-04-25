@@ -78,15 +78,15 @@ export const ventures: Experience[] = [
     company: "Artisanal Tea Brand",
     dates: "2018 – 2022",
     description:
-      "Built an artisanal tea brand from the ground up in Tokyo, developing the product line, building relationships with tea farms and suppliers, and securing distribution into café chains across Japan, including Godiva Cafés. Handled everything from packaging and positioning to negotiating and structuring international franchise deals, pitching to partners across Asia.",
+      "Built an artisanal tea brand from the ground up in Tokyo, developing the product line, building relationships with tea farms and suppliers, and securing distribution into café chains across Japan, including Godiva Cafés. Owned packaging, positioning, and the overall brand.",
     location: "Tokyo",
   },
   {
-    role: "Independent Consultant",
-    company: "Self-employed",
+    role: "Founder",
+    company: "Boutique Consulting Firm",
     dates: "2018 – 2023",
     description:
-      "Ran an independent consulting practice alongside and between corporate roles, sourcing and serving clients directly. Engagements included marketing strategy for Godiva Japan and business development support for Kaefer in partnership with the JR Group, one of Japan's largest infrastructure and real estate operators.",
+      "Founded and ran a boutique consulting firm in Tokyo, sourcing and serving clients directly alongside and between corporate roles. Engagements included marketing strategy for Godiva Japan, business development for a German industrial brand in partnership with the JR Group (one of Japan's largest infrastructure and real estate operators), and healthcare and life sciences consulting for clients including IQVIA.",
     location: "Tokyo",
   },
 ];
