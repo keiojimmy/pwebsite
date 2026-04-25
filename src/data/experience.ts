@@ -17,9 +17,9 @@ export const experiences: Experience[] = [
   {
     role: "Senior Investment Director",
     company: "DEEPCORE",
-    dates: "Mar 2025 – Present",
+    dates: "2025 – Present",
     description:
-      "Leading investments at an AI and deep tech-focused VC fund anchored by SoftBank, backing founders across Japan and globally. Responsible for sourcing, evaluating, and executing deals across the fund's portfolio, with a focus on early-stage companies building at the frontier of AI and emerging technology.",
+      "Leading investments at an AI and deep tech-focused VC fund anchored by SoftBank, backing founders primarily in Japan and the U.S. Sourcing, evaluating, and executing deals across the fund's portfolio, with co-investors including General Catalyst, SUSA, and NEA.",
     location: "Tokyo",
   },
   {
@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     company: "Digital Garage",
     dates: "2024 – 2025",
     description:
-      "Drove new fintech business creation and strategic partnerships at a TSE-listed internet and payments company. Led business development efforts to identify, structure, and close partnerships that expanded the company's fintech footprint — navigating the intersection of legacy infrastructure and new digital finance opportunities in Japan.",
+      "Drove new fintech business creation and strategic partnerships at a TSE-listed internet and payments company. Led business development efforts to identify, structure, and close partnerships that expanded the company's fintech footprint, navigating the intersection of legacy infrastructure and new digital finance opportunities in Japan.",
     location: "Tokyo",
   },
   {
@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     company: "McKinsey & Company",
     dates: "Summer 2023",
     description:
-      "Consulting internship in the Tokyo office during HBS, working on strategy engagements for clients in Japan.",
+      "Consulting internship between the first and second year of HBS, working on strategy engagements for clients in the Tokyo office. Received a full-time offer.",
     location: "Tokyo",
   },
   {
@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
     company: "DEEPCORE",
     dates: "Summer 2022",
     description:
-      "VC internship during HBS, evaluating early-stage investment opportunities across AI and deep tech in Japan.",
+      "VC internship prior to HBS, evaluating early-stage investment opportunities across AI and deep tech in Japan. Received a full-time offer.",
     location: "Tokyo",
   },
   {
@@ -51,15 +51,15 @@ export const experiences: Experience[] = [
     company: "JR Kyushu Fast Foods",
     dates: "2020 – 2022",
     description:
-      "Acted as a Chief of Staff within a fast-growing hospitality and food operations company, working directly alongside senior leadership through a period of aggressive expansion and COVID-era pivot. Owned cross-functional strategy work — restructuring operations, navigating the business through disruption, and identifying new directions when the original model no longer held.",
+      "Acted as a Chief of Staff within a fast-growing hospitality and food operations company, working directly alongside senior leadership through a period of aggressive expansion and a COVID-era pivot. Owned cross-functional strategy work, restructuring operations, navigating the business through disruption, and identifying new directions when the original model no longer held.",
     location: "Tokyo",
   },
   {
     role: "Japan Country Manager",
-    company: "Focus Brands",
+    company: "FOCUS BRANDS",
     dates: "2018 – 2020",
     description:
-      "Managed the Japan operations for Cinnabon, Auntie Anne's, and Seattle's Best Coffee — overseeing franchise relationships, brand compliance, and local business development. Launched Cinnabon Japan's first e-commerce and social media channels, introduced the Frozen Proof Oven system to Japan for the first time outside the U.S., and led the effort to restructure and stabilize the Cinnabon franchise when it faced potential closure. Also closed franchise agreements bringing Dickey's Barbecue Pit and Jamba Juice into Japan.",
+      "Managed the Japan operations for Cinnabon, Auntie Anne's, and Seattle's Best Coffee, overseeing franchise relationships, brand compliance, and local business development. Launched Cinnabon Japan's first e-commerce and social media channels, introduced the Frozen Proof Oven system to Japan for the first time outside the U.S., and led the effort to restructure and stabilize the Cinnabon franchise when it faced potential closure.",
     location: "Tokyo",
   },
   {
@@ -67,7 +67,7 @@ export const experiences: Experience[] = [
     company: "L.E.K. Consulting",
     dates: "2016 – 2018",
     description:
-      "Strategy consulting in the Tokyo office, with a focus on consumer and healthcare clients across APAC and the U.S. Engagements spanned growth strategy, M&A due diligence, and financial modeling — working across multiple industries and geographies from the Tokyo base.",
+      "Strategy consulting in the Tokyo office, focused on consumer and healthcare clients across APAC and the U.S. Engagements spanned growth strategy, M&A due diligence, and financial modeling across multiple industries and geographies.",
     location: "Tokyo",
   },
 ];
