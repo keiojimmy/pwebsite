@@ -44,13 +44,13 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
             <div key={project.id} className={`border transition-colors duration-300 ${isOpen ? "border-accent/40 bg-accent/[0.03]" : "border-border"}`}>
               <button
                 onClick={() => toggle(project.id)}
-                className="w-full text-left px-5 py-3 flex items-center justify-between gap-4"
+                className="w-full text-left px-5 py-2 flex items-center justify-between gap-4"
               >
                 <div>
-                  <div className="mb-1">
+                  <div className="mb-0.5">
                     <CategoryBadge category={project.category} />
                   </div>
-                  <span className={`font-serif text-[15.5px] sm:text-[17.5px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
+                  <span className={`font-serif text-[15px] sm:text-[16.5px] font-light leading-tight transition-colors duration-200 ${isOpen ? "text-ink" : "text-ink/70"}`}>
                     {project.title}
                   </span>
                 </div>
@@ -62,9 +62,9 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
               {/* Inline detail */}
               <div className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
-                  <div className="px-5 pb-5 pt-0.5 sm:max-w-3xl">
-                    <p className="font-sans text-[12px] text-faint mb-3">{project.year} · {project.company}</p>
-                    <p className="font-sans text-[15.5px] text-muted leading-[1.8] mb-5">{project.description}</p>
+                  <div className="px-5 pb-4 pt-0 sm:max-w-3xl">
+                    <p className="font-sans text-[12px] text-faint mb-2">{project.year} · {project.company}</p>
+                    <p className="font-sans text-[15px] text-muted leading-[1.7] mb-4">{project.description}</p>
                     <PhotoGrid count={project.photos} />
                   </div>
                 </div>
