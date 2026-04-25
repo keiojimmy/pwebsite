@@ -23,11 +23,11 @@ export const experiences: Experience[] = [
     location: "Tokyo",
   },
   {
-    role: "Deputy Head of New Fintech Business · Head of Business Development",
+    role: "Deputy Head of New Fintech Business",
     company: "Digital Garage",
     dates: "2024 – 2025",
     description:
-      "Drove new fintech business creation and strategic partnerships at a TSE-listed internet and payments company. Led business development efforts to identify, structure, and close partnerships that expanded the company's fintech footprint, navigating the intersection of legacy infrastructure and new digital finance opportunities in Japan.",
+      "Joined as Executive Manager of New Fintech Business and promoted to Deputy Head within the year. Digital Garage is a TSE-listed internet company that operates one of Japan's leading Payment Service Providers and manages subsidiaries including Kakaku.com, which runs Tabelog. Drove new fintech business creation and led business development to structure and close partnerships expanding the company's fintech footprint in Japan.",
     location: "Tokyo",
   },
   {
