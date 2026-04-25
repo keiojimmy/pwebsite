@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     company: "DEEPCORE",
     dates: "2025 – Present",
     description:
-      "Leading investments at an AI and deep tech-focused VC fund anchored by SoftBank, backing founders primarily in Japan and the U.S. Sourcing, evaluating, and executing deals across the fund's portfolio, with co-investors including General Catalyst, SUSA, and NEA.",
+      "Leading investments at an AI and deep tech-focused VC fund anchored by SoftBank, backing founders primarily in Japan and the U.S. Sourcing, evaluating, and executing deals across the fund's portfolio, with co-investors including General Catalyst, SUSA, and Neo.",
     location: "Tokyo",
   },
   {
