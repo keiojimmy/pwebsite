@@ -86,7 +86,7 @@ export const ventures: Experience[] = [
     company: "Boutique Consulting Firm",
     dates: "2018 – 2023",
     description:
-      "Founded and ran a boutique consulting firm in Tokyo, sourcing and serving clients directly alongside and between corporate roles. Engagements included marketing strategy for Godiva Japan, business development for a German industrial brand in partnership with the JR Group (one of Japan's largest infrastructure and real estate operators), and healthcare and life sciences consulting for clients including IQVIA.",
+      "Founded and ran a boutique consulting firm in Tokyo, sourcing and serving clients directly alongside and between corporate roles. Engagements included marketing strategy for Godiva Japan, business development for a German gourmet food and catering brand in partnership with the JR Group (one of Japan's largest infrastructure and real estate operators), and healthcare and life sciences consulting for clients including IQVIA.",
     location: "Tokyo",
   },
 ];
