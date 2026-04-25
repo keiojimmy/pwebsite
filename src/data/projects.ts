@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     id: "cinnabon-digital",
     title: "Built Cinnabon's Japan E-Commerce Channel",
-    category: "Operations",
+    category: "Operations & BD",
     company: "Cinnabon · Japan",
     year: "2019–2020",
     description:
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     id: "field-operations",
     title: "Introduced the Frozen Proof Oven (FPO) to Japan",
-    category: "Operations",
+    category: "Operations & BD",
     company: "Auntie Anne's · Seattle's Best Coffee · Japan",
     year: "2018–2020",
     description:
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     id: "cinnabon-rescue",
     title: "Saved Cinnabon from Closing in Japan",
-    category: "Business Development",
+    category: "Operations & BD",
     company: "Cinnabon · Japan",
     year: "2019–2020",
     description:
@@ -62,7 +62,7 @@ export const projects: Project[] = [
   {
     id: "dickeys-jamba-japan",
     title: "Brought Dickey's BBQ and Jamba Juice to Japan",
-    category: "Business Development",
+    category: "Operations & BD",
     company: "Dickey's Barbecue Pit · Jamba Juice · Japan",
     year: "2018–2019",
     description:
