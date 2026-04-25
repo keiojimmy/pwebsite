@@ -15,36 +15,60 @@ export type Education = {
 
 export const experiences: Experience[] = [
   {
-    role: "Partner",
-    company: "[Firm Name]",
-    dates: "2023 — Present",
+    role: "Senior Investment Director",
+    company: "DEEPCORE",
+    dates: "Mar 2025 – Present",
     description:
-      "Leading investments in early-stage B2B and fintech companies across Southeast Asia and broader emerging markets.",
-    location: "Singapore",
+      "Leading investments at an AI and deep tech-focused VC fund anchored by SoftBank, backing founders across Japan and globally. Responsible for sourcing, evaluating, and executing deals across the fund's portfolio, with a focus on early-stage companies building at the frontier of AI and emerging technology.",
+    location: "Tokyo",
   },
   {
-    role: "VP, Strategy & Operations",
-    company: "[Company Name]",
-    dates: "2021 — 2023",
+    role: "Deputy Head of New Fintech Business · Head of Business Development",
+    company: "Digital Garage",
+    dates: "2024 – 2025",
     description:
-      "Built and led the strategy and operations function during a period of rapid growth from Series B to Series D.",
-    location: "Singapore",
+      "Drove new fintech business creation and strategic partnerships at a TSE-listed internet and payments company. Led business development efforts to identify, structure, and close partnerships that expanded the company's fintech footprint — navigating the intersection of legacy infrastructure and new digital finance opportunities in Japan.",
+    location: "Tokyo",
   },
   {
-    role: "Engagement Manager",
+    role: "Summer Associate",
     company: "McKinsey & Company",
-    dates: "2017 — 2021",
+    dates: "Summer 2023",
     description:
-      "Led client engagements across financial services, consumer, and technology sectors in Southeast Asia and Greater China.",
-    location: "Hong Kong",
+      "Consulting internship in the Tokyo office during HBS, working on strategy engagements for clients in Japan.",
+    location: "Tokyo",
+  },
+  {
+    role: "Summer Venture Capitalist",
+    company: "DEEPCORE",
+    dates: "Summer 2022",
+    description:
+      "VC internship during HBS, evaluating early-stage investment opportunities across AI and deep tech in Japan.",
+    location: "Tokyo",
+  },
+  {
+    role: "Associate Director of Strategy",
+    company: "JR Kyushu Fast Foods",
+    dates: "2020 – 2022",
+    description:
+      "Acted as a Chief of Staff within a fast-growing hospitality and food operations company, working directly alongside senior leadership through a period of aggressive expansion and COVID-era pivot. Owned cross-functional strategy work — restructuring operations, navigating the business through disruption, and identifying new directions when the original model no longer held.",
+    location: "Tokyo",
+  },
+  {
+    role: "Japan Country Manager",
+    company: "Focus Brands",
+    dates: "2018 – 2020",
+    description:
+      "Managed the Japan operations for Cinnabon, Auntie Anne's, and Seattle's Best Coffee — overseeing franchise relationships, brand compliance, and local business development. Launched Cinnabon Japan's first e-commerce and social media channels, introduced the Frozen Proof Oven system to Japan for the first time outside the U.S., and led the effort to restructure and stabilize the Cinnabon franchise when it faced potential closure. Also closed franchise agreements bringing Dickey's Barbecue Pit and Jamba Juice into Japan.",
+    location: "Tokyo",
   },
   {
     role: "Associate",
-    company: "Goldman Sachs",
-    dates: "2014 — 2016",
+    company: "L.E.K. Consulting",
+    dates: "2016 – 2018",
     description:
-      "Investment Banking Division, covering technology M&A and capital markets transactions across APAC.",
-    location: "Hong Kong",
+      "Strategy consulting in the Tokyo office, with a focus on consumer and healthcare clients across APAC and the U.S. Engagements spanned growth strategy, M&A due diligence, and financial modeling — working across multiple industries and geographies from the Tokyo base.",
+    location: "Tokyo",
   },
 ];
 
@@ -52,13 +76,12 @@ export const education: Education[] = [
   {
     degree: "MBA",
     school: "Harvard Business School",
-    year: "2017",
-    note: "Baker Scholar",
+    year: "2022 – 2024",
+    note: "Co-chair, HBS Asia Business Conference",
   },
   {
-    degree: "B.S. Economics",
-    school: "University of Pennsylvania",
-    year: "2014",
-    note: "Wharton School, magna cum laude",
+    degree: "B.S. Chemical Engineering",
+    school: "Washington University in St. Louis",
+    year: "2015",
   },
 ];
