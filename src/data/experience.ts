@@ -72,6 +72,25 @@ export const experiences: Experience[] = [
   },
 ];
 
+export const ventures: Experience[] = [
+  {
+    role: "Founder",
+    company: "Artisanal Tea Brand",
+    dates: "2018 – 2022",
+    description:
+      "Built an artisanal tea brand from the ground up in Tokyo, developing the product line, building relationships with tea farms and suppliers, and securing distribution into café chains across Japan, including Godiva Cafés. Handled everything from packaging and positioning to negotiating and structuring international franchise deals, pitching to partners across Asia.",
+    location: "Tokyo",
+  },
+  {
+    role: "Independent Consultant",
+    company: "Self-employed",
+    dates: "2018 – 2023",
+    description:
+      "Ran an independent consulting practice alongside and between corporate roles, sourcing and serving clients directly. Engagements included marketing strategy for Godiva Japan and business development support for Kaefer in partnership with the JR Group, one of Japan's largest infrastructure and real estate operators.",
+    location: "Tokyo",
+  },
+];
+
 export const education: Education[] = [
   {
     degree: "MBA",

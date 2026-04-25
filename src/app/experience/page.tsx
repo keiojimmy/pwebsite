@@ -1,9 +1,36 @@
 import type { Metadata } from "next";
-import { experiences, education } from "@/data/experience";
+import { experiences, ventures, education } from "@/data/experience";
 
 export const metadata: Metadata = {
   title: "CV — Jimmy Cho",
 };
+
+function RoleList({ items }: { items: typeof experiences }) {
+  return (
+    <div className="divide-y divide-border">
+      {items.map((exp) => (
+        <div key={`${exp.company}-${exp.dates}`} className="py-6 sm:py-7">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-3">
+            <div>
+              <h2 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-tight">
+                {exp.role}
+              </h2>
+              <p className="font-sans text-[14.5px] text-faint italic mt-1">
+                {exp.company}{exp.location && ` · ${exp.location}`}
+              </p>
+            </div>
+            <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
+              {exp.dates}
+            </span>
+          </div>
+          <p className="font-sans text-[14.5px] text-muted leading-[1.85]">
+            {exp.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function ExperiencePage() {
   return (
@@ -27,8 +54,11 @@ export default function ExperiencePage() {
         {/* Sidebar */}
         <aside className="w-full sm:w-36 sm:shrink-0 mb-10 sm:mb-0">
           <nav className="flex gap-8 sm:flex-col sm:gap-0 sm:space-y-2 sm:sticky sm:top-24">
-            <a href="#roles" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
-              Roles
+            <a href="#corporate" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
+              Corporate
+            </a>
+            <a href="#ventures" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
+              Ventures
             </a>
             <a href="#education" className="font-sans text-[14px] text-faint hover:text-ink transition-colors duration-400 py-0.5">
               Education
@@ -38,37 +68,28 @@ export default function ExperiencePage() {
 
         <div className="flex-1">
 
-          {/* Roles */}
-          <section id="roles" className="mb-14 sm:mb-16">
+          {/* Corporate */}
+          <section id="corporate" className="mb-14 sm:mb-16">
             <div className="flex items-center gap-5 mb-7 sm:mb-8">
               <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
               <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
-                roles
+                corporate
               </p>
               <div className="flex-1 h-px bg-border" />
             </div>
-            <div className="divide-y divide-border">
-              {experiences.map((exp) => (
-                <div key={`${exp.company}-${exp.dates}`} className="py-6 sm:py-7">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-3">
-                    <div>
-                      <h2 className="font-serif text-[20px] sm:text-[22px] font-light text-ink leading-tight">
-                        {exp.role}
-                      </h2>
-                      <p className="font-sans text-[14.5px] text-faint italic mt-1">
-                        {exp.company}{exp.location && ` · ${exp.location}`}
-                      </p>
-                    </div>
-                    <span className="font-sans text-[13px] text-ghost mt-1.5 sm:mt-0 sm:shrink-0 sm:pt-1">
-                      {exp.dates}
-                    </span>
-                  </div>
-                  <p className="font-sans text-[14.5px] text-muted leading-[1.85]">
-                    {exp.description}
-                  </p>
-                </div>
-              ))}
+            <RoleList items={experiences} />
+          </section>
+
+          {/* Ventures */}
+          <section id="ventures" className="mb-14 sm:mb-16">
+            <div className="flex items-center gap-5 mb-7 sm:mb-8">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
+              <p className="font-serif text-[15px] italic text-accent/80 whitespace-nowrap">
+                ventures
+              </p>
+              <div className="flex-1 h-px bg-border" />
             </div>
+            <RoleList items={ventures} />
           </section>
 
           {/* Education */}
