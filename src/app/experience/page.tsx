@@ -16,16 +16,16 @@ function RoleList({ items }: { items: typeof experiences }) {
     <div className="divide-y divide-border">
       {items.map((exp) => (
         <div key={`${exp.company}-${exp.dates}`} className="py-3 sm:py-4 first:pt-1">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8 mb-1.5">
-            <div>
-              <h2 className="font-serif text-[17px] sm:text-[18.5px] font-light text-ink leading-tight">
+          <div className="flex items-start justify-between gap-3 mb-1.5">
+            <div className="flex flex-wrap items-baseline gap-x-2">
+              <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
                 {exp.role}
               </h2>
-              <p className="font-sans text-[13px] sm:text-[13.5px] text-muted italic mt-0.5">
-                {exp.company}{exp.location && ` · ${exp.location}`}
+              <p className="font-sans text-[13px] sm:text-[13.5px] text-muted italic">
+                · {exp.company}{exp.location && ` · ${exp.location}`}
               </p>
             </div>
-            <span className="font-sans text-[12.5px] sm:text-[13px] text-muted mt-1 sm:mt-0 sm:shrink-0 sm:pt-1">
+            <span className="font-sans text-[12.5px] sm:text-[13px] text-muted shrink-0 pt-1">
               {exp.dates}
             </span>
           </div>
@@ -102,16 +102,16 @@ export default function ExperiencePage() {
         <div className="divide-y divide-border">
           {education.map((edu) => (
             <div key={`${edu.school}-${edu.year}`} className="py-3 sm:py-4 first:pt-1">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-8">
-                <div>
-                  <h2 className="font-serif text-[17px] sm:text-[18.5px] font-light text-ink leading-tight">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex flex-wrap items-baseline gap-x-2">
+                  <h2 className="font-serif text-[16.5px] sm:text-[18px] font-light text-ink leading-tight">
                     {edu.degree}
                   </h2>
-                  <p className="font-sans text-[13px] sm:text-[13.5px] text-muted italic mt-0.5">
-                    {edu.school}{edu.note && ` · ${edu.note}`}
+                  <p className="font-sans text-[13px] sm:text-[13.5px] text-muted italic">
+                    · {edu.school}{edu.note && ` · ${edu.note}`}
                   </p>
                 </div>
-                <span className="font-sans text-[12.5px] sm:text-[13px] text-muted mt-1 sm:mt-0 sm:shrink-0 sm:pt-1">
+                <span className="font-sans text-[12.5px] sm:text-[13px] text-muted shrink-0 pt-1">
                   {edu.year}
                 </span>
               </div>
