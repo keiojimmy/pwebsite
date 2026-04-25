@@ -52,13 +52,13 @@ export default function ExperiencePage() {
           roles, education, and the work behind the work.
         </p>
 
-        {/* Section anchor nav — boxes */}
+        {/* Section anchor nav — accent boxes */}
         <nav className="flex flex-wrap items-center gap-2 mt-5">
           {sections.map(({ href, label }) => (
             <a
               key={href}
               href={href}
-              className="border border-border px-3.5 py-1.5 font-sans text-[13px] text-muted hover:bg-surface/50 hover:text-ink hover:border-accent/30 transition-all duration-200"
+              className="border border-accent/40 bg-accent/[0.05] px-3.5 py-1.5 font-sans text-[13px] text-accent/80 hover:bg-accent/[0.1] hover:border-accent/60 hover:text-accent transition-all duration-200"
             >
               {label}
             </a>
