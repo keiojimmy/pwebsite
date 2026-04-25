@@ -16,7 +16,7 @@ function RoleList({ items }: { items: typeof experiences }) {
     <div className="divide-y divide-border">
       {items.map((exp) => (
         <div key={`${exp.company}-${exp.dates}`} className="py-3 sm:py-4 first:pt-1">
-          <div className="flex items-start justify-between gap-3 mb-1.5">
+          <div className="flex items-start justify-between gap-3 mb-0.5">
             <h2 className="font-serif text-[16px] sm:text-[17.5px] font-light leading-tight">
               <span className="text-ink">{exp.role}</span>
               <span className="text-muted italic text-[14.5px] sm:text-[15.5px]">
