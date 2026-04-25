@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const sections = [
   { href: "#corporate", label: "corporate" },
-  { href: "#ventures", label: "ventures" },
+  { href: "#founder", label: "founder" },
   { href: "#education", label: "education" },
 ];
 
@@ -76,12 +76,12 @@ export default function ExperiencePage() {
         <RoleList items={experiences} />
       </section>
 
-      {/* Ventures */}
-      <section id="ventures" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
+      {/* Founder */}
+      <section id="founder" className="mb-7 sm:mb-9 scroll-mt-24 sm:scroll-mt-28">
         <div className="flex items-center gap-5 mb-1 sm:mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent opacity-60 shrink-0" />
           <p className="font-serif text-[15.5px] italic text-accent/80 whitespace-nowrap">
-            ventures
+            founder
           </p>
           <div className="flex-1 h-px bg-border" />
         </div>
