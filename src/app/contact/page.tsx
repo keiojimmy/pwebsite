@@ -25,9 +25,9 @@ export default function ContactPage() {
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-10 bg-accent opacity-40" />
           <p className="font-sans text-[16px] leading-[1.9] text-muted">
-            Always open to conversations — about early-stage companies, founders
-            building something interesting, and ideas worth exploring.
-            If you think there&apos;s something worth talking about, reach out.
+            Always open to conversations about early-stage companies, interesting
+            founders, and the occasional new opportunity. If you think
+            there&apos;s something worth talking about, reach out.
           </p>
         </div>
 
