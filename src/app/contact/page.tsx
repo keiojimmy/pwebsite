@@ -17,7 +17,6 @@ export default function ContactPage() {
         <p className="font-sans text-[15px] text-faint italic">
           open to investing, advisory, and interesting conversations.
         </p>
-        <div className="mt-8 h-px bg-border" />
       </div>
 
       {/* Content */}
@@ -26,9 +25,9 @@ export default function ContactPage() {
         <div className="relative pl-7">
           <div className="absolute left-0 top-2 w-0.5 h-10 bg-accent opacity-40" />
           <p className="font-sans text-[16px] leading-[1.9] text-muted">
-            Open to conversations about investing, strategy, and interesting
-            company-building — especially in Southeast Asia and emerging markets.
-            If you&apos;re building something ambitious, I&apos;d like to hear from you.
+            Open to conversations about early-stage investing, Japan and the U.S.,
+            and the kind of company-building that happens at the edges.
+            If you&apos;re working on something ambitious, I&apos;d like to hear from you.
           </p>
         </div>
 
@@ -38,10 +37,10 @@ export default function ContactPage() {
               email
             </p>
             <a
-              href="mailto:hello@jimmycho.com"
+              href="mailto:hello@jimmy-cho.com"
               className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
             >
-              hello@jimmycho.com
+              hello@jimmy-cho.com
             </a>
           </div>
 
@@ -50,12 +49,12 @@ export default function ContactPage() {
               linkedin
             </p>
             <a
-              href="https://linkedin.com/in/jimmycho"
+              href="https://linkedin.com/in/jimmy-cho"
               className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin.com/in/jimmycho
+              linkedin.com/in/jimmy-cho
             </a>
           </div>
 
@@ -64,7 +63,7 @@ export default function ContactPage() {
               based in
             </p>
             <p className="font-serif text-[22px] sm:text-[24px] font-light text-ink">
-              Singapore
+              Tokyo
             </p>
           </div>
         </div>
