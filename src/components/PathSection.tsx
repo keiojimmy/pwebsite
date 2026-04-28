@@ -7,7 +7,7 @@ const items = [
   { index: "II",  role: "Operator",               org: "Enterprise & Startups",  note: "Running global food brands across Asia. Chief of Staff at a fast-growing hospitality tech unicorn." },
   { index: "III", role: "Founder",                org: "Food & Beverage",                  note: "Built a startup — an artisanal tea brand distributed to café chains including Godiva Cafés across Japan." },
   { index: "IV",  role: "Harvard Business School",org: "MBA",                    note: "Co-chair of the HBS Asia Business Conference — one of the largest student-run business conferences." },
-  { index: "V",   role: "Investor",               org: "Current",                note: "Backing founders at the early stages, in Japan and the U.S." },
+  { index: "V",   role: "Investor",               org: "Early Stage VC",         note: "Backing founders at the early stages, in Japan and the U.S." },
 ];
 
 export default function PathSection() {

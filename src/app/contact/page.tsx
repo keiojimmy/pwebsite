@@ -38,7 +38,7 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:hello@jimmy-cho.com"
-              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
+              className="font-serif text-[18px] sm:text-[20px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
             >
               hello@jimmy-cho.com
             </a>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             </p>
             <a
               href="https://linkedin.com/in/jimmy-cho"
-              className="font-serif text-[22px] sm:text-[24px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
+              className="font-serif text-[18px] sm:text-[20px] font-light text-ink hover:text-accent/80 border-b border-transparent hover:border-accent/40 transition-all duration-500 pb-0.5 break-all"
               target="_blank"
               rel="noopener noreferrer"
             >
