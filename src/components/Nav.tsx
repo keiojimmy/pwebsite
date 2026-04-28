@@ -92,7 +92,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             className="text-faint hover:text-accent transition-colors duration-500"
             aria-label="Open search"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
@@ -106,7 +106,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
         {/* Mobile: icons only in row 1 */}
         <div className="flex sm:hidden items-center gap-5 pointer-events-auto">
           <button onClick={onSearchOpen} className="text-faint hover:text-accent transition-colors" aria-label="Open search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>
               <line x1="15.5" y1="15.5" x2="22" y2="22"/>
             </svg>
