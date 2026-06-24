@@ -11,17 +11,6 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
-function PhotoGrid({ count }: { count: number }) {
-  return (
-    <div className={`grid gap-2 ${count === 4 ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-2 sm:grid-cols-3"}`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="aspect-[4/3] bg-surface border border-border/60 rounded-sm flex items-center justify-center">
-          <span className="font-sans text-[11px] text-ghost/50 select-none">photo {i + 1}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function ProjectsLayout({ projects }: { projects: Project[] }) {
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
@@ -64,8 +53,7 @@ export default function ProjectsLayout({ projects }: { projects: Project[] }) {
                 <div className="overflow-hidden">
                   <div className="px-5 pb-4 pt-0 sm:max-w-3xl">
                     <p className="font-sans text-[12px] text-faint mb-2">{project.year} · {project.company}</p>
-                    <p className="font-sans text-[15px] text-muted leading-[1.7] mb-4">{project.description}</p>
-                    <PhotoGrid count={project.photos} />
+                    <p className="font-sans text-[15px] text-muted leading-[1.7]">{project.description}</p>
                   </div>
                 </div>
               </div>
