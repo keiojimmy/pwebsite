@@ -4,7 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { T } from "@/data/translations";
+
+// The top menu always stays in English.
+const links = [
+  { href: "/", label: "about" },
+  { href: "/work", label: "projects" },
+  { href: "/experience", label: "cv" },
+  { href: "/contact", label: "contact" },
+];
 
 function SunIcon() {
   return (
@@ -33,21 +40,27 @@ function MoonIcon() {
 function LangToggle() {
   const { lang, setLang } = useLanguage();
   return (
-    <div className="flex items-center gap-0.5 font-sans text-[12.5px] tracking-[0.04em]">
+    <div className="flex items-center gap-2 font-sans text-[12.5px] tracking-[0.03em] select-none">
       <button
         onClick={() => setLang("en")}
-        className={`px-1 transition-colors duration-300 ${lang === "en" ? "text-ink" : "text-faint/60 hover:text-faint"}`}
-        aria-label="Switch to English"
+        className={`flex items-center gap-1.5 transition-opacity duration-300 ${lang === "en" ? "opacity-100" : "opacity-45 hover:opacity-75"}`}
+        aria-label="English"
+        aria-pressed={lang === "en"}
       >
-        EN
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logos/Flag_of_the_United_States.svg.png" alt="" width={18} height={12} className="w-[18px] h-[12px] rounded-[2px] object-cover shadow-[0_1px_2px_rgba(0,0,0,0.12)]" draggable={false} />
+        <span className={lang === "en" ? "text-ink" : "text-faint"}>EN</span>
       </button>
-      <span className="text-faint/30 select-none">·</span>
+      <span className="text-faint/30">/</span>
       <button
         onClick={() => setLang("jp")}
-        className={`px-1 transition-colors duration-300 ${lang === "jp" ? "text-ink" : "text-faint/60 hover:text-faint"}`}
-        aria-label="日本語に切り替え"
+        className={`flex items-center gap-1.5 transition-opacity duration-300 ${lang === "jp" ? "opacity-100" : "opacity-45 hover:opacity-75"}`}
+        aria-label="日本語"
+        aria-pressed={lang === "jp"}
       >
-        JP
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logos/Flag_of_Japan.svg.webp" alt="" width={18} height={12} className="w-[18px] h-[12px] rounded-[2px] object-cover shadow-[0_1px_2px_rgba(0,0,0,0.12)]" draggable={false} />
+        <span className={lang === "jp" ? "text-ink" : "text-faint"}>日本語</span>
       </button>
     </div>
   );
@@ -56,14 +69,6 @@ function LangToggle() {
 export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
   const pathname = usePathname();
   const [dark, setDark] = useState(false);
-  const { lang } = useLanguage();
-
-  const links = [
-    { href: "/",           label: T.nav.about[lang] },
-    { href: "/work",       label: T.nav.projects[lang] },
-    { href: "/experience", label: T.nav.cv[lang] },
-    { href: "/contact",    label: T.nav.contact[lang] },
-  ];
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -113,11 +118,13 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             );
           })}
 
-          <LangToggle />
+          <span className="self-center">
+            <LangToggle />
+          </span>
 
           <button
             onClick={onSearchOpen}
-            className="text-faint hover:text-accent transition-colors duration-500"
+            className="self-center text-faint hover:text-accent transition-colors duration-500"
             aria-label="Open search"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -126,13 +133,13 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             </svg>
           </button>
 
-          <button onClick={toggleTheme} aria-label="Toggle theme" className="text-faint hover:text-accent transition-colors duration-500">
+          <button onClick={toggleTheme} aria-label="Toggle theme" className="self-center text-faint hover:text-accent transition-colors duration-500">
             {dark ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
 
         {/* Mobile: icons only in row 1 */}
-        <div className="flex sm:hidden items-center gap-5 pointer-events-auto">
+        <div className="flex sm:hidden items-center gap-4 pointer-events-auto">
           <LangToggle />
           <button onClick={onSearchOpen} className="text-faint hover:text-accent transition-colors" aria-label="Open search">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

@@ -12,6 +12,10 @@ function RoleList({ items, lang }: { items: typeof experiences; lang: Lang }) {
       {items.map((exp) => {
         const role = lang === "jp" && exp.role_jp ? exp.role_jp : exp.role;
         const description = lang === "jp" && exp.description_jp ? exp.description_jp : exp.description;
+        const sentences =
+          lang === "jp"
+            ? description.split(/(?<=。)/).map((s) => s.trim()).filter(Boolean)
+            : description.split(/(?<=\.)\s+(?=[A-Z])/);
         return (
           <div key={`${exp.company}-${exp.dates}`} className="py-3 sm:py-4 first:pt-1">
             <div className="flex items-start justify-between gap-3 mb-0.5">
@@ -26,7 +30,7 @@ function RoleList({ items, lang }: { items: typeof experiences; lang: Lang }) {
               </span>
             </div>
             <ul className="space-y-1">
-              {description.split(/(?<=\.)\s+(?=[A-Z　-鿿一-龯])/).map((sentence, i) => (
+              {sentences.map((sentence, i) => (
                 <li
                   key={i}
                   className="font-sans text-[13.5px] sm:text-[14px] text-muted leading-[1.6] flex gap-2 items-baseline"
