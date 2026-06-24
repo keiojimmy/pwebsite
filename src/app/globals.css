@@ -37,15 +37,7 @@ html.dark {
 }
 
 /* ── Japanese mode ── */
-/* Swap the elegant Latin serif/sans for clean Arial / Times-led stacks
-   (page content + footer only — the top menu stays in its English type). */
-html.lang-jp main,
-html.lang-jp footer {
-  --font-serif: "Times New Roman", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "MS PMincho", serif;
-  --font-sans: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
-}
-
-/* No italics anywhere in Japanese — they read as awkward slanted glyphs. */
+/* No italics: slanted Latin glyphs look broken with Japanese characters. */
 html.lang-jp main,
 html.lang-jp footer,
 html.lang-jp main *,

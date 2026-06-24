@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
     description:
       "Leading investments at an AI and deep tech VC fund anchored by SoftBank, backing founders in Japan and the U.S. alongside co-investors including General Catalyst, SUSA, and Neo.",
     description_jp:
-      "ソフトバンクをアンカーLPとするAI・ディープテック特化のVCファンドで、投資をリード。General Catalyst、SUSA、Neoといった共同投資家とともに、日本と米国の創業者を支援している。",
+      "ソフトバンクを主要LPとするAI・ディープテック特化のVC。General Catalyst、SUSA、Neoと共同で、日米の創業者への投資をリードしている。",
   },
   {
     role: "Deputy Head of New Fintech Business",
@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     description:
       "Promoted from Executive Manager to Deputy Head within the year, driving new fintech business creation and partnerships at a TSE-listed internet company that operates one of Japan's leading PSPs and owns subsidiaries including Kakaku.com (Tabelog).",
     description_jp:
-      "日本有数のPSP（決済代行）を運営し、カカク.com（食べログ）などを傘下に持つ東証上場のインターネット企業で、新たなフィンテック事業の創出とパートナーシップを推進。入社から1年でエグゼクティブ・マネージャーから副責任者に昇進した。",
+      "カカク.com（食べログ）などを傘下に持ち、日本有数のPSPを運営する東証上場企業で、新規フィンテック事業の創出とパートナーシップ開拓を担当。入社から1年以内にエグゼクティブ・マネージャーから副責任者へ昇進した。",
   },
   {
     role: "Summer Associate",
@@ -46,7 +46,7 @@ export const experiences: Experience[] = [
     description:
       "Strategy consulting internship between HBS years, with the Tokyo office. Received a full-time offer.",
     description_jp:
-      "HBS在学中の夏季インターンとして、マッキンゼー東京オフィスで戦略コンサルティングに従事。フルタイムのオファーを受けた。",
+      "HBS在学中のサマーインターン。東京オフィスで戦略コンサルティングに従事し、フルタイムのオファーを受けた。",
   },
   {
     role: "Summer Venture Capitalist",
@@ -56,7 +56,7 @@ export const experiences: Experience[] = [
     description:
       "VC internship prior to HBS, evaluating early-stage AI and deep tech opportunities in Japan. Received a full-time offer.",
     description_jp:
-      "HBS入学前のインターンとして、日本のアーリーステージのAI・ディープテック領域の投資機会を評価。フルタイムのオファーを受けた。",
+      "HBS入学前のインターン。日本のアーリーステージのAI・ディープテック領域で投資機会を評価し、フルタイムのオファーを受けた。",
   },
   {
     role: "Associate Director of Strategy",
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
     description:
       "Chief of Staff at a fast-growing hospitality and food operations company. Led cross-functional strategy and operational restructuring through aggressive expansion and a full COVID-era pivot.",
     description_jp:
-      "急成長する外食・ホスピタリティ企業でチーフ・オブ・スタッフを担当。積極的な事業拡大と、コロナ禍での全面的な方針転換を通じて、部門横断の戦略立案と組織再編を主導した。",
+      "急拡大する外食・ホスピタリティ企業でチーフ・オブ・スタッフを担当。積極的な事業拡大と、コロナ禍での全面的な方針転換を通じ、部門横断の戦略立案と組織再編を主導した。",
   },
   {
     role: "Japan Country Manager",
@@ -76,7 +76,7 @@ export const experiences: Experience[] = [
     description:
       "Ran Japan operations for Cinnabon, Auntie Anne's, and Seattle's Best Coffee. Launched Cinnabon Japan's e-commerce, introduced the Frozen Proof Oven to Japan for the first time outside the U.S., and rescued the Cinnabon franchise from closure.",
     description_jp:
-      "シナボン、アンティ・アンズ、シアトルズ・ベスト・コーヒーの日本事業を統括。シナボン・ジャパンのEC立ち上げ、米国外では初となるフローズン・プルーフ・オーブンの日本導入、そして撤退の危機にあったシナボンのフランチャイズ再建を実現した。",
+      "シナボン、アンティ・アンズ、シアトルズ・ベスト・コーヒーの日本事業を統括。シナボンのEC立ち上げ、米国外初のフローズン・プルーフ・オーブン日本導入、撤退危機にあったフランチャイズの立て直しを実現した。",
   },
   {
     role: "Associate",
@@ -86,7 +86,7 @@ export const experiences: Experience[] = [
     description:
       "Strategy consulting in the Tokyo office, working on growth strategy, M&A due diligence, and financial modeling for consumer and healthcare clients across APAC and the U.S.",
     description_jp:
-      "東京オフィスで戦略コンサルティングに従事。APACと米国の消費財・ヘルスケア企業に対し、成長戦略、M&Aデューデリジェンス、財務モデリングを手がけた。",
+      "東京オフィスで戦略コンサルティングに従事。APAC・米国の消費財・ヘルスケアクライアントに対し、成長戦略、M&Aデューデリジェンス、財務モデリングを手がけた。",
   },
 ];
 
@@ -99,7 +99,7 @@ export const ventures: Experience[] = [
     description:
       "Built an artisanal tea brand from the ground up in Tokyo, developing the product line with farms and suppliers and securing distribution into café chains across Japan including Godiva Cafés.",
     description_jp:
-      "東京でこだわりのティーブランドをゼロから立ち上げ、茶農家やサプライヤーと組んで商品ラインを開発。ゴディバカフェをはじめ、日本各地のカフェチェーンへの流通を実現した。",
+      "東京でこだわりのティーブランドをゼロから立ち上げ、茶農家・サプライヤーと組んで商品ラインを開発。ゴディバカフェを含む日本各地のカフェチェーンへの流通を実現した。",
   },
   {
     role: "Founder",
@@ -109,7 +109,7 @@ export const ventures: Experience[] = [
     description:
       "Founded a boutique consulting firm in Tokyo serving clients directly. Engagements spanned marketing strategy for Godiva Japan, business development for a German gourmet food and catering brand with JR Group, and healthcare and life sciences work for clients including IQVIA.",
     description_jp:
-      "東京でブティック型のコンサルティングファームを設立し、自ら顧客を開拓して支援。ゴディバジャパンのマーケティング戦略、JRグループと組んだドイツのグルメ食品・ケータリングブランドの事業開発、IQVIAをはじめとするヘルスケア・ライフサイエンス領域の案件まで、幅広く手がけた。",
+      "東京で独立系コンサルティングファームを立ち上げ、自ら顧客を獲得して支援。ゴディバジャパンのマーケティング戦略、JRグループと組んだドイツのグルメ食品ブランドの事業開発、IQVIAをはじめとするヘルスケア・ライフサイエンス領域の案件など。",
   },
 ];
 
