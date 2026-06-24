@@ -1,17 +1,13 @@
 "use client";
 
 import { useState } from "react";
-
-const items = [
-  { index: "I",   role: "Strategy Consulting",    org: "Consumer & Pharma",      note: "Growth strategy, M&A diligence, and financial modeling for companies across APAC and the U.S." },
-  { index: "II",  role: "Operator",               org: "Enterprise & Startups",  note: "Running global food brands across Asia. Chief of Staff at a fast-growing hospitality tech unicorn." },
-  { index: "III", role: "Founder",                org: "Food & Beverage",                  note: "Built a startup — an artisanal tea brand distributed to café chains including Godiva Cafés across Japan." },
-  { index: "IV",  role: "Harvard Business School",org: "MBA",                    note: "Co-chair of the HBS Asia Business Conference — one of the largest student-run business conferences." },
-  { index: "V",   role: "Investor",               org: "Early Stage VC",         note: "Backing founders at the early stages, in Japan and the U.S." },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { T } from "@/data/translations";
 
 export default function PathSection() {
   const [active, setActive] = useState<number | null>(null);
+  const { lang } = useLanguage();
+  const items = T.path.items;
 
   return (
     <>
@@ -37,10 +33,10 @@ export default function PathSection() {
               {item.index}
             </div>
             <div className="font-sans text-[13px] text-ink mb-1 leading-snug">
-              {item.role}
+              {item.role[lang]}
             </div>
             <div className="font-sans text-[12px] text-muted italic mb-2">
-              {item.org}
+              {item.org[lang]}
             </div>
             {item.note && (
               <p
@@ -48,7 +44,7 @@ export default function PathSection() {
                   active === i ? "text-muted/90" : "text-muted/70"
                 }`}
               >
-                {item.note}
+                {item.note[lang]}
               </p>
             )}
           </button>
@@ -76,17 +72,17 @@ export default function PathSection() {
             </div>
             <div className="min-h-[72px]">
               <div className="font-sans text-[14px] text-ink mb-1.5 leading-snug">
-                {item.role}
+                {item.role[lang]}
               </div>
               <div className="font-sans text-[13px] text-muted italic">
-                {item.org}
+                {item.org[lang]}
               </div>
             </div>
             {item.note && (
               <p className={`font-sans text-[13px] leading-[1.75] transition-colors duration-300 ${
                 active === i ? "text-muted/90" : "text-muted/65"
               }`}>
-                {item.note}
+                {item.note[lang]}
               </p>
             )}
           </button>

@@ -3,13 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-
-const links = [
-  { href: "/", label: "about" },
-  { href: "/work", label: "projects" },
-  { href: "/experience", label: "cv" },
-  { href: "/contact", label: "contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { T } from "@/data/translations";
 
 function SunIcon() {
   return (
@@ -35,9 +30,40 @@ function MoonIcon() {
   );
 }
 
+function LangToggle() {
+  const { lang, setLang } = useLanguage();
+  return (
+    <div className="flex items-center gap-0.5 font-sans text-[12.5px] tracking-[0.04em]">
+      <button
+        onClick={() => setLang("en")}
+        className={`px-1 transition-colors duration-300 ${lang === "en" ? "text-ink" : "text-faint/60 hover:text-faint"}`}
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+      <span className="text-faint/30 select-none">·</span>
+      <button
+        onClick={() => setLang("jp")}
+        className={`px-1 transition-colors duration-300 ${lang === "jp" ? "text-ink" : "text-faint/60 hover:text-faint"}`}
+        aria-label="日本語に切り替え"
+      >
+        JP
+      </button>
+    </div>
+  );
+}
+
 export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
   const pathname = usePathname();
   const [dark, setDark] = useState(false);
+  const { lang } = useLanguage();
+
+  const links = [
+    { href: "/",           label: T.nav.about[lang] },
+    { href: "/work",       label: T.nav.projects[lang] },
+    { href: "/experience", label: T.nav.cv[lang] },
+    { href: "/contact",    label: T.nav.contact[lang] },
+  ];
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -87,6 +113,8 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
             );
           })}
 
+          <LangToggle />
+
           <button
             onClick={onSearchOpen}
             className="text-faint hover:text-accent transition-colors duration-500"
@@ -105,6 +133,7 @@ export default function Nav({ onSearchOpen }: { onSearchOpen: () => void }) {
 
         {/* Mobile: icons only in row 1 */}
         <div className="flex sm:hidden items-center gap-5 pointer-events-auto">
+          <LangToggle />
           <button onClick={onSearchOpen} className="text-faint hover:text-accent transition-colors" aria-label="Open search">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5"/>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientShell from "@/components/ClientShell";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Jimmy Cho",
@@ -23,7 +24,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-bg text-ink font-sans antialiased">
-        <ClientShell>{children}</ClientShell>
+        <LanguageProvider>
+          <ClientShell>{children}</ClientShell>
+        </LanguageProvider>
       </body>
     </html>
   );

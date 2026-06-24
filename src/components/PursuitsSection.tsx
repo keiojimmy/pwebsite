@@ -1,18 +1,14 @@
 "use client";
 
 import { useState } from "react";
-
-const pursuits = [
-  { emoji: "🎵", text: "Music, always — playing and singing" },
-  { emoji: "🏀", text: "Basketball, on a bad ankle" },
-  { emoji: "♨️", text: "Onsens and good sashimi" },
-  { emoji: "☕", text: "Quiet cafés and something sweet" },
-  { emoji: "📺", text: "Late-night Korean dramas" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { T } from "@/data/translations";
 
 export default function PursuitsSection() {
   const [active, setActive] = useState<number | null>(null);
   const [animKeys, setAnimKeys] = useState<Record<number, number>>({});
+  const { lang } = useLanguage();
+  const pursuits = T.pursuits.items;
 
   const handleClick = (i: number) => {
     setActive(prev => prev === i ? null : i);
@@ -25,7 +21,7 @@ export default function PursuitsSection() {
       <div className="md:hidden grid grid-cols-2 gap-2.5">
         {pursuits.map(({ emoji, text }, i) => (
           <button
-            key={text}
+            key={i}
             onClick={() => handleClick(i)}
             className={`text-left p-3.5 border flex flex-col transition-all duration-300 rounded-sm min-h-[120px] ${
               i === pursuits.length - 1 ? "col-span-2" : ""
@@ -49,7 +45,7 @@ export default function PursuitsSection() {
               <p className={`font-sans text-[12px] leading-[1.6] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}>
-                {text}
+                {text[lang]}
               </p>
             </div>
           </button>
@@ -60,7 +56,7 @@ export default function PursuitsSection() {
       <div className="hidden md:grid md:grid-cols-5 gap-3">
         {pursuits.map(({ emoji, text }, i) => (
           <button
-            key={text}
+            key={i}
             onClick={() => handleClick(i)}
             className={`text-left border p-5 flex flex-col transition-all duration-300 min-h-[140px] ${
               active === i
@@ -82,7 +78,7 @@ export default function PursuitsSection() {
               <span className={`font-sans text-[13px] leading-[1.7] transition-colors duration-300 ${
                 active === i ? "text-ink" : "text-muted"
               }`}>
-                {text}
+                {text[lang]}
               </span>
             </div>
           </button>
