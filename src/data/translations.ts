@@ -11,24 +11,24 @@ export const T = {
   home: {
     heroSubtitle: {
       en: "Shaped by strategy consulting, hands-on operations, and entrepreneurship across Japan, Korea, and the U.S., now investing in early-stage companies.",
-      jp: "コンサルタント、オペレーター、起業家として日本・韓国・アメリカを渡り歩き、今はアーリーステージのスタートアップに投資している。",
+      jp: "コンサルタント、オペレーター、起業家として、日本・韓国・アメリカで経験を重ねてきた。今の軸足は、アーリーステージのスタートアップへの投資。",
     },
     bioLabel: { en: "bio", jp: "自己紹介" },
     bioQuote: {
       en: "The most interesting things happen at the edges, where people and places collide.",
-      jp: "面白いことはいつも、人と場所がぶつかるところに転がっている。",
+      jp: "いちばん面白いことが生まれるのは、人と場所がぶつかり合う境界。",
     },
     bioPara1: {
       en: "In the span of 20 months, I attended preschool in Korea, started kindergarten in Germany, and finished it in Japan. I spent first grade in Tennessee, second in Colorado, third and fourth in Korea, middle school in Texas, and high school back in Seoul. As life continued to ping-pong me between college in the U.S., the army in Korea, and a career in Japan, I came to believe that the most interesting things happen at the edges, where people and places collide.",
-      jp: "生まれてから20ヶ月のあいだに、韓国・ドイツ・日本の3カ国を渡った。小学校はテネシーとコロラドと韓国、中学はテキサス、高校はソウル。大学でアメリカへ、兵役で韓国へ、就職で日本へ。気がつけば、人生がひたすら自分を次の国へと運び続けていた。そのうちに、いちばん面白いことは人と場所がぶつかるところにあると、信じるようになった。",
+      jp: "生まれてから20ヶ月のあいだに、韓国、ドイツ、日本と移り住んだ。小学校はテネシーとコロラドと韓国、中学はテキサス、高校はソウル。大学でアメリカへ、兵役で韓国へ、就職で日本へ。気がつけば、人生がひたすら自分を次の国へと運び続けていた。そのうちに気づいた。いちばん面白いことが生まれるのは、人と場所がぶつかり合う境界なのだと。",
     },
     bioPara2: {
       en: "My career has been built on navigating those exact edges. Strategy consulting at L.E.K. in Tokyo. Managing Cinnabon and Jamba Juice across Japan and Korea. Acting as Chief of Staff at a fast-growing hospitality tech unicorn expanding aggressively across Asia. Getting my hands dirty through COVID when the business had to do a full pivot. Building a startup, an artisanal tea brand that distributed to café chains across Japan, including Godiva. Two years at Harvard Business School confirmed what my operating experience had already suggested.",
-      jp: "キャリアもまた、その境界の上で積んできた。東京でL.E.K.のコンサルタントとして、日韓でシナボンとジャンバジュースを運営する事業者として、アジアで急拡大するホスピタリティ・テックのスタートアップでチーフ・オブ・スタッフとして。コロナ禍で事業の全面転換を迫られたときは泥臭く現場に入り、ゴディバカフェを含む日本各地のカフェチェーンに卸す自分のティーブランドも立ち上げた。ハーバード・ビジネス・スクールでの2年間は、現場で掴んでいたものに言葉を与えてくれた。",
+      jp: "キャリアもまた、その境界の上で積み重ねてきた。東京ではL.E.K.のコンサルタント、日韓ではシナボンとジャンバジュースを率いる責任者、そしてアジアで急拡大するホスピタリティ・テックのスタートアップではチーフ・オブ・スタッフ。コロナ禍で事業の全面転換を迫られたときは、泥臭く現場に入った。ゴディバカフェを含む日本各地のカフェチェーンに卸す、自分のティーブランドも立ち上げた。ハーバード・ビジネス・スクールでの2年間は、現場で掴んでいたものに言葉を与えてくれた。",
     },
     bioPara3: {
       en: "I now back early-stage founders building at those exact edges, where new ideas collide and the path forward is least defined.",
-      jp: "今は、その境界の上で挑む創業期の起業家たちに投資している。新しいアイデアがぶつかり合い、誰もまだ答えを知らない、そんな場所にいる人たちだ。",
+      jp: "今、私が支えているのは、その境界の上で挑む創業期の起業家たち。新しいアイデアがぶつかり合い、進むべき道がいちばん見えにくい、そんな場所で戦う人たちだ。",
     },
     pathLabel:     { en: "path",          jp: "歩み" },
     pursuitsLabel: { en: "other pursuits", jp: "好きなこと" },
@@ -116,7 +116,7 @@ export const T = {
         org:  { en: "Early Stage VC",   jp: "アーリーステージVC" },
         note: {
           en: "Backing founders at the early stages, in Japan and the U.S.",
-          jp: "日本と米国で、創業期の起業家たちに投資している。",
+          jp: "日本と米国で、創業期の起業家たちを後押しする日々。",
         },
       },
     ],
